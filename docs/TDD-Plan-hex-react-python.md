@@ -36,6 +36,7 @@ References: [ADR-003], [PRD-004], [SDS-007], [SDS-016]
   - CI job: generate + verify passes.
 </del>
 
+<del>
 ###  Task 1.3: ESLint Dependency Constraints
 References: [ADR-008], [PRD-007], [SDS-012]
 - Red
@@ -46,6 +47,7 @@ References: [ADR-008], [PRD-007], [SDS-012]
   - Extract reusable ESLint config presets.
 - Regression
   - Nx lint target fails for violations in CI.
+</del>
 
 ### Task 1.4: CI/CD Type Sync Workflow
 References: [ADR-009], [PRD-008], [SDS-007]
