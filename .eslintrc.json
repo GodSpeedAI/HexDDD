@@ -1,10 +1,19 @@
 {
   "root": true,
-  "ignorePatterns": ["**/*"],
-  "plugins": ["@nx"],
+  "ignorePatterns": [
+    "node_modules/"
+  ],
+  "plugins": [
+    "@nx"
+  ],
   "overrides": [
     {
-      "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+      "files": [
+        "*.ts",
+        "*.tsx",
+        "*.js",
+        "*.jsx"
+      ],
       "rules": {
         "@nx/enforce-module-boundaries": [
           "error",
@@ -40,92 +49,159 @@
               },
               {
                 "sourceTag": "type:ui",
-                "onlyDependOnLibsWithTags": ["type:domain-logic", "type:util"]
+                "onlyDependOnLibsWithTags": [
+                  "type:domain-logic",
+                  "type:util"
+                ]
               },
               {
                 "sourceTag": "type:domain-logic",
-                "onlyDependOnLibsWithTags": ["type:util"]
+                "onlyDependOnLibsWithTags": [
+                  "type:util"
+                ]
               },
               {
                 "sourceTag": "domain:shared",
-                "onlyDependOnLibsWithTags": ["domain:shared"]
+                "onlyDependOnLibsWithTags": [
+                  "domain:shared"
+                ]
               },
               {
                 "sourceTag": "domain:luggage",
-                "onlyDependOnLibsWithTags": ["domain:luggage", "domain:shared"]
+                "onlyDependOnLibsWithTags": [
+                  "domain:luggage",
+                  "domain:shared"
+                ]
               },
               {
                 "sourceTag": "domain:luggage",
-                "onlyDependOnLibsWithTags": ["domain:luggage", "domain:shared"]
+                "onlyDependOnLibsWithTags": [
+                  "domain:luggage",
+                  "domain:shared"
+                ]
               },
               {
                 "sourceTag": "domain:luggage",
-                "onlyDependOnLibsWithTags": ["domain:luggage", "domain:shared"]
+                "onlyDependOnLibsWithTags": [
+                  "domain:luggage",
+                  "domain:shared"
+                ]
               },
               {
                 "sourceTag": "domain:luggage",
-                "onlyDependOnLibsWithTags": ["domain:luggage", "domain:shared"]
+                "onlyDependOnLibsWithTags": [
+                  "domain:luggage",
+                  "domain:shared"
+                ]
               },
               {
                 "sourceTag": "domain:luggage",
-                "onlyDependOnLibsWithTags": ["domain:luggage", "domain:shared"]
+                "onlyDependOnLibsWithTags": [
+                  "domain:luggage",
+                  "domain:shared"
+                ]
               },
               {
                 "sourceTag": "domain:luggage",
-                "onlyDependOnLibsWithTags": ["domain:luggage", "domain:shared"]
+                "onlyDependOnLibsWithTags": [
+                  "domain:luggage",
+                  "domain:shared"
+                ]
               },
               {
                 "sourceTag": "domain:luggage",
-                "onlyDependOnLibsWithTags": ["domain:luggage", "domain:shared"]
+                "onlyDependOnLibsWithTags": [
+                  "domain:luggage",
+                  "domain:shared"
+                ]
               },
               {
                 "sourceTag": "domain:luggage",
-                "onlyDependOnLibsWithTags": ["domain:luggage", "domain:shared"]
+                "onlyDependOnLibsWithTags": [
+                  "domain:luggage",
+                  "domain:shared"
+                ]
               },
               {
                 "sourceTag": "domain:luggage",
-                "onlyDependOnLibsWithTags": ["domain:luggage", "domain:shared"]
+                "onlyDependOnLibsWithTags": [
+                  "domain:luggage",
+                  "domain:shared"
+                ]
               },
               {
                 "sourceTag": "domain:luggage",
-                "onlyDependOnLibsWithTags": ["domain:luggage", "domain:shared"]
+                "onlyDependOnLibsWithTags": [
+                  "domain:luggage",
+                  "domain:shared"
+                ]
               },
               {
                 "sourceTag": "domain:boarding",
-                "onlyDependOnLibsWithTags": ["domain:boarding", "domain:shared"]
+                "onlyDependOnLibsWithTags": [
+                  "domain:boarding",
+                  "domain:shared"
+                ]
               },
               {
                 "sourceTag": "domain:checkin",
-                "onlyDependOnLibsWithTags": ["domain:checkin", "domain:shared"]
+                "onlyDependOnLibsWithTags": [
+                  "domain:checkin",
+                  "domain:shared"
+                ]
               },
               {
                 "sourceTag": "domain:feature",
-                "onlyDependOnLibsWithTags": ["domain:feature", "domain:shared"]
+                "onlyDependOnLibsWithTags": [
+                  "domain:feature",
+                  "domain:shared"
+                ]
               },
               {
                 "sourceTag": "domain:miles",
-                "onlyDependOnLibsWithTags": ["domain:miles", "domain:shared"]
+                "onlyDependOnLibsWithTags": [
+                  "domain:miles",
+                  "domain:shared"
+                ]
               },
               // Hex Architecture Constraints
               {
                 "sourceTag": "layer:domain",
-                "onlyDependOnLibsWithTags": ["layer:domain", "layer:shared"]
+                "onlyDependOnLibsWithTags": [
+                  "layer:domain",
+                  "layer:shared"
+                ]
               },
               {
                 "sourceTag": "layer:application",
-                "onlyDependOnLibsWithTags": ["layer:domain", "layer:application", "layer:shared"]
+                "onlyDependOnLibsWithTags": [
+                  "layer:domain",
+                  "layer:application",
+                  "layer:shared"
+                ]
               },
               {
                 "sourceTag": "layer:infrastructure",
-                "onlyDependOnLibsWithTags": ["layer:domain", "layer:application", "layer:infrastructure", "layer:shared"]
+                "onlyDependOnLibsWithTags": [
+                  "layer:domain",
+                  "layer:application",
+                  "layer:infrastructure",
+                  "layer:shared"
+                ]
               },
               {
                 "sourceTag": "layer:ui",
-                "onlyDependOnLibsWithTags": ["layer:application", "layer:ui", "layer:shared"]
+                "onlyDependOnLibsWithTags": [
+                  "layer:application",
+                  "layer:ui",
+                  "layer:shared"
+                ]
               },
               {
                 "sourceTag": "layer:shared",
-                "onlyDependOnLibsWithTags": ["layer:shared"]
+                "onlyDependOnLibsWithTags": [
+                  "layer:shared"
+                ]
               }
             ]
           }
@@ -133,13 +209,23 @@
       }
     },
     {
-      "files": ["*.ts", "*.tsx"],
-      "extends": ["plugin:@nx/typescript"],
+      "files": [
+        "*.ts",
+        "*.tsx"
+      ],
+      "extends": [
+        "plugin:@nx/typescript"
+      ],
       "rules": {}
     },
     {
-      "files": ["*.js", "*.jsx"],
-      "extends": ["plugin:@nx/javascript"],
+      "files": [
+        "*.js",
+        "*.jsx"
+      ],
+      "extends": [
+        "plugin:@nx/javascript"
+      ],
       "rules": {}
     },
     {

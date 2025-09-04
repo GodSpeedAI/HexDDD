@@ -1,4 +1,4 @@
-import { User } from '../../../domain/src/lib/user.entity';
+import { User } from '@fixture/fixture-domain';
 
 export class UserService {
   getUser(id: string): User {

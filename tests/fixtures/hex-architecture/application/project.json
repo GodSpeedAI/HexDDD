@@ -1,4 +1,10 @@
 {
-  "name": "fixture-application",
-  "tags": ["layer:application"]
+  "name": "@fixture/fixture-application",
+  "root": "tests/fixtures/hex-architecture/application",
+  "sourceRoot": "tests/fixtures/hex-architecture/application/src",
+  "projectType": "library",
+  "targets": {},
+  "tags": [
+    "layer:application"
+  ]
 }

@@ -1,4 +1,10 @@
 {
-  "name": "fixture-domain",
-  "tags": ["layer:domain"]
+  "name": "@fixture/fixture-domain",
+  "root": "tests/fixtures/hex-architecture/domain",
+  "sourceRoot": "tests/fixtures/hex-architecture/domain/src",
+  "projectType": "library",
+  "targets": {},
+  "tags": [
+    "layer:domain"
+  ]
 }

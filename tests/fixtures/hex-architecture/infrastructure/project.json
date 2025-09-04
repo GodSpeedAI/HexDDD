@@ -1,4 +1,10 @@
 {
-  "name": "fixture-infrastructure",
-  "tags": ["layer:infrastructure"]
+  "name": "@fixture/fixture-infrastructure",
+  "root": "tests/fixtures/hex-architecture/infrastructure",
+  "sourceRoot": "tests/fixtures/hex-architecture/infrastructure/src",
+  "projectType": "library",
+  "targets": {},
+  "tags": [
+    "layer:infrastructure"
+  ]
 }
