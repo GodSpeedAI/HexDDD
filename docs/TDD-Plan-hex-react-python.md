@@ -22,6 +22,7 @@ References: [ADR-002], [ADR-003], [PRD-004], [SDS-007], [SDS-013]
 - Regression
   - Run generator twice → no diff; verify task passes.
 </del>
+
 <del>
 ### Task 1.2: Verify Target — Structural Parity
 References: [ADR-003], [PRD-004], [SDS-007], [SDS-016]
