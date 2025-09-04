@@ -96,3 +96,22 @@ class DbToPython:
             base_type = f'Optional[{base_type}]'
 
         return base_type
+
+
+if __name__ == "__main__":
+    import sys
+    if len(sys.argv) < 2:
+        print("Usage: python db_to_python.py <schema_path> [output_dir]")
+        sys.exit(1)
+
+    schema_path = sys.argv[1]
+    output_dir = sys.argv[2] if len(sys.argv) > 2 else None
+
+    generator = DbToPython()
+    generator.generate(schema_path, output_dir)
+
+    if output_dir:
+        print(f"Python types generated successfully in {output_dir}")
+    else:
+        print("Python types generated successfully (no output directory specified)")
+

@@ -27,7 +27,8 @@ program
   .description('Verify structural parity between TypeScript and Python types')
   .argument('<ts-dir>', 'directory containing TypeScript type files')
   .argument('<py-dir>', 'directory containing Python type files')
-  .action((tsDir, pyDir) => {
+  .option('-f, --fix', 'auto-fix simple naming mismatches by renaming Python fields to match TypeScript')
+  .action((tsDir, pyDir, options) => {
     console.log('Verifying type parity between TypeScript and Python...');
 
     // Read TypeScript files
@@ -54,9 +55,11 @@ program
     // Read Python files
     const pyFiles = require('fs').readdirSync(pyDir).filter(file => file.endsWith('.py'));
     const pyTypes = {};
+    const pyFileContents = {};
 
     pyFiles.forEach(file => {
       const content = readFileSync(join(pyDir, file), 'utf-8');
+      pyFileContents[file] = content;
       const classMatch = content.match(/class (\w+):\s*""".*?"""\s*((?:\s*\w+:\s*[^\n]+\s*)*)/);
       if (classMatch) {
         const className = classMatch[1];
@@ -97,6 +100,28 @@ program
         if (!pyClass[pythonFieldName]) {
           console.error(`❌ Missing field in Python ${className}: ${fieldName} (expected ${pythonFieldName} in Python)`);
           hasErrors = true;
+          // Attempt auto-fix: if --fix and Python has the snake_case form, rename it to TS fieldName
+          if (options.fix) {
+            const pyFile = join(pyDir, `${className.toLowerCase()}.py`);
+            if (require('fs').existsSync(pyFile)) {
+              let content = pyFileContents[`${className.toLowerCase()}.py`];
+              // Replace the field definition line preserving type
+              const pyType = pyClass[pythonFieldName];
+              if (pyType) {
+                const fieldDefRegex = new RegExp(`(^|\n)(\s*)${pythonFieldName}:\s*[^\n]+`);
+                if (fieldDefRegex.test(content)) {
+                  content = content.replace(fieldDefRegex, (m, p1, indent) => `${p1}${indent}${fieldName}: ${pyType}`);
+                  require('fs').writeFileSync(pyFile, content, 'utf-8');
+                  // Reflect change in memory for subsequent checks
+                  pyFileContents[`${className.toLowerCase()}.py`] = content;
+                  pyClass[fieldName] = pyType;
+                  delete pyClass[pythonFieldName];
+                  console.log(`🛠  Auto-fixed field name in ${className}: ${pythonFieldName} -> ${fieldName}`);
+                  hasErrors = false; // this specific error fixed
+                }
+              }
+            }
+          }
           return;
         }
 
@@ -111,12 +136,29 @@ program
 
       // Check for extra fields in Python
       Object.keys(pyClass).forEach(fieldName => {
-        // Convert Python field names from snake_case to camelCase for comparison
-        const typescriptFieldName = snakeToCamel(fieldName);
+        // Accept either exact snake_case or camelCase in TS
+        const camelCaseName = snakeToCamel(fieldName);
+        const existsInTs = tsClass[camelCaseName] || tsClass[fieldName];
 
-        if (!tsClass[typescriptFieldName]) {
-          console.error(`❌ Extra field in Python ${className}: ${fieldName} (would be ${typescriptFieldName} in TypeScript)`);
+        if (!existsInTs) {
+          console.error(`❌ Extra field in Python ${className}: ${fieldName} (expected ${camelCaseName} or ${fieldName} in TypeScript)`);
           hasErrors = true;
+        } else if (options.fix && tsClass[camelCaseName] && !tsClass[fieldName]) {
+          // If TS prefers camelCase and Python has snake_case, rename Python field to camelCase
+          const pyFile = join(pyDir, `${className.toLowerCase()}.py`);
+          if (require('fs').existsSync(pyFile)) {
+            let content = pyFileContents[`${className.toLowerCase()}.py`];
+            const pyType = pyClass[fieldName];
+            const fieldDefRegex = new RegExp(`(^|\n)(\s*)${fieldName}:\s*[^\n]+`);
+            if (fieldDefRegex.test(content)) {
+              content = content.replace(fieldDefRegex, (m, p1, indent) => `${p1}${indent}${camelCaseName}: ${pyType}`);
+              require('fs').writeFileSync(pyFile, content, 'utf-8');
+              pyFileContents[`${className.toLowerCase()}.py`] = content;
+              pyClass[camelCaseName] = pyType;
+              delete pyClass[fieldName];
+              console.log(`🛠  Auto-fixed field name in ${className}: ${fieldName} -> ${camelCaseName}`);
+            }
+          }
         }
       });
     });

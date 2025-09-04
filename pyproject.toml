@@ -1,0 +1,10 @@
+[project]
+name = "nx-ddd-hex-plugin-python"
+version = "0.1.0"
+description = "Local Python utilities for type generation"
+requires-python = ">=3.9"
+
+# No dependencies are required for the current generator script; add here if needed later.
+
+[tool.uv]
+# Using defaults; uv will resolve from this pyproject when using `uv run`

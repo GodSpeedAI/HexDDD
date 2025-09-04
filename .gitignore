@@ -42,5 +42,8 @@ Thumbs.db
 .angular
 .nx/cache
 
+# Python virtual env
+.venv/
+
 .cursor/rules/nx-rules.mdc
 .github/instructions/nx.instructions.md

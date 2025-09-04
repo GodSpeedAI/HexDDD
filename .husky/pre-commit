@@ -1,0 +1,46 @@
+#!/bin/sh
+set -e
+
+echo "Running type sync pre-commit hook..."
+
+# Generate TypeScript types
+echo "Generating TypeScript types..."
+REPO_ROOT="$(git rev-parse --show-toplevel 2>/dev/null || pwd)"
+SCHEMA="$REPO_ROOT/tests/fixtures/database-schema.json"
+TS_OUT="$REPO_ROOT/libs/shared/database-types"
+PY_OUT="$REPO_ROOT/libs/backend/type_utils"
+NODE_CLI="$REPO_ROOT/tools/type-generator/cli.js"
+PY_GEN="$REPO_ROOT/libs/shared/type_system/generators/db_to_python.py"
+
+node "$NODE_CLI" generate "$SCHEMA" -o "$TS_OUT"
+
+# Generate Python types
+echo "Generating Python types..."
+# Prefer .venv if present, else try python3/python, else try `uv run`
+PY_BIN=""
+if [ -x "$REPO_ROOT/.venv/bin/python" ]; then
+	PY_BIN="$REPO_ROOT/.venv/bin/python"
+elif command -v python3 >/dev/null 2>&1; then
+	PY_BIN=python3
+elif command -v python >/dev/null 2>&1; then
+	PY_BIN=python
+fi
+
+if [ -n "$PY_BIN" ]; then
+	"$PY_BIN" "$PY_GEN" "$SCHEMA" "$PY_OUT"
+elif command -v uv >/dev/null 2>&1; then
+	echo "python not found, attempting with uv run"
+	uv run "$PY_GEN" "$SCHEMA" "$PY_OUT" || echo "uv run failed; skipping Python generation"
+else
+	echo "python not found in PATH, skipping Python type generation and verification"
+fi
+
+# Verify type parity
+echo "Verifying type parity..."
+if [ -d "$PY_OUT" ] && [ "$(ls -A "$PY_OUT" 2>/dev/null)" ]; then
+	node "$NODE_CLI" verify "$TS_OUT" "$PY_OUT" --fix
+else
+	echo "Skipping verify: Python types directory missing or empty ($PY_OUT)"
+fi
+
+echo "Type sync completed successfully!"

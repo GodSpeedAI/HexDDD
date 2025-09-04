@@ -48,7 +48,7 @@ References: [ADR-008], [PRD-007], [SDS-012]
 - Regression
   - Nx lint target fails for violations in CI.
 </del>
-
+<del>
 ### Task 1.4: CI/CD Type Sync Workflow
 References: [ADR-009], [PRD-008], [SDS-007]
 - Red
@@ -59,6 +59,7 @@ References: [ADR-009], [PRD-008], [SDS-007]
   - Parameterize Node/Python versions; cache dependencies.
 - Regression
   - CI dry run; pre-commit hook behaves idempotently.
+</del>
 
 ## Phase 2: Core Domain Implementation
 
