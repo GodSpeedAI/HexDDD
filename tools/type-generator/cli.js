@@ -63,7 +63,7 @@ program
         const fields = {};
         const fieldLines = classMatch[2].trim().split('\n');
         fieldLines.forEach(line => {
-          const fieldMatch = line.trim().match(/(\w+):\s*(.+)/);
+          const fieldMatch = line.trim().match(/(\w+):\s*([^\n]+)/);
           if (fieldMatch) {
             fields[fieldMatch[1]] = fieldMatch[2].trim();
           }
