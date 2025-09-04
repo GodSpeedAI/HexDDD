@@ -105,6 +105,27 @@
               {
                 "sourceTag": "domain:miles",
                 "onlyDependOnLibsWithTags": ["domain:miles", "domain:shared"]
+              },
+              // Hex Architecture Constraints
+              {
+                "sourceTag": "layer:domain",
+                "onlyDependOnLibsWithTags": ["layer:domain", "layer:shared"]
+              },
+              {
+                "sourceTag": "layer:application",
+                "onlyDependOnLibsWithTags": ["layer:domain", "layer:application", "layer:shared"]
+              },
+              {
+                "sourceTag": "layer:infrastructure",
+                "onlyDependOnLibsWithTags": ["layer:domain", "layer:application", "layer:infrastructure", "layer:shared"]
+              },
+              {
+                "sourceTag": "layer:ui",
+                "onlyDependOnLibsWithTags": ["layer:application", "layer:ui", "layer:shared"]
+              },
+              {
+                "sourceTag": "layer:shared",
+                "onlyDependOnLibsWithTags": ["layer:shared"]
               }
             ]
           }

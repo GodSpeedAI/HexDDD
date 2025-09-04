@@ -1,0 +1,33 @@
+{
+  "tables": {
+    "users": {
+      "columns": {
+        "id": {"type": "uuid", "nullable": false},
+        "name": {"type": "text", "nullable": false},
+        "email": {"type": "text", "nullable": false},
+        "created_at": {"type": "timestamptz", "nullable": false},
+        "updated_at": {"type": "timestamptz", "nullable": true}
+      }
+    },
+    "posts": {
+      "columns": {
+        "id": {"type": "uuid", "nullable": false},
+        "user_id": {"type": "uuid", "nullable": false},
+        "title": {"type": "text", "nullable": false},
+        "content": {"type": "text", "nullable": true},
+        "published": {"type": "boolean", "nullable": false, "default": false},
+        "created_at": {"type": "timestamptz", "nullable": false},
+        "updated_at": {"type": "timestamptz", "nullable": true}
+      }
+    },
+    "comments": {
+      "columns": {
+        "id": {"type": "uuid", "nullable": false},
+        "post_id": {"type": "uuid", "nullable": false},
+        "user_id": {"type": "uuid", "nullable": false},
+        "content": {"type": "text", "nullable": false},
+        "created_at": {"type": "timestamptz", "nullable": false}
+      }
+    }
+  }
+}
