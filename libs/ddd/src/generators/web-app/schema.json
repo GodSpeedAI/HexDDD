@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "cli": "nx",
+  "id": "web-app",
+  "title": "Universal Web App Generator",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Project name",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      }
+    },
+    "framework": {
+      "type": "string",
+      "enum": ["next", "remix"],
+      "description": "Which framework to scaffold"
+    },
+    "apiClient": {
+      "type": "boolean",
+      "default": true,
+      "description": "Create and wire shared API client"
+    },
+    "includeExamplePage": {
+      "type": "boolean",
+      "default": true,
+      "description": "Include example page/route"
+    },
+    "routerStyle": {
+      "type": "string",
+      "enum": ["app", "pages"],
+      "default": "app",
+      "description": "Next.js router style (ignored for Remix)"
+    }
+  },
+  "required": ["name", "framework"]
+}
+

@@ -1,5 +1,5 @@
 {
-  "name": "@angular-architects/ddd",
+  "name": "@Nx-ddd/hex",
   "version": "0.0.1",
   "schematics": {
     "ng-add": {
@@ -33,7 +33,7 @@
       "factory": "./src/generators/api/index",
       "schema": "./src/generators/api/schema.json",
       "description": "adds a API library to a domain or as a shared library"
-    },    
+    },
     "util": {
       "factory": "./src/generators/util/index",
       "schema": "./src/generators/util/schema.json",
@@ -58,6 +58,11 @@
       "factory": "./src/generators/event-bus/index",
       "schema": "./src/generators/event-bus/schema.json",
       "description": "creates an event bus for a domain"
+    },
+    "web-app": {
+      "factory": "./src/generators/web-app/index",
+      "schema": "./src/generators/web-app/schema.json",
+      "description": "scaffolds a React web app (Next.js or Remix) and wires shared web client"
     }
   }
 }
