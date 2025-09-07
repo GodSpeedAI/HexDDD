@@ -1,0 +1,38 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "name": "web-next",
+  "projectType": "application",
+  "sourceRoot": "apps/web-next",
+  "targets": {
+    "build": {
+      "executor": "@nx/next:build",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/web-next"
+      }
+    },
+    "serve": {
+      "executor": "@nx/next:serve",
+      "options": {
+        "buildTarget": "web-next:build"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "options": {
+        "lintFilePatterns": [
+          "apps/web-next/**/*.ts",
+          "apps/web-next/**/*.tsx"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "options": {
+        "jestConfig": "apps/web-next/jest.config.ts"
+      }
+    }
+  },
+  "tags": ["type:app", "framework:next"]
+}
+

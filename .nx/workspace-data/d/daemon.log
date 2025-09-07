@@ -1,0 +1,810 @@
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:19.607Z - Started listening on: /tmp/a1f1da55350bddc4c5fd/d.sock
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:19.621Z - [WATCHER]: Subscribed to changes within: /home/sprime01/Projects/nx-ddd-hex-plugin (native)
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:19.626Z - Established a connection. Number of open connections: 1
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:19.636Z - Closed a connection. Number of open connections: 0
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:19.764Z - Time taken for 'loadSpecifiedNxPlugins' 7.788434000000052ms
+Time for 'plugin worker 2595 code loading' 31.05244599999999
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:19.918Z - Established a connection. Number of open connections: 1
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:19.920Z - Closed a connection. Number of open connections: 0
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:19.932Z - Established a connection. Number of open connections: 1
+Time for 'plugin worker 2599 code loading' 32.02060799999998
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:19.947Z - [REQUEST]: Client Request for Project Graph Received
+Time for 'plugin worker 2596 code loading' 43.538253999999995
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:20.423Z - Time taken for 'Load Nx Plugin: /home/sprime01/Projects/nx-ddd-hex-plugin/node_modules/nx/src/plugins/package-json' 696.3376660000001ms
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:20.468Z - Time taken for 'Load Nx Plugin: /home/sprime01/Projects/nx-ddd-hex-plugin/node_modules/nx/src/plugins/project-json/build-nodes/project-json' 738.9020280000001ms
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:20.511Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:20.511Z - [REQUEST]: 
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:20.512Z - [REQUEST]: 
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:20.520Z - Reusing in-memory cached project graph because no files changed.
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:20.557Z - Time taken for 'loadDefaultNxPlugins' 785.90297ms
+Time for 'nx/core/package-json:createNodes' 16.613903999999934
+Time for 'nx/core/project-json:createNodes' 12.861863999999969
+Time for 'nx/js/dependencies-and-lockfile:createNodes' 84.79273599999999
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:20.763Z - Time taken for 'build-project-configs' 174.5038830000001ms
+Time for 'build typescript dependencies' 968.206962
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:22.236Z - Wrote project graph cache to /home/sprime01/Projects/nx-ddd-hex-plugin/.nx/workspace-data/project-graph.json
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:22.237Z - [SYNC]: collect registered sync generators
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:22.243Z - [REQUEST]: Responding to the client. project-graph
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:22.252Z - Time taken for 'total for creating and serializing project graph' 2296.550122ms
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:22.255Z - Done responding to the client project-graph
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:22.255Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 2299. Response time: 12.
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:22.286Z - [REQUEST]: Responding to the client. handleContextFileData
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:22.287Z - Done responding to the client handleContextFileData
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:22.287Z - Handled GET_CONTEXT_FILE_DATA. Handling time: 1. Response time: 1.
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:22.291Z - Closed a connection. Number of open connections: 0
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:24.120Z - Established a connection. Number of open connections: 1
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:24.121Z - Closed a connection. Number of open connections: 0
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:24.122Z - Established a connection. Number of open connections: 1
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:24.123Z - Established a connection. Number of open connections: 2
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:24.124Z - Closed a connection. Number of open connections: 1
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:24.127Z - [REQUEST]: Client Request for Project Graph Received
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:24.128Z - Reusing in-memory cached project graph because no files changed.
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:24.128Z - [REQUEST]: Responding to the client. project-graph
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:24.134Z - Time taken for 'total for creating and serializing project graph' 0.8025310000002719ms
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:24.136Z - Done responding to the client project-graph
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:24.137Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 1. Response time: 9.
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:24.151Z - [REQUEST]: Client Request for Project Graph Received
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:24.152Z - Reusing in-memory cached project graph because no files changed.
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:24.152Z - [REQUEST]: Responding to the client. project-graph
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:24.158Z - Time taken for 'total for creating and serializing project graph' 0.6386280000006082ms
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:24.161Z - Done responding to the client project-graph
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:24.162Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 1. Response time: 10.
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:24.174Z - Established a connection. Number of open connections: 2
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:27.050Z - [WATCHER]: Processing file changes in outputs
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:38.866Z - [WATCHER]: .vscode/extensions.json was modified
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:38.873Z - [REQUEST]: Responding to the client. File watch changed
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:38.874Z - Done responding to the client File watch changed
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:38.874Z - Handled FILE-WATCH-CHANGED. Handling time: 1. Response time: 1.
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:38.874Z - [WATCHER]: Processing file changes in outputs
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:38.875Z - Time taken for 'changed-projects' 1.718655000000581ms
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:38.970Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:38.970Z - [REQUEST]: .vscode/extensions.json
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:38.970Z - [REQUEST]: 
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:39.008Z - Time taken for 'hash changed files from watcher' 1.5235130000000936ms
+Time for 'nx/core/package-json:createNodes' 45.93012600000293
+Time for 'nx/core/project-json:createNodes' 35.98729900000035
+Time for 'nx/js/dependencies-and-lockfile:createNodes' 108.59567699999752
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:39.282Z - Time taken for 'build-project-configs' 251.8261730000013ms
+Time for 'build typescript dependencies' 0.2280529999989085
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:39.387Z - Wrote project graph cache to /home/sprime01/Projects/nx-ddd-hex-plugin/.nx/workspace-data/project-graph.json
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:39.387Z - [SYNC]: collect registered sync generators
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:39.391Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:39.391Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:39.392Z - Time taken for 'total execution time for createProjectGraph()' 106.36453099999926ms
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:40.262Z - [WATCHER]: Processing file changes in outputs
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:40.271Z - [WATCHER]: .vscode/extensions.json was modified
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:40.274Z - [REQUEST]: Responding to the client. File watch changed
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:40.276Z - Done responding to the client File watch changed
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:40.276Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 2.
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:40.278Z - Time taken for 'changed-projects' 0.5411419999982172ms
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:40.478Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:40.479Z - [REQUEST]: .vscode/extensions.json
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:40.479Z - [REQUEST]: 
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:40.536Z - Time taken for 'hash changed files from watcher' 3.179721000000427ms
+Time for 'nx/core/project-json:createNodes' 31.034090000001015
+Time for 'nx/core/package-json:createNodes' 47.48871800000052
+Time for 'nx/js/dependencies-and-lockfile:createNodes' 146.69069800000216
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:40.753Z - Time taken for 'build-project-configs' 227.62791700000162ms
+Time for 'build typescript dependencies' 0.10798900000008871
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:40.965Z - Wrote project graph cache to /home/sprime01/Projects/nx-ddd-hex-plugin/.nx/workspace-data/project-graph.json
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:40.966Z - [SYNC]: collect registered sync generators
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:40.968Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:40.969Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:40.969Z - Time taken for 'total execution time for createProjectGraph()' 148.02042600000277ms
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:51.334Z - Established a connection. Number of open connections: 3
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:51.337Z - [REQUEST]: Client Request for Project Graph Received
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:51.340Z - Reusing in-memory cached project graph because no files changed.
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:51.341Z - [REQUEST]: Responding to the client. project-graph
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:51.356Z - Time taken for 'total for creating and serializing project graph' 4.478627000000415ms
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:51.357Z - Closed a connection. Number of open connections: 2
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:51.367Z - Done responding to the client project-graph
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:51.367Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 4. Response time: 26.
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:51.399Z - [REQUEST]: Responding to the client. handleContextFileData
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:51.414Z - Done responding to the client handleContextFileData
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:51.414Z - Handled GET_CONTEXT_FILE_DATA. Handling time: 2. Response time: 15.
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:51.420Z - Closed a connection. Number of open connections: 1
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:52.093Z - Closed a connection. Number of open connections: 0
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:52.103Z - Established a connection. Number of open connections: 1
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:52.105Z - Closed a connection. Number of open connections: 0
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:52.107Z - Established a connection. Number of open connections: 1
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:52.107Z - Established a connection. Number of open connections: 2
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:52.108Z - Closed a connection. Number of open connections: 1
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:52.109Z - [REQUEST]: Client Request for Project Graph Received
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:52.111Z - Reusing in-memory cached project graph because no files changed.
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:52.112Z - [REQUEST]: Responding to the client. project-graph
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:52.132Z - Time taken for 'total for creating and serializing project graph' 2.973974000000453ms
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:52.134Z - Done responding to the client project-graph
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:52.135Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 3. Response time: 23.
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:52.171Z - [REQUEST]: Client Request for Project Graph Received
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:52.172Z - Reusing in-memory cached project graph because no files changed.
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:52.172Z - [REQUEST]: Responding to the client. project-graph
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:52.177Z - Time taken for 'total for creating and serializing project graph' 0.9768140000014682ms
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:52.180Z - Done responding to the client project-graph
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:52.181Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 1. Response time: 9.
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:32:52.254Z - Established a connection. Number of open connections: 2
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:36:28.671Z - Started listening on: /tmp/a1f1da55350bddc4c5fd/d.sock
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:36:28.686Z - [WATCHER]: Subscribed to changes within: /home/sprime01/Projects/nx-ddd-hex-plugin (native)
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:36:28.691Z - Established a connection. Number of open connections: 1
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:36:28.703Z - Closed a connection. Number of open connections: 0
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:36:28.836Z - Time taken for 'loadSpecifiedNxPlugins' 10.634648999999968ms
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:36:28.908Z - Established a connection. Number of open connections: 1
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:36:28.911Z - Closed a connection. Number of open connections: 0
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:36:28.916Z - Established a connection. Number of open connections: 1
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:36:28.924Z - [REQUEST]: Client Request for Project Graph Received
+Time for 'plugin worker 2972 code loading' 22.171434000000005
+Time for 'plugin worker 2973 code loading' 22.846964999999997
+Time for 'plugin worker 2979 code loading' 18.39512400000001
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:36:29.508Z - Time taken for 'Load Nx Plugin: /home/sprime01/Projects/nx-ddd-hex-plugin/node_modules/nx/src/plugins/project-json/build-nodes/project-json' 711.338755ms
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:36:29.509Z - Time taken for 'Load Nx Plugin: /home/sprime01/Projects/nx-ddd-hex-plugin/node_modules/nx/src/plugins/package-json' 714.907069ms
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:36:29.613Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:36:29.613Z - [REQUEST]: 
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:36:29.613Z - [REQUEST]: 
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:36:29.621Z - Reusing in-memory cached project graph because no files changed.
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:36:29.659Z - Time taken for 'loadDefaultNxPlugins' 821.7334069999999ms
+Time for 'nx/core/package-json:createNodes' 17.205716000000052
+Time for 'nx/core/project-json:createNodes' 14.751018000000045
+Time for 'nx/js/dependencies-and-lockfile:createNodes' 43.376127999999994
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:36:29.824Z - Time taken for 'build-project-configs' 132.09202299999993ms
+Time for 'build typescript dependencies' 0.4724140000000716
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:36:29.979Z - Wrote project graph cache to /home/sprime01/Projects/nx-ddd-hex-plugin/.nx/workspace-data/project-graph.json
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:36:29.983Z - [SYNC]: collect registered sync generators
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:36:29.987Z - [REQUEST]: Responding to the client. project-graph
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:36:29.996Z - Time taken for 'total for creating and serializing project graph' 1063.081988ms
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:36:30.002Z - Done responding to the client project-graph
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:36:30.002Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 1064. Response time: 15.
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:36:30.046Z - [REQUEST]: Responding to the client. handleContextFileData
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:36:30.050Z - Done responding to the client handleContextFileData
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:36:30.050Z - Handled GET_CONTEXT_FILE_DATA. Handling time: 3. Response time: 4.
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:36:30.060Z - Closed a connection. Number of open connections: 0
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:36:32.038Z - Established a connection. Number of open connections: 1
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:36:32.038Z - Closed a connection. Number of open connections: 0
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:36:32.039Z - Established a connection. Number of open connections: 1
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:36:32.039Z - Established a connection. Number of open connections: 2
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:36:32.040Z - Closed a connection. Number of open connections: 1
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:36:32.042Z - [REQUEST]: Client Request for Project Graph Received
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:36:32.043Z - Reusing in-memory cached project graph because no files changed.
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:36:32.043Z - [REQUEST]: Responding to the client. project-graph
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:36:32.048Z - Time taken for 'total for creating and serializing project graph' 1.4241820000002008ms
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:36:32.052Z - Done responding to the client project-graph
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:36:32.052Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 1. Response time: 9.
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:36:32.072Z - [REQUEST]: Client Request for Project Graph Received
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:36:32.072Z - Reusing in-memory cached project graph because no files changed.
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:36:32.072Z - [REQUEST]: Responding to the client. project-graph
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:36:32.078Z - Time taken for 'total for creating and serializing project graph' 0.9843940000000657ms
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:36:32.083Z - Done responding to the client project-graph
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:36:32.083Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 1. Response time: 11.
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:36:32.103Z - Established a connection. Number of open connections: 2
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:36:35.808Z - [WATCHER]: Processing file changes in outputs
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:41:30.829Z - Started listening on: /tmp/a1f1da55350bddc4c5fd/d.sock
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:41:30.859Z - [WATCHER]: Subscribed to changes within: /home/sprime01/Projects/nx-ddd-hex-plugin (native)
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:41:30.878Z - Established a connection. Number of open connections: 1
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:41:30.909Z - Closed a connection. Number of open connections: 0
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:41:31.203Z - Time taken for 'loadSpecifiedNxPlugins' 62.619736999999986ms
+Time for 'plugin worker 2677 code loading' 69.02507500000002
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:41:31.806Z - Established a connection. Number of open connections: 1
+Time for 'plugin worker 2678 code loading' 87.79088599999994
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:41:31.827Z - Closed a connection. Number of open connections: 0
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:41:31.840Z - Established a connection. Number of open connections: 1
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:41:31.867Z - [REQUEST]: Client Request for Project Graph Received
+Time for 'plugin worker 2679 code loading' 51.67589200000003
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:41:33.203Z - Time taken for 'Load Nx Plugin: /home/sprime01/Projects/nx-ddd-hex-plugin/node_modules/nx/src/plugins/project-json/build-nodes/project-json' 2203.1236499999995ms
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:41:33.407Z - Time taken for 'Load Nx Plugin: /home/sprime01/Projects/nx-ddd-hex-plugin/node_modules/nx/src/plugins/package-json' 2421.751618ms
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:41:33.619Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:41:33.622Z - [REQUEST]: 
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:41:33.622Z - [REQUEST]: 
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:41:33.657Z - Reusing in-memory cached project graph because no files changed.
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:41:33.724Z - Time taken for 'loadDefaultNxPlugins' 2641.9896280000003ms
+Time for 'nx/core/project-json:createNodes' 50.47761700000001
+Time for 'nx/core/package-json:createNodes' 63.31032699999969
+Time for 'nx/js/dependencies-and-lockfile:createNodes' 109.95450399999982
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:41:34.328Z - Time taken for 'build-project-configs' 460.1337400000002ms
+Time for 'build typescript dependencies' 0.8107070000000931
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:41:34.806Z - Wrote project graph cache to /home/sprime01/Projects/nx-ddd-hex-plugin/.nx/workspace-data/project-graph.json
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:41:34.807Z - [SYNC]: collect registered sync generators
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:41:34.819Z - [REQUEST]: Responding to the client. project-graph
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:41:34.834Z - Time taken for 'total for creating and serializing project graph' 2951.289098ms
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:41:34.870Z - Done responding to the client project-graph
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:41:34.871Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 2951. Response time: 53.
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:41:34.945Z - [REQUEST]: Responding to the client. handleContextFileData
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:41:34.947Z - Done responding to the client handleContextFileData
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:41:34.947Z - Handled GET_CONTEXT_FILE_DATA. Handling time: 8. Response time: 2.
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:41:34.959Z - Closed a connection. Number of open connections: 0
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:41:38.247Z - Established a connection. Number of open connections: 1
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:41:38.248Z - Established a connection. Number of open connections: 2
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:41:38.249Z - Closed a connection. Number of open connections: 1
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:41:38.250Z - Established a connection. Number of open connections: 2
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:41:38.251Z - Closed a connection. Number of open connections: 1
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:41:38.253Z - [REQUEST]: Client Request for Project Graph Received
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:41:38.254Z - Reusing in-memory cached project graph because no files changed.
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:41:38.254Z - [REQUEST]: Responding to the client. project-graph
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:41:38.261Z - Time taken for 'total for creating and serializing project graph' 1.4014430000006541ms
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:41:38.266Z - Done responding to the client project-graph
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:41:38.267Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 1. Response time: 13.
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:41:38.298Z - [REQUEST]: Client Request for Project Graph Received
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:41:38.299Z - Reusing in-memory cached project graph because no files changed.
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:41:38.299Z - [REQUEST]: Responding to the client. project-graph
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:41:38.306Z - Time taken for 'total for creating and serializing project graph' 1.0356059999994613ms
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:41:38.315Z - Done responding to the client project-graph
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:41:38.315Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 1. Response time: 16.
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:41:38.362Z - Established a connection. Number of open connections: 2
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:41:45.394Z - [WATCHER]: Processing file changes in outputs
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:42:33.013Z - [WATCHER]: Processing file changes in outputs
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:42:33.039Z - [WATCHER]: nx.json was modified
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:42:33.044Z - [REQUEST]: Responding to the client. File watch changed
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:42:33.044Z - Done responding to the client File watch changed
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:42:33.045Z - Handled FILE-WATCH-CHANGED. Handling time: 1. Response time: 1.
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:42:33.045Z - Time taken for 'changed-projects' 0.926539000000048ms
+/home/sprime01/Projects/nx-ddd-hex-plugin/node_modules/nx/src/utils/json.js:29
+        throw new Error(formatParseError(input, errors[0]));
+              ^
+
+Error: EndOfFileExpected in /home/sprime01/Projects/nx-ddd-hex-plugin/nx.json at 52:7
+  50 |   }
+  51 | }
+> 52 |       "!{projectRoot}/.eslintrc.json",
+     |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  53 |       "!{projectRoot}/**/?(*.)+(spec|test).[jt]s?(x)?(.snap)",
+  54 |       "!{projectRoot}/tsconfig.spec.json",
+  55 |       "!{projectRoot}/jest.config.[jt]s"
+
+    at parseJson (/home/sprime01/Projects/nx-ddd-hex-plugin/node_modules/nx/src/utils/json.js:29:15)
+    at readJsonFile (/home/sprime01/Projects/nx-ddd-hex-plugin/node_modules/nx/src/utils/fileutils.js:32:37)
+    at readNxJson (/home/sprime01/Projects/nx-ddd-hex-plugin/node_modules/nx/src/config/nx-json.js:12:66)
+    at getPlugins (/home/sprime01/Projects/nx-ddd-hex-plugin/node_modules/nx/src/project-graph/plugins/get-plugins.js:23:59)
+    at Timeout._onTimeout (/home/sprime01/Projects/nx-ddd-hex-plugin/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:98:98)
+    at listOnTimeout (node:internal/timers:608:17)
+    at process.processTimers (node:internal/timers:543:7)
+
+Node.js v24.6.0
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:47:21.878Z - Started listening on: /tmp/a1f1da55350bddc4c5fd/d.sock
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:47:21.884Z - [WATCHER]: Subscribed to changes within: /home/sprime01/Projects/nx-ddd-hex-plugin (native)
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:47:21.889Z - Established a connection. Number of open connections: 1
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:47:21.895Z - Closed a connection. Number of open connections: 0
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:47:21.935Z - Established a connection. Number of open connections: 1
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:47:21.937Z - Closed a connection. Number of open connections: 0
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:47:21.938Z - Established a connection. Number of open connections: 1
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:47:21.945Z - [REQUEST]: Client Request for Project Graph Received
+Time for 'plugin worker 3635 code loading' 12.681953
+Time for 'plugin worker 3637 code loading' 13.51850600000001
+Time for 'plugin worker 3638 code loading' 12.654575000000008
+Time for 'plugin worker 3644 code loading' 14.361196999999997
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:47:22.531Z - Time taken for 'Load Nx Plugin: /home/sprime01/Projects/nx-ddd-hex-plugin/node_modules/nx/src/plugins/package-json' 575.6312140000001ms
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:47:22.543Z - Time taken for 'Load Nx Plugin: /home/sprime01/Projects/nx-ddd-hex-plugin/node_modules/nx/src/plugins/project-json/build-nodes/project-json' 588.2724019999999ms
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:47:22.578Z - Time taken for 'loadDefaultNxPlugins' 624.5608080000001ms
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:47:22.923Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:47:22.923Z - [REQUEST]: 
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:47:22.923Z - [REQUEST]: 
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:47:22.934Z - No files changed, but no in-memory cached project graph found. Recomputing it...
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:47:22.958Z - Time taken for 'loadSpecifiedNxPlugins' 972.033625ms
+Time for 'nx/core/project-json:createNodes' 8.081772999999998
+Time for 'nx/core/package-json:createNodes' 23.800014000000033
+Time for 'nx/js/dependencies-and-lockfile:createNodes' 62.14653299999998
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:47:23.175Z - Time taken for 'build-project-configs' 165.994954ms
+Time for 'build typescript dependencies' 1172.1906849999998
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:47:24.522Z - Wrote project graph cache to /home/sprime01/Projects/nx-ddd-hex-plugin/.nx/workspace-data/project-graph.json
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:47:24.523Z - [SYNC]: collect registered sync generators
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:47:24.527Z - [REQUEST]: Responding to the client. project-graph
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:47:24.546Z - Time taken for 'total for creating and serializing project graph' 2581.4752000000003ms
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:47:24.548Z - Done responding to the client project-graph
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:47:24.549Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 2582. Response time: 22.
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:47:24.585Z - [REQUEST]: Responding to the client. handleContextFileData
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:47:24.586Z - Done responding to the client handleContextFileData
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:47:24.587Z - Handled GET_CONTEXT_FILE_DATA. Handling time: 1. Response time: 2.
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:47:24.590Z - Closed a connection. Number of open connections: 0
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:47:24.979Z - Established a connection. Number of open connections: 1
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:47:24.980Z - Closed a connection. Number of open connections: 0
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:47:24.980Z - Established a connection. Number of open connections: 1
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:47:24.981Z - Established a connection. Number of open connections: 2
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:47:24.982Z - Closed a connection. Number of open connections: 1
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:47:24.983Z - [REQUEST]: Client Request for Project Graph Received
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:47:24.985Z - Reusing in-memory cached project graph because no files changed.
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:47:24.986Z - [REQUEST]: Responding to the client. project-graph
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:47:24.998Z - Time taken for 'total for creating and serializing project graph' 2.434529999999995ms
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:47:25.000Z - Done responding to the client project-graph
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:47:25.001Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 3. Response time: 15.
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:47:25.018Z - [REQUEST]: Client Request for Project Graph Received
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:47:25.021Z - Reusing in-memory cached project graph because no files changed.
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:47:25.022Z - [REQUEST]: Responding to the client. project-graph
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:47:25.031Z - Time taken for 'total for creating and serializing project graph' 3.5626820000002226ms
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:47:25.035Z - Done responding to the client project-graph
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:47:25.036Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 4. Response time: 14.
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:47:25.049Z - Established a connection. Number of open connections: 2
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:03.144Z - [WATCHER]: nx.json was modified
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:03.148Z - [REQUEST]: Responding to the client. File watch changed
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:03.148Z - Done responding to the client File watch changed
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:03.148Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 0.
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:03.149Z - [WATCHER]: Processing file changes in outputs
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:03.150Z - Time taken for 'changed-projects' 1.0487750000029337ms
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:03.248Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:03.249Z - [REQUEST]: nx.json
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:03.249Z - [REQUEST]: 
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:03.275Z - Time taken for 'hash changed files from watcher' 1.1247290000028443ms
+Time for 'nx/core/package-json:createNodes' 4.229136999994807
+Time for 'nx/core/project-json:createNodes' 3.9842100000023493
+Time for 'nx/js/dependencies-and-lockfile:createNodes' 39.04074299999775
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:03.400Z - Time taken for 'build-project-configs' 113.95154900000489ms
+Time for 'build typescript dependencies' 0.17146900000079768
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:03.525Z - Wrote project graph cache to /home/sprime01/Projects/nx-ddd-hex-plugin/.nx/workspace-data/project-graph.json
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:03.525Z - [SYNC]: collect registered sync generators
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:03.526Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:03.527Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:03.527Z - Time taken for 'total execution time for createProjectGraph()' 112.78300399999716ms
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:04.156Z - Established a connection. Number of open connections: 3
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:04.157Z - Closed a connection. Number of open connections: 2
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:04.159Z - [REQUEST]: Client Request for Project Graph Received
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:04.160Z - Reusing in-memory cached project graph because no files changed.
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:04.160Z - [REQUEST]: Responding to the client. project-graph
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:04.164Z - Time taken for 'total for creating and serializing project graph' 1.2327080000031856ms
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:04.166Z - Done responding to the client project-graph
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:04.167Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 1. Response time: 7.
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:04.186Z - [REQUEST]: Responding to the client. handleContextFileData
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:04.187Z - Done responding to the client handleContextFileData
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:04.187Z - Handled GET_CONTEXT_FILE_DATA. Handling time: 1. Response time: 1.
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:04.189Z - Closed a connection. Number of open connections: 1
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:04.560Z - Closed a connection. Number of open connections: 0
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:04.566Z - Established a connection. Number of open connections: 1
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:04.568Z - Closed a connection. Number of open connections: 0
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:04.569Z - Established a connection. Number of open connections: 1
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:04.571Z - Established a connection. Number of open connections: 2
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:04.573Z - Closed a connection. Number of open connections: 1
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:04.577Z - [REQUEST]: Client Request for Project Graph Received
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:04.578Z - Reusing in-memory cached project graph because no files changed.
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:04.579Z - [REQUEST]: Responding to the client. project-graph
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:04.583Z - Time taken for 'total for creating and serializing project graph' 1.0519249999997555ms
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:04.586Z - Done responding to the client project-graph
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:04.587Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 2. Response time: 8.
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:04.603Z - [REQUEST]: Client Request for Project Graph Received
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:04.604Z - Reusing in-memory cached project graph because no files changed.
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:04.605Z - [REQUEST]: Responding to the client. project-graph
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:04.612Z - Time taken for 'total for creating and serializing project graph' 2.2029920000059064ms
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:04.613Z - Done responding to the client project-graph
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:04.614Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 2. Response time: 8.
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:04.628Z - Established a connection. Number of open connections: 2
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:19.914Z - [WATCHER]: nx.json was modified
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:19.916Z - [REQUEST]: Responding to the client. File watch changed
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:19.917Z - Done responding to the client File watch changed
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:19.917Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 1.
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:19.917Z - [WATCHER]: Processing file changes in outputs
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:19.918Z - Time taken for 'changed-projects' 0.3891989999974612ms
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:20.018Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:20.018Z - [REQUEST]: nx.json
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:20.018Z - [REQUEST]: 
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:20.041Z - Time taken for 'hash changed files from watcher' 1.2763599999962025ms
+Time for 'nx/core/package-json:createNodes' 4.93312199999491
+Time for 'nx/core/project-json:createNodes' 3.6961890000020503
+Time for 'nx/js/dependencies-and-lockfile:createNodes' 25.86952300000121
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:20.111Z - Time taken for 'build-project-configs' 70.66419099999621ms
+Time for 'build typescript dependencies' 0.059740000004239846
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:20.179Z - Wrote project graph cache to /home/sprime01/Projects/nx-ddd-hex-plugin/.nx/workspace-data/project-graph.json
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:20.179Z - [SYNC]: collect registered sync generators
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:20.180Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:20.180Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:20.181Z - Time taken for 'total execution time for createProjectGraph()' 56.00972200000251ms
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:20.925Z - Established a connection. Number of open connections: 3
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:20.927Z - [REQUEST]: Client Request for Project Graph Received
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:20.928Z - Reusing in-memory cached project graph because no files changed.
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:20.928Z - [REQUEST]: Responding to the client. project-graph
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:20.932Z - Time taken for 'total for creating and serializing project graph' 1.092874000001757ms
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:20.932Z - Closed a connection. Number of open connections: 2
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:20.934Z - Done responding to the client project-graph
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:20.934Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 1. Response time: 6.
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:20.945Z - [REQUEST]: Responding to the client. handleContextFileData
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:20.945Z - Done responding to the client handleContextFileData
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:20.945Z - Handled GET_CONTEXT_FILE_DATA. Handling time: 1. Response time: 0.
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:20.947Z - Closed a connection. Number of open connections: 1
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:21.504Z - Closed a connection. Number of open connections: 0
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:21.512Z - Established a connection. Number of open connections: 1
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:21.514Z - Closed a connection. Number of open connections: 0
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:21.515Z - Established a connection. Number of open connections: 1
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:21.516Z - Established a connection. Number of open connections: 2
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:21.517Z - Closed a connection. Number of open connections: 1
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:21.519Z - [REQUEST]: Client Request for Project Graph Received
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:21.520Z - Reusing in-memory cached project graph because no files changed.
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:21.520Z - [REQUEST]: Responding to the client. project-graph
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:21.527Z - Time taken for 'total for creating and serializing project graph' 1.440958999999566ms
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:21.529Z - Done responding to the client project-graph
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:21.530Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 2. Response time: 10.
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:21.552Z - [REQUEST]: Client Request for Project Graph Received
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:21.553Z - Reusing in-memory cached project graph because no files changed.
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:21.553Z - [REQUEST]: Responding to the client. project-graph
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:21.559Z - Time taken for 'total for creating and serializing project graph' 1.2229990000050748ms
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:21.561Z - Done responding to the client project-graph
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:21.562Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 1. Response time: 9.
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:21.578Z - Established a connection. Number of open connections: 2
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:37.143Z - [WATCHER]: nx.json was modified
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:37.146Z - [REQUEST]: Responding to the client. File watch changed
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:37.147Z - Done responding to the client File watch changed
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:37.148Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 2.
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:37.148Z - [WATCHER]: Processing file changes in outputs
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:37.150Z - Time taken for 'changed-projects' 1.101133000003756ms
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:37.249Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:37.249Z - [REQUEST]: nx.json
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:37.250Z - [REQUEST]: 
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:37.293Z - Time taken for 'hash changed files from watcher' 2.4054980000073556ms
+Time for 'nx/core/package-json:createNodes' 13.054426999995485
+Time for 'nx/core/project-json:createNodes' 6.745553999993717
+Time for 'nx/js/dependencies-and-lockfile:createNodes' 59.306601000003866
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:37.434Z - Time taken for 'build-project-configs' 140.18242199999804ms
+Time for 'build typescript dependencies' 0.06909099999757018
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:37.579Z - Wrote project graph cache to /home/sprime01/Projects/nx-ddd-hex-plugin/.nx/workspace-data/project-graph.json
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:37.579Z - [SYNC]: collect registered sync generators
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:37.580Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:37.580Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:37.581Z - Time taken for 'total execution time for createProjectGraph()' 135.93907500000205ms
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:38.177Z - Established a connection. Number of open connections: 3
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:38.180Z - Closed a connection. Number of open connections: 2
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:38.185Z - [REQUEST]: Client Request for Project Graph Received
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:38.187Z - Reusing in-memory cached project graph because no files changed.
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:38.189Z - [REQUEST]: Responding to the client. project-graph
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:38.201Z - Time taken for 'total for creating and serializing project graph' 3.738442000001669ms
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:38.206Z - Done responding to the client project-graph
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:38.207Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 4. Response time: 18.
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:38.276Z - [REQUEST]: Responding to the client. handleContextFileData
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:38.278Z - Done responding to the client handleContextFileData
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:38.279Z - Handled GET_CONTEXT_FILE_DATA. Handling time: 5. Response time: 3.
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:38.288Z - Closed a connection. Number of open connections: 1
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:38.752Z - Closed a connection. Number of open connections: 0
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:38.761Z - Established a connection. Number of open connections: 1
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:38.762Z - Established a connection. Number of open connections: 2
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:38.763Z - Closed a connection. Number of open connections: 1
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:38.763Z - Established a connection. Number of open connections: 2
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:38.764Z - Closed a connection. Number of open connections: 1
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:38.765Z - [REQUEST]: Client Request for Project Graph Received
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:38.767Z - Reusing in-memory cached project graph because no files changed.
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:38.767Z - [REQUEST]: Responding to the client. project-graph
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:38.771Z - Time taken for 'total for creating and serializing project graph' 1.5007650000043213ms
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:38.773Z - Done responding to the client project-graph
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:38.773Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 2. Response time: 6.
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:38.787Z - [REQUEST]: Client Request for Project Graph Received
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:38.788Z - Reusing in-memory cached project graph because no files changed.
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:38.788Z - [REQUEST]: Responding to the client. project-graph
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:38.792Z - Time taken for 'total for creating and serializing project graph' 1.3399700000009034ms
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:38.795Z - Done responding to the client project-graph
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:38.795Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 1. Response time: 7.
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:48:38.806Z - Established a connection. Number of open connections: 2
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:50:13.986Z - [WATCHER]: Processing file changes in outputs
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:50:13.989Z - [WATCHER]: 0 file(s) created or restored, 3 file(s) modified, 0 file(s) deleted
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:50:13.990Z - [REQUEST]: Responding to the client. File watch changed
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:50:13.991Z - Done responding to the client File watch changed
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:50:13.991Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 1.
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:50:13.991Z - Time taken for 'changed-projects' 0.4310989999794401ms
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:50:14.092Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:50:14.092Z - [REQUEST]: libs/shared/database-types/comments.ts,libs/shared/database-types/users.ts,libs/shared/database-types/posts.ts
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:50:14.092Z - [REQUEST]: 
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:50:14.117Z - Time taken for 'hash changed files from watcher' 2.0457949999836273ms
+Time for 'nx/core/package-json:createNodes' 5.15288799998234
+Time for 'nx/core/project-json:createNodes' 3.387992000003578
+Time for 'nx/js/dependencies-and-lockfile:createNodes' 34.71041800000239
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:50:14.204Z - Time taken for 'build-project-configs' 86.20579599999473ms
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:50:14.211Z - [WATCHER]: 0 file(s) created or restored, 3 file(s) modified, 0 file(s) deleted
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:50:14.212Z - [REQUEST]: Responding to the client. File watch changed
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:50:14.212Z - Done responding to the client File watch changed
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:50:14.212Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 0.
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:50:14.213Z - [WATCHER]: Processing file changes in outputs
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:50:14.213Z - Time taken for 'changed-projects' 0.2772990000084974ms
+Time for 'build typescript dependencies' 0.045400000002700835
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:50:14.298Z - Wrote project graph cache to /home/sprime01/Projects/nx-ddd-hex-plugin/.nx/workspace-data/project-graph.json
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:50:14.299Z - [SYNC]: collect registered sync generators
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:50:14.300Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:50:14.300Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:50:14.301Z - Time taken for 'total execution time for createProjectGraph()' 83.69980199998827ms
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:50:14.413Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:50:14.414Z - [REQUEST]: libs/backend/type_utils/posts.py,libs/backend/type_utils/comments.py,libs/backend/type_utils/users.py
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:50:14.414Z - [REQUEST]: 
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:50:14.430Z - Time taken for 'hash changed files from watcher' 1.723496000020532ms
+Time for 'nx/core/package-json:createNodes' 3.5080920000036713
+Time for 'nx/core/project-json:createNodes' 4.551588999980595
+Time for 'nx/js/dependencies-and-lockfile:createNodes' 22.930045999994036
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+Unable to find local plugin [] Map(0) {}
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:50:14.539Z - Time taken for 'build-project-configs' 83.36573000001954ms
+Time for 'build typescript dependencies' 0.06219200001214631
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:50:14.661Z - Wrote project graph cache to /home/sprime01/Projects/nx-ddd-hex-plugin/.nx/workspace-data/project-graph.json
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:50:14.662Z - [SYNC]: collect registered sync generators
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:50:14.663Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:50:14.663Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:50:14.664Z - Time taken for 'total execution time for createProjectGraph()' 118.49783800001023ms
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:50:25.232Z - Established a connection. Number of open connections: 3
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:50:25.233Z - Closed a connection. Number of open connections: 2
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:50:25.235Z - [REQUEST]: Client Request for Project Graph Received
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:50:25.236Z - Reusing in-memory cached project graph because no files changed.
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:50:25.237Z - [REQUEST]: Responding to the client. project-graph
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:50:25.245Z - Time taken for 'total for creating and serializing project graph' 1.6961730000039097ms
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:50:25.246Z - Done responding to the client project-graph
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:50:25.247Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 2. Response time: 10.
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:50:25.263Z - [REQUEST]: Responding to the client. handleContextFileData
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:50:25.263Z - Done responding to the client handleContextFileData
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:50:25.264Z - Handled GET_CONTEXT_FILE_DATA. Handling time: 1. Response time: 1.
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:50:25.266Z - Closed a connection. Number of open connections: 1
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:50:25.807Z - Closed a connection. Number of open connections: 0
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:50:25.813Z - Established a connection. Number of open connections: 1
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:50:25.814Z - Closed a connection. Number of open connections: 0
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:50:25.815Z - Established a connection. Number of open connections: 1
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:50:25.816Z - Closed a connection. Number of open connections: 0
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:50:25.817Z - Established a connection. Number of open connections: 1
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:50:25.818Z - [REQUEST]: Client Request for Project Graph Received
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:50:25.819Z - Reusing in-memory cached project graph because no files changed.
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:50:25.819Z - [REQUEST]: Responding to the client. project-graph
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:50:25.824Z - Time taken for 'total for creating and serializing project graph' 0.9431019999901764ms
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:50:25.825Z - Done responding to the client project-graph
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:50:25.826Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 1. Response time: 7.
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:50:25.836Z - [REQUEST]: Client Request for Project Graph Received
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:50:25.837Z - Reusing in-memory cached project graph because no files changed.
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:50:25.837Z - [REQUEST]: Responding to the client. project-graph
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:50:25.842Z - Time taken for 'total for creating and serializing project graph' 0.8441210000019055ms
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:50:25.844Z - Done responding to the client project-graph
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:50:25.844Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 1. Response time: 7.
+[NX v21.4.1 Daemon Server] - 2025-09-07T20:50:25.854Z - Established a connection. Number of open connections: 2
