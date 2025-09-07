@@ -1,12 +1,12 @@
 {
-  "name": "@angular-architects/ddd",
-  "version": "20.0.1",
+  "name": "@Nx-ddd/hex",
+  "version": "0.1.0",
   "license": "MIT",
-  "author": "Manfred Steyer",
-  "description": "Nx plugin for structuring a monorepo with domain driven design",
+  "author": "Samuel Prime",
+  "description": "Nx plugin for structuring a monorepo with domain driven design and hexagonal architecture",
   "repository": {
     "type": "github",
-    "url": "https://github.com/angular-architects/nx-ddd-plugin"
+    "url": "https://github.com/SPRIME01/nx-ddd-hex-plugin.git"
   },
   "engines": {
     "node": ">=20.19.0",
@@ -17,11 +17,10 @@
     "tslib": "^2.3.1"
   },
   "optionalDependencies": {
-    "@ngrx/schematics": "^20.0.0"
+    
   },
   "peerDependencies": {
-    "@angular/core": "^20.0.0",
-    "@nx/angular": ">=21.2.0"
+    "@nx/next": ">=16.0.0"
   },
   "main": "src/index.js",
   "schematics": "./collection.json",
