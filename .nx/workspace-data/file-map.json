@@ -39,288 +39,288 @@
   "fileMap": {
     "nonProjectFiles": [
       {
-        "file": "tools/type-generator/dist/generators/types/generator.js",
-        "hash": "18279672563627731298"
-      },
-      {
-        "file": "update.sh",
-        "hash": "7174086204101225741"
-      },
-      {
-        "file": "tools/type-generator/package.json",
-        "hash": "13789822491665627285"
-      },
-      {
-        "file": "jest.preset.js",
-        "hash": "9084884494335109525"
-      },
-      {
-        "file": "tools/type-generator/package-lock.json",
-        "hash": "6730867061746424862"
-      },
-      {
-        "file": "tools/type-generator/dist/generators/verify.d.ts",
-        "hash": "3302149517121317679"
-      },
-      {
-        "file": ".vscode/settings.json",
-        "hash": "10163172667057107058"
-      },
-      {
-        "file": "tools/type-generator/src/generators/types/index.ts",
-        "hash": "3754073525545358558"
-      },
-      {
-        "file": "tests/ts/jest.config.js",
-        "hash": "6571346136412520319"
-      },
-      {
-        "file": "package-lock.json",
-        "hash": "10351744106294079401"
-      },
-      {
-        "file": ".vscode/extensions.json",
-        "hash": "9442636306979469745"
-      },
-      {
-        "file": ".roo/mcp.json",
-        "hash": "3923442425154448907"
-      },
-      {
-        "file": "docs/types-spec.md",
-        "hash": "16724516649387818761"
-      },
-      {
-        "file": "tools/type-generator/src/generators/verify.ts",
-        "hash": "14901114248572853348"
-      },
-      {
-        "file": "decorate-angular-cli.js",
-        "hash": "14094702620983487434"
-      },
-      {
-        "file": "tools/type-generator/tsconfig.json",
-        "hash": "6494677685151386818"
-      },
-      {
-        "file": "libs/shared/database-types/posts.ts",
-        "hash": "190306115908111260"
-      },
-      {
-        "file": "docs/react-python-hex-migration.md",
-        "hash": "6807487859171943194"
-      },
-      {
-        "file": ".gitignore",
-        "hash": "10443705941758768944"
-      },
-      {
-        "file": "jest.config.ts",
-        "hash": "3494843969422251966"
-      },
-      {
-        "file": "tests/e2e/typegen/generate-all.spec.ts",
-        "hash": "17148595354917451648"
-      },
-      {
-        "file": "tsconfig.base.json",
-        "hash": "933613079207694020"
-      },
-      {
-        "file": "docs/TECHSPEC-hex-react-python.md",
-        "hash": "4360425870469727650"
-      },
-      {
-        "file": "README.md",
-        "hash": "11023225333642822417"
-      },
-      {
-        "file": "tools/type-generator/src/generators/types/generator.ts",
-        "hash": "2532261641955172669"
-      },
-      {
-        "file": "tests/ts/unit/typegen/db-to-ts.spec.ts",
-        "hash": "16629052623028372970"
-      },
-      {
-        "file": "tools/type-generator/src/generators/types/db-to-typescript.ts",
-        "hash": "5911771354800552865"
-      },
-      {
-        "file": "libs/backend/type_utils/users.py",
-        "hash": "14470648835641264530"
-      },
-      {
-        "file": "migrations.json",
-        "hash": "6002396235639935645"
-      },
-      {
-        "file": "tests/ts/unit/lint/dependency-rules.spec.ts",
-        "hash": "10051477987047672430"
-      },
-      {
-        "file": "tests/ts/unit/generators/web-app.spec.ts",
-        "hash": "1691901419934192242"
-      },
-      {
-        "file": "tools/type-generator/dist/generators/types/generator.d.ts",
-        "hash": "6706940342093928719"
-      },
-      {
-        "file": ".editorconfig",
-        "hash": "5443105041930014821"
-      },
-      {
-        "file": "libs/.gitkeep",
-        "hash": "3244421341483603138"
-      },
-      {
-        "file": ".eslintrc.json",
-        "hash": "9747026852123211696"
-      },
-      {
-        "file": "libs/shared/__init__.py",
-        "hash": "12533451310798131487"
-      },
-      {
-        "file": ".eslintignore",
-        "hash": "7663861978715868291"
-      },
-      {
-        "file": ".husky/pre-commit",
-        "hash": "479817402690382069"
-      },
-      {
-        "file": "tests/ts/tsconfig.json",
-        "hash": "4527870151428910052"
-      },
-      {
-        "file": "libs/shared/database-types/users.ts",
-        "hash": "7780287665793498466"
-      },
-      {
-        "file": "tools/type-generator/cli.js",
-        "hash": "16336037828380322087"
-      },
-      {
-        "file": "tools/type-generator/dist/generators/verify.js",
-        "hash": "2670219392436817574"
-      },
-      {
-        "file": "tools/tsconfig.tools.json",
-        "hash": "16088922570277978783"
-      },
-      {
         "file": "tools/type-generator/dist/generators/types/index.d.ts",
         "hash": "3754073525545358558"
-      },
-      {
-        "file": "tools/type-generator/dist/generators/types/index.js",
-        "hash": "2533590451424839346"
-      },
-      {
-        "file": "pyproject.toml",
-        "hash": "6093493642344425122"
-      },
-      {
-        "file": ".prettierrc",
-        "hash": "16267754514737964994"
-      },
-      {
-        "file": "docs/TDD-Plan-hex-react-python.md",
-        "hash": "11177190305440362501"
-      },
-      {
-        "file": "tests/ci/workflow.test.ts",
-        "hash": "6523057787607706712"
-      },
-      {
-        "file": "package.json",
-        "hash": "14799739601715411384"
-      },
-      {
-        "file": "nx.json",
-        "hash": "11654848359515506546"
-      },
-      {
-        "file": "docs/PRD-hex-react-python.md",
-        "hash": "2754557940018673523"
-      },
-      {
-        "file": "tools/type-generator/jest.config.js",
-        "hash": "7717984446034882111"
-      },
-      {
-        "file": "tests/ts/unit/typegen/verify.spec.ts",
-        "hash": "6372123352085406507"
-      },
-      {
-        "file": "libs/shared/database-types/comments.ts",
-        "hash": "10226298427271342688"
-      },
-      {
-        "file": "libs/backend/type_utils/posts.py",
-        "hash": "4064515657547950430"
-      },
-      {
-        "file": "docs/SDS-hex-react-python.md",
-        "hash": "15148488345195606459"
-      },
-      {
-        "file": "apps/.gitkeep",
-        "hash": "3244421341483603138"
-      },
-      {
-        "file": "tests/ts/tsconfig.spec.json",
-        "hash": "6747623379304039029"
-      },
-      {
-        "file": "docs/ADR-hex-react-python.md",
-        "hash": "6383930096234370771"
-      },
-      {
-        "file": "tools/type-generator/test-fixtures/py/User.py",
-        "hash": "13729110218690856986"
-      },
-      {
-        "file": ".prettierignore",
-        "hash": "3356760868306086659"
-      },
-      {
-        "file": "tools/type-generator/dist/generators/types/db-to-typescript.js",
-        "hash": "10929508702036975626"
       },
       {
         "file": "tests/py/unit/typegen/test_db_to_python.py",
         "hash": "11737881398781282766"
       },
       {
-        "file": "libs/shared/type_system/generators/db_to_python.py",
-        "hash": "10749414225307811173"
+        "file": "update.sh",
+        "hash": "7174086204101225741"
       },
       {
-        "file": "tools/type-generator/test-fixtures/ts/User.ts",
-        "hash": "15943884427499760609"
+        "file": "libs/shared/__init__.py",
+        "hash": "12533451310798131487"
+      },
+      {
+        "file": "README.md",
+        "hash": "11023225333642822417"
+      },
+      {
+        "file": "docs/PRD-hex-react-python.md",
+        "hash": "2754557940018673523"
+      },
+      {
+        "file": "package-lock.json",
+        "hash": "10351744106294079401"
+      },
+      {
+        "file": "docs/SDS-hex-react-python.md",
+        "hash": "15148488345195606459"
+      },
+      {
+        "file": "tests/ts/jest.config.js",
+        "hash": "6571346136412520319"
+      },
+      {
+        "file": "tools/type-generator/dist/generators/types/generator.js",
+        "hash": "18279672563627731298"
+      },
+      {
+        "file": "tools/type-generator/dist/generators/verify.js",
+        "hash": "2670219392436817574"
+      },
+      {
+        "file": "tools/type-generator/src/generators/verify.ts",
+        "hash": "14901114248572853348"
+      },
+      {
+        "file": "nx.json",
+        "hash": "11654848359515506546"
+      },
+      {
+        "file": "tools/type-generator/package.json",
+        "hash": "13789822491665627285"
+      },
+      {
+        "file": "libs/backend/type_utils/users.py",
+        "hash": "14470648835641264530"
+      },
+      {
+        "file": ".roo/mcp.json",
+        "hash": "3923442425154448907"
+      },
+      {
+        "file": ".prettierrc",
+        "hash": "16267754514737964994"
+      },
+      {
+        "file": "libs/shared/database-types/users.ts",
+        "hash": "7780287665793498466"
+      },
+      {
+        "file": "tests/e2e/typegen/generate-all.spec.ts",
+        "hash": "17148595354917451648"
+      },
+      {
+        "file": "tools/type-generator/tsconfig.json",
+        "hash": "6494677685151386818"
+      },
+      {
+        "file": "jest.config.ts",
+        "hash": "3494843969422251966"
+      },
+      {
+        "file": "tests/ts/tsconfig.spec.json",
+        "hash": "6747623379304039029"
+      },
+      {
+        "file": "docs/TDD-Plan-hex-react-python.md",
+        "hash": "11177190305440362501"
+      },
+      {
+        "file": "tools/type-generator/dist/generators/types/index.js",
+        "hash": "2533590451424839346"
+      },
+      {
+        "file": ".vscode/extensions.json",
+        "hash": "9442636306979469745"
+      },
+      {
+        "file": "libs/shared/database-types/posts.ts",
+        "hash": "190306115908111260"
       },
       {
         "file": ".github/workflows/type-sync.yml",
         "hash": "15809555576515003482"
       },
       {
-        "file": "tests/ts/unit/python/backend-api-project.spec.ts",
-        "hash": "290397791248517725"
+        "file": "libs/shared/type_system/generators/db_to_python.py",
+        "hash": "10749414225307811173"
+      },
+      {
+        "file": "tests/ts/unit/typegen/db-to-ts.spec.ts",
+        "hash": "16629052623028372970"
+      },
+      {
+        "file": "apps/.gitkeep",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "tools/type-generator/src/generators/types/index.ts",
+        "hash": "3754073525545358558"
+      },
+      {
+        "file": "docs/ADR-hex-react-python.md",
+        "hash": "6383930096234370771"
+      },
+      {
+        "file": "package.json",
+        "hash": "14799739601715411384"
+      },
+      {
+        "file": "jest.preset.js",
+        "hash": "9084884494335109525"
+      },
+      {
+        "file": ".vscode/settings.json",
+        "hash": "10163172667057107058"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "933613079207694020"
+      },
+      {
+        "file": "tests/ts/unit/generators/web-app.spec.ts",
+        "hash": "1691901419934192242"
+      },
+      {
+        "file": "tools/type-generator/test-fixtures/ts/User.ts",
+        "hash": "15943884427499760609"
+      },
+      {
+        "file": "decorate-angular-cli.js",
+        "hash": "14094702620983487434"
+      },
+      {
+        "file": "tools/type-generator/test-fixtures/py/User.py",
+        "hash": "13729110218690856986"
+      },
+      {
+        "file": "tools/type-generator/jest.config.js",
+        "hash": "7717984446034882111"
+      },
+      {
+        "file": ".husky/pre-commit",
+        "hash": "479817402690382069"
+      },
+      {
+        "file": "tests/fixtures/database-schema.json",
+        "hash": "8069589284216445823"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "10443705941758768944"
+      },
+      {
+        "file": "libs/shared/database-types/comments.ts",
+        "hash": "10226298427271342688"
+      },
+      {
+        "file": "tools/type-generator/package-lock.json",
+        "hash": "6730867061746424862"
       },
       {
         "file": "libs/backend/type_utils/comments.py",
         "hash": "8994875840786682738"
       },
       {
+        "file": "tests/ts/unit/typegen/verify.spec.ts",
+        "hash": "6372123352085406507"
+      },
+      {
+        "file": "migrations.json",
+        "hash": "6002396235639935645"
+      },
+      {
+        "file": "tools/type-generator/src/generators/types/db-to-typescript.ts",
+        "hash": "5911771354800552865"
+      },
+      {
+        "file": "tests/ts/tsconfig.json",
+        "hash": "4527870151428910052"
+      },
+      {
+        "file": ".prettierignore",
+        "hash": "3356760868306086659"
+      },
+      {
+        "file": ".eslintrc.json",
+        "hash": "9747026852123211696"
+      },
+      {
+        "file": "docs/TECHSPEC-hex-react-python.md",
+        "hash": "4360425870469727650"
+      },
+      {
+        "file": "pyproject.toml",
+        "hash": "6093493642344425122"
+      },
+      {
+        "file": "tests/ts/unit/python/backend-api-project.spec.ts",
+        "hash": "290397791248517725"
+      },
+      {
+        "file": "libs/backend/type_utils/posts.py",
+        "hash": "4064515657547950430"
+      },
+      {
+        "file": "tools/type-generator/dist/generators/verify.d.ts",
+        "hash": "3302149517121317679"
+      },
+      {
+        "file": "docs/types-spec.md",
+        "hash": "16724516649387818761"
+      },
+      {
+        "file": "tests/ci/workflow.test.ts",
+        "hash": "6523057787607706712"
+      },
+      {
+        "file": "tools/type-generator/dist/generators/types/db-to-typescript.js",
+        "hash": "10929508702036975626"
+      },
+      {
+        "file": "tools/type-generator/cli.js",
+        "hash": "16336037828380322087"
+      },
+      {
+        "file": "tools/tsconfig.tools.json",
+        "hash": "16088922570277978783"
+      },
+      {
+        "file": "tests/ts/unit/lint/dependency-rules.spec.ts",
+        "hash": "10051477987047672430"
+      },
+      {
         "file": "tools/type-generator/dist/generators/types/db-to-typescript.d.ts",
         "hash": "7057777459113660340"
       },
       {
-        "file": "tests/fixtures/database-schema.json",
-        "hash": "8069589284216445823"
+        "file": "docs/react-python-hex-migration.md",
+        "hash": "6807487859171943194"
+      },
+      {
+        "file": ".editorconfig",
+        "hash": "5443105041930014821"
+      },
+      {
+        "file": "tools/type-generator/src/generators/types/generator.ts",
+        "hash": "2532261641955172669"
+      },
+      {
+        "file": ".eslintignore",
+        "hash": "7663861978715868291"
+      },
+      {
+        "file": "tools/type-generator/dist/generators/types/generator.d.ts",
+        "hash": "6706940342093928719"
+      },
+      {
+        "file": "libs/.gitkeep",
+        "hash": "3244421341483603138"
       }
     ],
     "projectFileMap": {
