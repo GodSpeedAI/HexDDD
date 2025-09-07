@@ -16,7 +16,8 @@
     "@phenomnomnominal/tsquery": "^5.0.1",
     "@swc/helpers": "0.5.17",
     "rxjs": "7.8.1",
-    "tslib": "^2.5.2"
+    "tslib": "^2.5.2",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@nx/cypress": "21.4.1",
