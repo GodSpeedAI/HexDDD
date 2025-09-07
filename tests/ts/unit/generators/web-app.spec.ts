@@ -34,3 +34,25 @@ describe('webAppGenerator (Next.js path)', () => {
   });
 });
 
+describe('webAppGenerator (Remix path)', () => {
+  let tree: Tree;
+
+  beforeEach(() => {
+    tree = createTreeWithEmptyWorkspace();
+  });
+
+  it('should create shared web library files even if remix plugin missing', async () => {
+    await webAppGenerator(tree, {
+      name: 'web-remix',
+      framework: 'remix',
+      apiClient: true,
+      includeExamplePage: true,
+    });
+
+    expect(tree.exists('libs/shared/web/src/lib/client.ts')).toBe(true);
+    expect(tree.exists('libs/shared/web/src/lib/errors.ts')).toBe(true);
+    expect(tree.exists('libs/shared/web/src/lib/schemas.ts')).toBe(true);
+    expect(tree.exists('libs/shared/web/src/lib/env.ts')).toBe(true);
+    expect(tree.exists('libs/shared/web/src/index.ts')).toBe(true);
+  });
+});
