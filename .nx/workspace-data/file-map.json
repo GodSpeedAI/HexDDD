@@ -1,0 +1,1844 @@
+{
+  "version": "6.0",
+  "nxVersion": "21.4.1",
+  "pathMappings": {
+    "@angular-architects/checkin/domain": [
+      "libs/checkin/domain/src/index.ts"
+    ],
+    "@angular-architects/checkin/feature-manage": [
+      "libs/checkin/feature-manage/src/index.ts"
+    ],
+    "@angular-architects/ddd": [
+      "libs/ddd/src/index.ts"
+    ],
+    "@angular-architects/feature/domain": [
+      "libs/feature/domain/src/index.ts"
+    ],
+    "@angular-architects/miles/domain": [
+      "libs/miles/domain/src/index.ts"
+    ],
+    "@angular-architects/miles/feature-manage": [
+      "libs/miles/feature-manage/src/index.ts"
+    ],
+    "@fixture/fixture-application": [
+      "tests/fixtures/hex-architecture/application/src/index.ts"
+    ],
+    "@fixture/fixture-domain": [
+      "tests/fixtures/hex-architecture/domain/src/index.ts"
+    ],
+    "@fixture/fixture-infrastructure": [
+      "tests/fixtures/hex-architecture/infrastructure/src/index.ts"
+    ]
+  },
+  "nxJsonPlugins": [
+    {
+      "name": "@nx/js",
+      "version": "21.4.1"
+    }
+  ],
+  "fileMap": {
+    "nonProjectFiles": [
+      {
+        "file": "tools/type-generator/dist/generators/types/generator.js",
+        "hash": "18279672563627731298"
+      },
+      {
+        "file": "update.sh",
+        "hash": "7174086204101225741"
+      },
+      {
+        "file": "tools/type-generator/package.json",
+        "hash": "13789822491665627285"
+      },
+      {
+        "file": "jest.preset.js",
+        "hash": "9084884494335109525"
+      },
+      {
+        "file": "tools/type-generator/package-lock.json",
+        "hash": "6730867061746424862"
+      },
+      {
+        "file": "tools/type-generator/dist/generators/verify.d.ts",
+        "hash": "3302149517121317679"
+      },
+      {
+        "file": ".vscode/settings.json",
+        "hash": "10163172667057107058"
+      },
+      {
+        "file": "tools/type-generator/src/generators/types/index.ts",
+        "hash": "3754073525545358558"
+      },
+      {
+        "file": "tests/ts/jest.config.js",
+        "hash": "6571346136412520319"
+      },
+      {
+        "file": "package-lock.json",
+        "hash": "10351744106294079401"
+      },
+      {
+        "file": ".vscode/extensions.json",
+        "hash": "9442636306979469745"
+      },
+      {
+        "file": ".roo/mcp.json",
+        "hash": "3923442425154448907"
+      },
+      {
+        "file": "docs/types-spec.md",
+        "hash": "16724516649387818761"
+      },
+      {
+        "file": "tools/type-generator/src/generators/verify.ts",
+        "hash": "14901114248572853348"
+      },
+      {
+        "file": "decorate-angular-cli.js",
+        "hash": "14094702620983487434"
+      },
+      {
+        "file": "tools/type-generator/tsconfig.json",
+        "hash": "6494677685151386818"
+      },
+      {
+        "file": "libs/shared/database-types/posts.ts",
+        "hash": "190306115908111260"
+      },
+      {
+        "file": "docs/react-python-hex-migration.md",
+        "hash": "6807487859171943194"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "10443705941758768944"
+      },
+      {
+        "file": "jest.config.ts",
+        "hash": "3494843969422251966"
+      },
+      {
+        "file": "tests/e2e/typegen/generate-all.spec.ts",
+        "hash": "17148595354917451648"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "933613079207694020"
+      },
+      {
+        "file": "docs/TECHSPEC-hex-react-python.md",
+        "hash": "4360425870469727650"
+      },
+      {
+        "file": "README.md",
+        "hash": "11023225333642822417"
+      },
+      {
+        "file": "tools/type-generator/src/generators/types/generator.ts",
+        "hash": "2532261641955172669"
+      },
+      {
+        "file": "tests/ts/unit/typegen/db-to-ts.spec.ts",
+        "hash": "16629052623028372970"
+      },
+      {
+        "file": "tools/type-generator/src/generators/types/db-to-typescript.ts",
+        "hash": "5911771354800552865"
+      },
+      {
+        "file": "libs/backend/type_utils/users.py",
+        "hash": "14470648835641264530"
+      },
+      {
+        "file": "migrations.json",
+        "hash": "6002396235639935645"
+      },
+      {
+        "file": "tests/ts/unit/lint/dependency-rules.spec.ts",
+        "hash": "10051477987047672430"
+      },
+      {
+        "file": "tests/ts/unit/generators/web-app.spec.ts",
+        "hash": "1691901419934192242"
+      },
+      {
+        "file": "tools/type-generator/dist/generators/types/generator.d.ts",
+        "hash": "6706940342093928719"
+      },
+      {
+        "file": ".editorconfig",
+        "hash": "5443105041930014821"
+      },
+      {
+        "file": "libs/.gitkeep",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": ".eslintrc.json",
+        "hash": "9747026852123211696"
+      },
+      {
+        "file": "libs/shared/__init__.py",
+        "hash": "12533451310798131487"
+      },
+      {
+        "file": ".eslintignore",
+        "hash": "7663861978715868291"
+      },
+      {
+        "file": ".husky/pre-commit",
+        "hash": "479817402690382069"
+      },
+      {
+        "file": "tests/ts/tsconfig.json",
+        "hash": "4527870151428910052"
+      },
+      {
+        "file": "libs/shared/database-types/users.ts",
+        "hash": "7780287665793498466"
+      },
+      {
+        "file": "tools/type-generator/cli.js",
+        "hash": "16336037828380322087"
+      },
+      {
+        "file": "tools/type-generator/dist/generators/verify.js",
+        "hash": "2670219392436817574"
+      },
+      {
+        "file": "tools/tsconfig.tools.json",
+        "hash": "16088922570277978783"
+      },
+      {
+        "file": "tools/type-generator/dist/generators/types/index.d.ts",
+        "hash": "3754073525545358558"
+      },
+      {
+        "file": "tools/type-generator/dist/generators/types/index.js",
+        "hash": "2533590451424839346"
+      },
+      {
+        "file": "pyproject.toml",
+        "hash": "6093493642344425122"
+      },
+      {
+        "file": ".prettierrc",
+        "hash": "16267754514737964994"
+      },
+      {
+        "file": "docs/TDD-Plan-hex-react-python.md",
+        "hash": "11177190305440362501"
+      },
+      {
+        "file": "tests/ci/workflow.test.ts",
+        "hash": "6523057787607706712"
+      },
+      {
+        "file": "package.json",
+        "hash": "14799739601715411384"
+      },
+      {
+        "file": "nx.json",
+        "hash": "11654848359515506546"
+      },
+      {
+        "file": "docs/PRD-hex-react-python.md",
+        "hash": "2754557940018673523"
+      },
+      {
+        "file": "tools/type-generator/jest.config.js",
+        "hash": "7717984446034882111"
+      },
+      {
+        "file": "tests/ts/unit/typegen/verify.spec.ts",
+        "hash": "6372123352085406507"
+      },
+      {
+        "file": "libs/shared/database-types/comments.ts",
+        "hash": "10226298427271342688"
+      },
+      {
+        "file": "libs/backend/type_utils/posts.py",
+        "hash": "4064515657547950430"
+      },
+      {
+        "file": "docs/SDS-hex-react-python.md",
+        "hash": "15148488345195606459"
+      },
+      {
+        "file": "apps/.gitkeep",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "tests/ts/tsconfig.spec.json",
+        "hash": "6747623379304039029"
+      },
+      {
+        "file": "docs/ADR-hex-react-python.md",
+        "hash": "6383930096234370771"
+      },
+      {
+        "file": "tools/type-generator/test-fixtures/py/User.py",
+        "hash": "13729110218690856986"
+      },
+      {
+        "file": ".prettierignore",
+        "hash": "3356760868306086659"
+      },
+      {
+        "file": "tools/type-generator/dist/generators/types/db-to-typescript.js",
+        "hash": "10929508702036975626"
+      },
+      {
+        "file": "tests/py/unit/typegen/test_db_to_python.py",
+        "hash": "11737881398781282766"
+      },
+      {
+        "file": "libs/shared/type_system/generators/db_to_python.py",
+        "hash": "10749414225307811173"
+      },
+      {
+        "file": "tools/type-generator/test-fixtures/ts/User.ts",
+        "hash": "15943884427499760609"
+      },
+      {
+        "file": ".github/workflows/type-sync.yml",
+        "hash": "15809555576515003482"
+      },
+      {
+        "file": "tests/ts/unit/python/backend-api-project.spec.ts",
+        "hash": "290397791248517725"
+      },
+      {
+        "file": "libs/backend/type_utils/comments.py",
+        "hash": "8994875840786682738"
+      },
+      {
+        "file": "tools/type-generator/dist/generators/types/db-to-typescript.d.ts",
+        "hash": "7057777459113660340"
+      },
+      {
+        "file": "tests/fixtures/database-schema.json",
+        "hash": "8069589284216445823"
+      }
+    ],
+    "projectFileMap": {
+      "my-test-domain-infrastructure": [
+        {
+          "file": "libs/my-test-domain/infrastructure/project.json",
+          "hash": "13383646362752408566"
+        },
+        {
+          "file": "libs/my-test-domain/infrastructure/src/index.ts",
+          "hash": "17485638343730217183"
+        },
+        {
+          "file": "libs/my-test-domain/infrastructure/src/lib/adapters/event-bus.in-memory.adapter.ts",
+          "hash": "8383532287153840287"
+        },
+        {
+          "file": "libs/my-test-domain/infrastructure/src/lib/adapters/event_bus_in_memory_adapter.py",
+          "hash": "17601958247146642791"
+        },
+        {
+          "file": "libs/my-test-domain/infrastructure/src/lib/adapters/myTestPort.in-memory.adapter.ts",
+          "hash": "6285534335141458684"
+        },
+        {
+          "file": "libs/my-test-domain/infrastructure/src/lib/adapters/my_test_port_fake_adapter.py",
+          "hash": "941169961000337368"
+        },
+        {
+          "file": "libs/my-test-domain/infrastructure/src/lib/adapters/unit-of-work.in-memory.adapter.ts",
+          "hash": "11695019042967785516"
+        },
+        {
+          "file": "libs/my-test-domain/infrastructure/src/lib/adapters/unit_of_work_sqlalchemy_adapter.py",
+          "hash": "17250209885187234111"
+        }
+      ],
+      "checkin-domain": [
+        {
+          "file": "libs/checkin/domain/.eslintrc.json",
+          "hash": "15922087236188162403"
+        },
+        {
+          "file": "libs/checkin/domain/README.md",
+          "hash": "4098103176898146755"
+        },
+        {
+          "file": "libs/checkin/domain/jest.config.ts",
+          "hash": "9371938243109031897"
+        },
+        {
+          "file": "libs/checkin/domain/project.json",
+          "hash": "5939173124262793689"
+        },
+        {
+          "file": "libs/checkin/domain/src/index.ts",
+          "hash": "1041351500567280436"
+        },
+        {
+          "file": "libs/checkin/domain/src/lib/application/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "libs/checkin/domain/src/lib/application/manage.facade.ts",
+          "hash": "1568658721180906131",
+          "deps": [
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "libs/checkin/domain/src/lib/entities/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "libs/checkin/domain/src/lib/entities/ticket.ts",
+          "hash": "12990997997917811166"
+        },
+        {
+          "file": "libs/checkin/domain/src/lib/infrastructure/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "libs/checkin/domain/src/lib/infrastructure/ticket.data.service.ts",
+          "hash": "7586480132779607656",
+          "deps": [
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "libs/checkin/domain/src/test-setup.ts",
+          "hash": "17711435995618823417"
+        },
+        {
+          "file": "libs/checkin/domain/tsconfig.json",
+          "hash": "4477682170649870006"
+        },
+        {
+          "file": "libs/checkin/domain/tsconfig.lib.json",
+          "hash": "6020606002228403423"
+        },
+        {
+          "file": "libs/checkin/domain/tsconfig.spec.json",
+          "hash": "7159729809249402441"
+        }
+      ],
+      "demo-app": [
+        {
+          "file": "apps/demo-app/.browserslistrc",
+          "hash": "17600754102500844387"
+        },
+        {
+          "file": "apps/demo-app/.eslintrc.json",
+          "hash": "15584795406740484774"
+        },
+        {
+          "file": "apps/demo-app/jest.config.ts",
+          "hash": "8258408119649387166"
+        },
+        {
+          "file": "apps/demo-app/project.json",
+          "hash": "5253386319812512214"
+        },
+        {
+          "file": "apps/demo-app/src/app/app.component.css",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/demo-app/src/app/app.component.html",
+          "hash": "18291425215524101121"
+        },
+        {
+          "file": "apps/demo-app/src/app/app.component.spec.ts",
+          "hash": "8512160853627962511"
+        },
+        {
+          "file": "apps/demo-app/src/app/app.component.ts",
+          "hash": "6563925477974106150"
+        },
+        {
+          "file": "apps/demo-app/src/app/app.module.ts",
+          "hash": "10808297843432252648"
+        },
+        {
+          "file": "apps/demo-app/src/app/nx-welcome.component.ts",
+          "hash": "16204611699378465017"
+        },
+        {
+          "file": "apps/demo-app/src/assets/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/demo-app/src/environments/environment.prod.ts",
+          "hash": "10220522844224226756"
+        },
+        {
+          "file": "apps/demo-app/src/environments/environment.ts",
+          "hash": "15801694716951284069"
+        },
+        {
+          "file": "apps/demo-app/src/favicon.ico",
+          "hash": "9303420814833116677"
+        },
+        {
+          "file": "apps/demo-app/src/index.html",
+          "hash": "7609608886589764134"
+        },
+        {
+          "file": "apps/demo-app/src/main.ts",
+          "hash": "14896519517424602606"
+        },
+        {
+          "file": "apps/demo-app/src/polyfills.ts",
+          "hash": "13952578668946952738"
+        },
+        {
+          "file": "apps/demo-app/src/styles.css",
+          "hash": "5195668842064076916"
+        },
+        {
+          "file": "apps/demo-app/src/test-setup.ts",
+          "hash": "17711435995618823417"
+        },
+        {
+          "file": "apps/demo-app/tsconfig.app.json",
+          "hash": "6569194456818436848"
+        },
+        {
+          "file": "apps/demo-app/tsconfig.editor.json",
+          "hash": "6367495026318685054"
+        },
+        {
+          "file": "apps/demo-app/tsconfig.json",
+          "hash": "17981161305287108769"
+        },
+        {
+          "file": "apps/demo-app/tsconfig.spec.json",
+          "hash": "6658172359945877284"
+        }
+      ],
+      "@fixture/fixture-infrastructure": [
+        {
+          "file": "tests/fixtures/hex-architecture/infrastructure/.eslintrc.json",
+          "hash": "13743103059181335207"
+        },
+        {
+          "file": "tests/fixtures/hex-architecture/infrastructure/package.json",
+          "hash": "15596620188942714889"
+        },
+        {
+          "file": "tests/fixtures/hex-architecture/infrastructure/project.json",
+          "hash": "13035162877420102721"
+        },
+        {
+          "file": "tests/fixtures/hex-architecture/infrastructure/src/index.ts",
+          "hash": "18318837324817567028"
+        },
+        {
+          "file": "tests/fixtures/hex-architecture/infrastructure/src/lib/user.repository.ts",
+          "hash": "4954142218801557077",
+          "deps": [
+            "@fixture/fixture-domain"
+          ]
+        }
+      ],
+      "@fixture/fixture-domain": [
+        {
+          "file": "tests/fixtures/hex-architecture/domain/package.json",
+          "hash": "8550332924197575872"
+        },
+        {
+          "file": "tests/fixtures/hex-architecture/domain/project.json",
+          "hash": "10761254133326428994"
+        },
+        {
+          "file": "tests/fixtures/hex-architecture/domain/src/index.ts",
+          "hash": "3818028850465915397"
+        },
+        {
+          "file": "tests/fixtures/hex-architecture/domain/src/lib/invalid-import.ts",
+          "hash": "9953178328214900119",
+          "deps": [
+            "@fixture/fixture-infrastructure"
+          ]
+        },
+        {
+          "file": "tests/fixtures/hex-architecture/domain/src/lib/user.entity.ts",
+          "hash": "17086130301662866164"
+        }
+      ],
+      "checkin-feature-manage": [
+        {
+          "file": "libs/checkin/feature-manage/.eslintrc.json",
+          "hash": "15922087236188162403"
+        },
+        {
+          "file": "libs/checkin/feature-manage/README.md",
+          "hash": "11407436446313422107"
+        },
+        {
+          "file": "libs/checkin/feature-manage/jest.config.ts",
+          "hash": "9015060302053526329"
+        },
+        {
+          "file": "libs/checkin/feature-manage/project.json",
+          "hash": "534148286442449161"
+        },
+        {
+          "file": "libs/checkin/feature-manage/src/index.ts",
+          "hash": "9471145350363527550"
+        },
+        {
+          "file": "libs/checkin/feature-manage/src/lib/manage.component.html",
+          "hash": "8646889503933623454"
+        },
+        {
+          "file": "libs/checkin/feature-manage/src/lib/manage.component.scss",
+          "hash": "10026629338141928282"
+        },
+        {
+          "file": "libs/checkin/feature-manage/src/lib/manage.component.ts",
+          "hash": "2924058607216540955",
+          "deps": [
+            "checkin-domain"
+          ]
+        },
+        {
+          "file": "libs/checkin/feature-manage/src/test-setup.ts",
+          "hash": "17711435995618823417"
+        },
+        {
+          "file": "libs/checkin/feature-manage/tsconfig.json",
+          "hash": "4477682170649870006"
+        },
+        {
+          "file": "libs/checkin/feature-manage/tsconfig.lib.json",
+          "hash": "6020606002228403423"
+        },
+        {
+          "file": "libs/checkin/feature-manage/tsconfig.spec.json",
+          "hash": "7159729809249402441"
+        }
+      ],
+      "my-test-domain-application": [
+        {
+          "file": "libs/my-test-domain/application/project.json",
+          "hash": "3736293771213913500"
+        },
+        {
+          "file": "libs/my-test-domain/application/src/index.ts",
+          "hash": "1072255038736215347"
+        }
+      ],
+      "miles-feature-manage": [
+        {
+          "file": "libs/miles/feature-manage/.eslintrc.json",
+          "hash": "8008294133788575432"
+        },
+        {
+          "file": "libs/miles/feature-manage/README.md",
+          "hash": "2460774846922647104"
+        },
+        {
+          "file": "libs/miles/feature-manage/jest.config.ts",
+          "hash": "16816244419326005612"
+        },
+        {
+          "file": "libs/miles/feature-manage/project.json",
+          "hash": "14937776912852447722"
+        },
+        {
+          "file": "libs/miles/feature-manage/src/index.ts",
+          "hash": "212855353185393580"
+        },
+        {
+          "file": "libs/miles/feature-manage/src/lib/manage.component.html",
+          "hash": "8139552260645334038"
+        },
+        {
+          "file": "libs/miles/feature-manage/src/lib/manage.component.scss",
+          "hash": "10026629338141928282"
+        },
+        {
+          "file": "libs/miles/feature-manage/src/lib/manage.component.ts",
+          "hash": "1851462796091604543",
+          "deps": [
+            "miles-domain"
+          ]
+        },
+        {
+          "file": "libs/miles/feature-manage/src/lib/miles-feature-manage/miles-feature-manage.component.css",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "libs/miles/feature-manage/src/lib/miles-feature-manage/miles-feature-manage.component.html",
+          "hash": "8920401640600456031"
+        },
+        {
+          "file": "libs/miles/feature-manage/src/lib/miles-feature-manage/miles-feature-manage.component.spec.ts",
+          "hash": "3597825955396569375"
+        },
+        {
+          "file": "libs/miles/feature-manage/src/lib/miles-feature-manage/miles-feature-manage.component.ts",
+          "hash": "9840689082661680958"
+        },
+        {
+          "file": "libs/miles/feature-manage/src/test-setup.ts",
+          "hash": "17711435995618823417"
+        },
+        {
+          "file": "libs/miles/feature-manage/tsconfig.json",
+          "hash": "4477682170649870006"
+        },
+        {
+          "file": "libs/miles/feature-manage/tsconfig.lib.json",
+          "hash": "6020606002228403423"
+        },
+        {
+          "file": "libs/miles/feature-manage/tsconfig.spec.json",
+          "hash": "7159729809249402441"
+        }
+      ],
+      "backend-api": [
+        {
+          "file": "apps/backend-api/project.json",
+          "hash": "4737404117412733397"
+        }
+      ],
+      "miles-e2e": [
+        {
+          "file": "apps/miles-e2e/.eslintrc.json",
+          "hash": "14060216369337943343"
+        },
+        {
+          "file": "apps/miles-e2e/cypress.config.ts",
+          "hash": "15414076024138857470",
+          "deps": [
+            "npm:cypress",
+            "npm:@nx/cypress"
+          ]
+        },
+        {
+          "file": "apps/miles-e2e/project.json",
+          "hash": "11870947084412232018"
+        },
+        {
+          "file": "apps/miles-e2e/src/e2e/app.cy.ts",
+          "hash": "8122159508565179800"
+        },
+        {
+          "file": "apps/miles-e2e/src/fixtures/example.json",
+          "hash": "11614668686582597233"
+        },
+        {
+          "file": "apps/miles-e2e/src/support/app.po.ts",
+          "hash": "11157016311132186162"
+        },
+        {
+          "file": "apps/miles-e2e/src/support/commands.ts",
+          "hash": "7314691991044890572"
+        },
+        {
+          "file": "apps/miles-e2e/src/support/e2e.ts",
+          "hash": "3666078656922506009"
+        },
+        {
+          "file": "apps/miles-e2e/tsconfig.json",
+          "hash": "15439127571515986436"
+        }
+      ],
+      "checkin": [
+        {
+          "file": "apps/checkin/.eslintrc.json",
+          "hash": "17017356276584594466"
+        },
+        {
+          "file": "apps/checkin/jest.config.ts",
+          "hash": "4857896457853075457"
+        },
+        {
+          "file": "apps/checkin/project.json",
+          "hash": "1362433804857201790"
+        },
+        {
+          "file": "apps/checkin/src/app/app.component.html",
+          "hash": "4629913508578651057"
+        },
+        {
+          "file": "apps/checkin/src/app/app.component.scss",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/checkin/src/app/app.component.spec.ts",
+          "hash": "7948815267221520433"
+        },
+        {
+          "file": "apps/checkin/src/app/app.component.ts",
+          "hash": "8194220532953162308",
+          "deps": [
+            "checkin-feature-manage"
+          ]
+        },
+        {
+          "file": "apps/checkin/src/app/app.config.ts",
+          "hash": "9756254947726201314"
+        },
+        {
+          "file": "apps/checkin/src/assets/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/checkin/src/favicon.ico",
+          "hash": "9303420814833116677"
+        },
+        {
+          "file": "apps/checkin/src/index.html",
+          "hash": "17135040207119448998"
+        },
+        {
+          "file": "apps/checkin/src/main.ts",
+          "hash": "455621287488334118"
+        },
+        {
+          "file": "apps/checkin/src/styles.scss",
+          "hash": "5195668842064076916"
+        },
+        {
+          "file": "apps/checkin/src/test-setup.ts",
+          "hash": "12935735732682149507"
+        },
+        {
+          "file": "apps/checkin/tsconfig.app.json",
+          "hash": "8365644956319658761"
+        },
+        {
+          "file": "apps/checkin/tsconfig.editor.json",
+          "hash": "17511610827034788226"
+        },
+        {
+          "file": "apps/checkin/tsconfig.json",
+          "hash": "12094030803572703611"
+        },
+        {
+          "file": "apps/checkin/tsconfig.spec.json",
+          "hash": "2927375835638640771"
+        }
+      ],
+      "ddd-e2e": [
+        {
+          "file": "apps/ddd-e2e/jest.config.ts",
+          "hash": "5777859814217205684"
+        },
+        {
+          "file": "apps/ddd-e2e/project.json",
+          "hash": "1667279945099569235"
+        },
+        {
+          "file": "apps/ddd-e2e/tests/ddd.spec.ts",
+          "hash": "15572701343314855247",
+          "deps": [
+            "npm:@nx/plugin"
+          ]
+        },
+        {
+          "file": "apps/ddd-e2e/tsconfig.json",
+          "hash": "4138663062042646066"
+        },
+        {
+          "file": "apps/ddd-e2e/tsconfig.spec.json",
+          "hash": "10595040461224341030"
+        }
+      ],
+      "miles-domain": [
+        {
+          "file": "libs/miles/domain/.eslintrc.json",
+          "hash": "8008294133788575432"
+        },
+        {
+          "file": "libs/miles/domain/README.md",
+          "hash": "12567381147070666552"
+        },
+        {
+          "file": "libs/miles/domain/jest.config.ts",
+          "hash": "3612982534896580840"
+        },
+        {
+          "file": "libs/miles/domain/project.json",
+          "hash": "17037742327684573635"
+        },
+        {
+          "file": "libs/miles/domain/src/index.ts",
+          "hash": "11146201068812970903"
+        },
+        {
+          "file": "libs/miles/domain/src/lib/application/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "libs/miles/domain/src/lib/application/manage.facade.ts",
+          "hash": "1568658721180906131",
+          "deps": [
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "libs/miles/domain/src/lib/entities/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "libs/miles/domain/src/lib/entities/ticket.ts",
+          "hash": "12990997997917811166"
+        },
+        {
+          "file": "libs/miles/domain/src/lib/infrastructure/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "libs/miles/domain/src/lib/infrastructure/ticket.data.service.ts",
+          "hash": "7586480132779607656",
+          "deps": [
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "libs/miles/domain/src/lib/miles-domain/miles-domain.component.css",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "libs/miles/domain/src/lib/miles-domain/miles-domain.component.html",
+          "hash": "10073467786590201644"
+        },
+        {
+          "file": "libs/miles/domain/src/lib/miles-domain/miles-domain.component.spec.ts",
+          "hash": "7698197771706417225"
+        },
+        {
+          "file": "libs/miles/domain/src/lib/miles-domain/miles-domain.component.ts",
+          "hash": "9758285609068790780"
+        },
+        {
+          "file": "libs/miles/domain/src/test-setup.ts",
+          "hash": "17711435995618823417"
+        },
+        {
+          "file": "libs/miles/domain/tsconfig.json",
+          "hash": "4477682170649870006"
+        },
+        {
+          "file": "libs/miles/domain/tsconfig.lib.json",
+          "hash": "6020606002228403423"
+        },
+        {
+          "file": "libs/miles/domain/tsconfig.spec.json",
+          "hash": "7159729809249402441"
+        }
+      ],
+      "@fixture/fixture-application": [
+        {
+          "file": "tests/fixtures/hex-architecture/application/.eslintrc.json",
+          "hash": "13743103059181335207"
+        },
+        {
+          "file": "tests/fixtures/hex-architecture/application/package.json",
+          "hash": "13717802427600239934"
+        },
+        {
+          "file": "tests/fixtures/hex-architecture/application/project.json",
+          "hash": "7958673030980863888"
+        },
+        {
+          "file": "tests/fixtures/hex-architecture/application/src/index.ts",
+          "hash": "151359056192616104"
+        },
+        {
+          "file": "tests/fixtures/hex-architecture/application/src/lib/user.service.ts",
+          "hash": "13638196785515257859",
+          "deps": [
+            "@fixture/fixture-domain"
+          ]
+        }
+      ],
+      "feature-e2e": [
+        {
+          "file": "apps/feature-e2e/.eslintrc.json",
+          "hash": "14060216369337943343"
+        },
+        {
+          "file": "apps/feature-e2e/cypress.config.ts",
+          "hash": "15414076024138857470",
+          "deps": [
+            "npm:cypress",
+            "npm:@nx/cypress"
+          ]
+        },
+        {
+          "file": "apps/feature-e2e/project.json",
+          "hash": "10081176591171352746"
+        },
+        {
+          "file": "apps/feature-e2e/src/e2e/app.cy.ts",
+          "hash": "8716120328752946471"
+        },
+        {
+          "file": "apps/feature-e2e/src/fixtures/example.json",
+          "hash": "11614668686582597233"
+        },
+        {
+          "file": "apps/feature-e2e/src/support/app.po.ts",
+          "hash": "11157016311132186162"
+        },
+        {
+          "file": "apps/feature-e2e/src/support/commands.ts",
+          "hash": "7314691991044890572"
+        },
+        {
+          "file": "apps/feature-e2e/src/support/e2e.ts",
+          "hash": "3666078656922506009"
+        },
+        {
+          "file": "apps/feature-e2e/tsconfig.json",
+          "hash": "15439127571515986436"
+        }
+      ],
+      "my-test-domain-domain": [
+        {
+          "file": "libs/my-test-domain/domain/project.json",
+          "hash": "2804090607300375552"
+        },
+        {
+          "file": "libs/my-test-domain/domain/src/index.ts",
+          "hash": "7705032399463697305"
+        },
+        {
+          "file": "libs/my-test-domain/domain/src/lib/ports/event-bus.port.ts",
+          "hash": "9085767173745970975"
+        },
+        {
+          "file": "libs/my-test-domain/domain/src/lib/ports/event_bus_port.py",
+          "hash": "15679653008650275118"
+        },
+        {
+          "file": "libs/my-test-domain/domain/src/lib/ports/myTestPort.port.ts",
+          "hash": "319125700103584069"
+        },
+        {
+          "file": "libs/my-test-domain/domain/src/lib/ports/my_test_port_port.py",
+          "hash": "6209496747277588926"
+        },
+        {
+          "file": "libs/my-test-domain/domain/src/lib/ports/unit-of-work.port.ts",
+          "hash": "9308124907470335875"
+        },
+        {
+          "file": "libs/my-test-domain/domain/src/lib/ports/unit_of_work_port.py",
+          "hash": "2042317272432674729"
+        }
+      ],
+      "demo-app-e2e": [
+        {
+          "file": "apps/demo-app-e2e/.eslintrc.json",
+          "hash": "15523834149352881398"
+        },
+        {
+          "file": "apps/demo-app-e2e/cypress.json",
+          "hash": "10587405579460337765"
+        },
+        {
+          "file": "apps/demo-app-e2e/project.json",
+          "hash": "2102526315831745659"
+        },
+        {
+          "file": "apps/demo-app-e2e/src/fixtures/example.json",
+          "hash": "11614668686582597233"
+        },
+        {
+          "file": "apps/demo-app-e2e/src/integration/app.spec.ts",
+          "hash": "4560938090935205065"
+        },
+        {
+          "file": "apps/demo-app-e2e/src/support/app.po.ts",
+          "hash": "11157016311132186162"
+        },
+        {
+          "file": "apps/demo-app-e2e/src/support/commands.ts",
+          "hash": "7314691991044890572"
+        },
+        {
+          "file": "apps/demo-app-e2e/src/support/index.ts",
+          "hash": "3666078656922506009"
+        },
+        {
+          "file": "apps/demo-app-e2e/tsconfig.json",
+          "hash": "17327834683392158647"
+        }
+      ],
+      "checkin-e2e": [
+        {
+          "file": "apps/checkin-e2e/.eslintrc.json",
+          "hash": "14060216369337943343"
+        },
+        {
+          "file": "apps/checkin-e2e/cypress.config.ts",
+          "hash": "15414076024138857470",
+          "deps": [
+            "npm:cypress",
+            "npm:@nx/cypress"
+          ]
+        },
+        {
+          "file": "apps/checkin-e2e/project.json",
+          "hash": "7462878651948292388"
+        },
+        {
+          "file": "apps/checkin-e2e/src/e2e/app.cy.ts",
+          "hash": "5737591462311883652"
+        },
+        {
+          "file": "apps/checkin-e2e/src/fixtures/example.json",
+          "hash": "11614668686582597233"
+        },
+        {
+          "file": "apps/checkin-e2e/src/support/app.po.ts",
+          "hash": "11157016311132186162"
+        },
+        {
+          "file": "apps/checkin-e2e/src/support/commands.ts",
+          "hash": "7314691991044890572"
+        },
+        {
+          "file": "apps/checkin-e2e/src/support/e2e.ts",
+          "hash": "3666078656922506009"
+        },
+        {
+          "file": "apps/checkin-e2e/tsconfig.json",
+          "hash": "15439127571515986436"
+        }
+      ],
+      "feature": [
+        {
+          "file": "apps/feature/.eslintrc.json",
+          "hash": "17017356276584594466"
+        },
+        {
+          "file": "apps/feature/jest.config.ts",
+          "hash": "1112422501417237394"
+        },
+        {
+          "file": "apps/feature/project.json",
+          "hash": "12588076701595457887"
+        },
+        {
+          "file": "apps/feature/src/app/app.component.html",
+          "hash": "12311186482095208251"
+        },
+        {
+          "file": "apps/feature/src/app/app.component.scss",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/feature/src/app/app.component.spec.ts",
+          "hash": "7948815267221520433"
+        },
+        {
+          "file": "apps/feature/src/app/app.component.ts",
+          "hash": "6850960344544036388"
+        },
+        {
+          "file": "apps/feature/src/app/app.config.ts",
+          "hash": "9756254947726201314"
+        },
+        {
+          "file": "apps/feature/src/assets/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/feature/src/favicon.ico",
+          "hash": "9303420814833116677"
+        },
+        {
+          "file": "apps/feature/src/index.html",
+          "hash": "6599753883115327040"
+        },
+        {
+          "file": "apps/feature/src/main.ts",
+          "hash": "7551894440754674559"
+        },
+        {
+          "file": "apps/feature/src/styles.scss",
+          "hash": "5195668842064076916"
+        },
+        {
+          "file": "apps/feature/src/test-setup.ts",
+          "hash": "12935735732682149507"
+        },
+        {
+          "file": "apps/feature/tsconfig.app.json",
+          "hash": "8365644956319658761"
+        },
+        {
+          "file": "apps/feature/tsconfig.editor.json",
+          "hash": "17511610827034788226"
+        },
+        {
+          "file": "apps/feature/tsconfig.json",
+          "hash": "12094030803572703611"
+        },
+        {
+          "file": "apps/feature/tsconfig.spec.json",
+          "hash": "2927375835638640771"
+        }
+      ],
+      "miles": [
+        {
+          "file": "apps/miles/.eslintrc.json",
+          "hash": "17017356276584594466"
+        },
+        {
+          "file": "apps/miles/jest.config.ts",
+          "hash": "3236451073535543161"
+        },
+        {
+          "file": "apps/miles/project.json",
+          "hash": "9935975795757123882"
+        },
+        {
+          "file": "apps/miles/src/app/app.component.html",
+          "hash": "12861732308369881974"
+        },
+        {
+          "file": "apps/miles/src/app/app.component.scss",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/miles/src/app/app.component.spec.ts",
+          "hash": "7948815267221520433"
+        },
+        {
+          "file": "apps/miles/src/app/app.component.ts",
+          "hash": "14598694006338814658",
+          "deps": [
+            "miles-feature-manage"
+          ]
+        },
+        {
+          "file": "apps/miles/src/app/app.config.ts",
+          "hash": "9756254947726201314"
+        },
+        {
+          "file": "apps/miles/src/assets/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/miles/src/favicon.ico",
+          "hash": "9303420814833116677"
+        },
+        {
+          "file": "apps/miles/src/index.html",
+          "hash": "7251977291581882819"
+        },
+        {
+          "file": "apps/miles/src/main.ts",
+          "hash": "455621287488334118"
+        },
+        {
+          "file": "apps/miles/src/styles.scss",
+          "hash": "5195668842064076916"
+        },
+        {
+          "file": "apps/miles/src/test-setup.ts",
+          "hash": "12935735732682149507"
+        },
+        {
+          "file": "apps/miles/tsconfig.app.json",
+          "hash": "8365644956319658761"
+        },
+        {
+          "file": "apps/miles/tsconfig.editor.json",
+          "hash": "17511610827034788226"
+        },
+        {
+          "file": "apps/miles/tsconfig.json",
+          "hash": "12094030803572703611"
+        },
+        {
+          "file": "apps/miles/tsconfig.spec.json",
+          "hash": "2927375835638640771"
+        }
+      ],
+      "ddd": [
+        {
+          "file": "libs/ddd/.eslintrc.json",
+          "hash": "14740519535015732801"
+        },
+        {
+          "file": "libs/ddd/README.md",
+          "hash": "17558007665703164740"
+        },
+        {
+          "file": "libs/ddd/assets/ddd-libs.png",
+          "hash": "17813460409200043311"
+        },
+        {
+          "file": "libs/ddd/assets/ddd.png",
+          "hash": "6495596619084826821"
+        },
+        {
+          "file": "libs/ddd/assets/domain-layer.png",
+          "hash": "13581711749651085739"
+        },
+        {
+          "file": "libs/ddd/assets/linting-1.png",
+          "hash": "14349505490905456773"
+        },
+        {
+          "file": "libs/ddd/assets/linting-2.png",
+          "hash": "9456460597429265713"
+        },
+        {
+          "file": "libs/ddd/assets/linting-3.png",
+          "hash": "820040916174515482"
+        },
+        {
+          "file": "libs/ddd/assets/result.png",
+          "hash": "7740406967859126476"
+        },
+        {
+          "file": "libs/ddd/collection.json",
+          "hash": "2782519940395197202"
+        },
+        {
+          "file": "libs/ddd/executors.json",
+          "hash": "8477065115816206143"
+        },
+        {
+          "file": "libs/ddd/generators.json",
+          "hash": "11156511808100113801"
+        },
+        {
+          "file": "libs/ddd/jest.config.ts",
+          "hash": "7973677668858163302"
+        },
+        {
+          "file": "libs/ddd/package.json",
+          "hash": "14093836755180974955",
+          "deps": [
+            "npm:tslib"
+          ]
+        },
+        {
+          "file": "libs/ddd/project.json",
+          "hash": "9310647316099406828"
+        },
+        {
+          "file": "libs/ddd/src/executors/build/executor.spec.ts",
+          "hash": "14357623371195888682"
+        },
+        {
+          "file": "libs/ddd/src/executors/build/executor.ts",
+          "hash": "11841628902852102175"
+        },
+        {
+          "file": "libs/ddd/src/executors/build/schema.d.ts",
+          "hash": "17922418242936369517"
+        },
+        {
+          "file": "libs/ddd/src/executors/build/schema.json",
+          "hash": "15261243041175593186"
+        },
+        {
+          "file": "libs/ddd/src/generators/api/index.ts",
+          "hash": "16427746612854439369",
+          "deps": [
+            "npm:@nx/devkit"
+          ]
+        },
+        {
+          "file": "libs/ddd/src/generators/api/schema.json",
+          "hash": "2290132053903738432"
+        },
+        {
+          "file": "libs/ddd/src/generators/api/schema.ts",
+          "hash": "14439498368978058536"
+        },
+        {
+          "file": "libs/ddd/src/generators/ddd/files/src/index.ts__template__",
+          "hash": "12182040164740174869"
+        },
+        {
+          "file": "libs/ddd/src/generators/ddd/generator.spec.ts",
+          "hash": "726473201313816511",
+          "deps": [
+            "npm:@nx/devkit"
+          ]
+        },
+        {
+          "file": "libs/ddd/src/generators/ddd/generator.ts",
+          "hash": "3744327078250315487",
+          "deps": [
+            "npm:@nx/devkit"
+          ]
+        },
+        {
+          "file": "libs/ddd/src/generators/ddd/schema.d.ts",
+          "hash": "1411961788511467191"
+        },
+        {
+          "file": "libs/ddd/src/generators/ddd/schema.json",
+          "hash": "5826187715680445593"
+        },
+        {
+          "file": "libs/ddd/src/generators/domain/files/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "libs/ddd/src/generators/domain/files/domain-lib/application/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "libs/ddd/src/generators/domain/files/domain-lib/entities/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "libs/ddd/src/generators/domain/files/domain-lib/infrastructure/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "libs/ddd/src/generators/domain/files/standalone-app/app/app.component.html__tmpl__",
+          "hash": "4351717680047006557"
+        },
+        {
+          "file": "libs/ddd/src/generators/domain/files/standalone-app/app/app.component.spec.ts__tmpl__",
+          "hash": "7948815267221520433"
+        },
+        {
+          "file": "libs/ddd/src/generators/domain/files/standalone-app/app/app.component.ts__tmpl__",
+          "hash": "4531462061691445963"
+        },
+        {
+          "file": "libs/ddd/src/generators/domain/files/standalone-app/app/app.config.ts__tmpl__",
+          "hash": "12745097332567139224"
+        },
+        {
+          "file": "libs/ddd/src/generators/domain/files/standalone-lib/index.ts__tmpl__",
+          "hash": "17813854074565681158"
+        },
+        {
+          "file": "libs/ddd/src/generators/domain/files/standalone-lib/lib/providers.ts__tmpl__",
+          "hash": "7727594323778960066"
+        },
+        {
+          "file": "libs/ddd/src/generators/domain/index.ts",
+          "hash": "10384413201854307204",
+          "deps": [
+            "npm:@nx/devkit",
+            "npm:@nx/js",
+            "npm:typescript"
+          ]
+        },
+        {
+          "file": "libs/ddd/src/generators/domain/schema.json",
+          "hash": "3750369441078989537"
+        },
+        {
+          "file": "libs/ddd/src/generators/domain/schema.ts",
+          "hash": "3656134710463362421"
+        },
+        {
+          "file": "libs/ddd/src/generators/event-bus/event-bus.py.spec.ts",
+          "hash": "10062122556359300213",
+          "deps": [
+            "npm:@nx/devkit"
+          ]
+        },
+        {
+          "file": "libs/ddd/src/generators/event-bus/event-bus.spec.ts",
+          "hash": "9650358343712659354",
+          "deps": [
+            "npm:@nx/devkit"
+          ]
+        },
+        {
+          "file": "libs/ddd/src/generators/event-bus/generator.ts",
+          "hash": "5992348397249505126",
+          "deps": [
+            "npm:@nx/devkit"
+          ]
+        },
+        {
+          "file": "libs/ddd/src/generators/event-bus/index.ts",
+          "hash": "13012057705978617506"
+        },
+        {
+          "file": "libs/ddd/src/generators/event-bus/schema.json",
+          "hash": "2424585095936953873"
+        },
+        {
+          "file": "libs/ddd/src/generators/event-bus/schema.ts",
+          "hash": "9084751226676747684"
+        },
+        {
+          "file": "libs/ddd/src/generators/feature/files/forDomain/application/__name@dasherize__.facade.ts__tmpl__",
+          "hash": "9258415904757567299"
+        },
+        {
+          "file": "libs/ddd/src/generators/feature/files/forDomain/entities/__entity@dasherize__.ts__tmpl__",
+          "hash": "2951548096235552938"
+        },
+        {
+          "file": "libs/ddd/src/generators/feature/files/forDomain/infrastructure/__entity@dasherize__.data.service.ts__tmpl__",
+          "hash": "12803451367128372806"
+        },
+        {
+          "file": "libs/ddd/src/generators/feature/files/forDomainWithNgrx/+state/__entity@dasherize__/__entity@dasherize__.actions.ts__tmpl__",
+          "hash": "10575353933652699072"
+        },
+        {
+          "file": "libs/ddd/src/generators/feature/files/forDomainWithNgrx/+state/__entity@dasherize__/__entity@dasherize__.effects.ts__tmpl__",
+          "hash": "5808838422660815381"
+        },
+        {
+          "file": "libs/ddd/src/generators/feature/files/forDomainWithNgrx/+state/__entity@dasherize__/__entity@dasherize__.reducer.ts__tmpl__",
+          "hash": "8771332509896105396"
+        },
+        {
+          "file": "libs/ddd/src/generators/feature/files/forDomainWithNgrx/application/__name@dasherize__.facade.ts__tmpl__",
+          "hash": "6258286703139049056"
+        },
+        {
+          "file": "libs/ddd/src/generators/feature/files/forDomainWithNgrx/entities/__entity@dasherize__.ts__tmpl__",
+          "hash": "2951548096235552938"
+        },
+        {
+          "file": "libs/ddd/src/generators/feature/files/forDomainWithNgrx/infrastructure/__entity@dasherize__.data.service.ts__tmpl__",
+          "hash": "1548325830891298006"
+        },
+        {
+          "file": "libs/ddd/src/generators/feature/files/forFeature/__name@dasherize__.component.html__tmpl__",
+          "hash": "13781363209714987593"
+        },
+        {
+          "file": "libs/ddd/src/generators/feature/files/forFeature/__name@dasherize__.component.scss__tmpl__",
+          "hash": "10026629338141928282"
+        },
+        {
+          "file": "libs/ddd/src/generators/feature/files/forFeature/__name@dasherize__.component.ts__tmpl__",
+          "hash": "14646090317909943609"
+        },
+        {
+          "file": "libs/ddd/src/generators/feature/files/forFeatureWithNgrx/__name@dasherize__.component.html__tmpl__",
+          "hash": "13781363209714987593"
+        },
+        {
+          "file": "libs/ddd/src/generators/feature/files/forFeatureWithNgrx/__name@dasherize__.component.scss__tmpl__",
+          "hash": "10026629338141928282"
+        },
+        {
+          "file": "libs/ddd/src/generators/feature/files/forFeatureWithNgrx/__name@dasherize__.component.ts__tmpl__",
+          "hash": "9065108391239942412"
+        },
+        {
+          "file": "libs/ddd/src/generators/feature/index.ts",
+          "hash": "17422282850024822054",
+          "deps": [
+            "npm:@nx/devkit"
+          ]
+        },
+        {
+          "file": "libs/ddd/src/generators/feature/schema.json",
+          "hash": "3660530086082971337"
+        },
+        {
+          "file": "libs/ddd/src/generators/feature/schema.ts",
+          "hash": "3798791168569728075"
+        },
+        {
+          "file": "libs/ddd/src/generators/hex-domain/files/index.ts__template__",
+          "hash": "2718393826854928797"
+        },
+        {
+          "file": "libs/ddd/src/generators/hex-domain/generator.ts",
+          "hash": "5100607486379562810",
+          "deps": [
+            "npm:@nx/devkit"
+          ]
+        },
+        {
+          "file": "libs/ddd/src/generators/hex-domain/hex-domain.spec.ts",
+          "hash": "14549579488259859738",
+          "deps": [
+            "npm:@nx/devkit"
+          ]
+        },
+        {
+          "file": "libs/ddd/src/generators/hex-domain/index.ts",
+          "hash": "13012057705978617506"
+        },
+        {
+          "file": "libs/ddd/src/generators/hex-domain/schema.json",
+          "hash": "525804515994871407"
+        },
+        {
+          "file": "libs/ddd/src/generators/hex-domain/schema.ts",
+          "hash": "2438414210295080314"
+        },
+        {
+          "file": "libs/ddd/src/generators/init/index.ts",
+          "hash": "900287193384211868",
+          "deps": [
+            "npm:@nx/devkit"
+          ]
+        },
+        {
+          "file": "libs/ddd/src/generators/init/schema.json",
+          "hash": "6025950280680908706"
+        },
+        {
+          "file": "libs/ddd/src/generators/init/schematic.ts",
+          "hash": "3292038884125177281",
+          "deps": [
+            "npm:@nx/devkit"
+          ]
+        },
+        {
+          "file": "libs/ddd/src/generators/port/generator.ts",
+          "hash": "15424389706024122032",
+          "deps": [
+            "npm:@nx/devkit"
+          ]
+        },
+        {
+          "file": "libs/ddd/src/generators/port/index.ts",
+          "hash": "13012057705978617506"
+        },
+        {
+          "file": "libs/ddd/src/generators/port/port.py.spec.ts",
+          "hash": "1595135878146088417",
+          "deps": [
+            "npm:@nx/devkit"
+          ]
+        },
+        {
+          "file": "libs/ddd/src/generators/port/port.spec.ts",
+          "hash": "8450426578160388611",
+          "deps": [
+            "npm:@nx/devkit"
+          ]
+        },
+        {
+          "file": "libs/ddd/src/generators/port/schema.json",
+          "hash": "997434167179639229"
+        },
+        {
+          "file": "libs/ddd/src/generators/port/schema.ts",
+          "hash": "18427260938873577147"
+        },
+        {
+          "file": "libs/ddd/src/generators/ui/index.ts",
+          "hash": "14766910991922904767",
+          "deps": [
+            "npm:@nx/devkit"
+          ]
+        },
+        {
+          "file": "libs/ddd/src/generators/ui/schema.json",
+          "hash": "15820328764662028224"
+        },
+        {
+          "file": "libs/ddd/src/generators/ui/schema.ts",
+          "hash": "13357337029413176576"
+        },
+        {
+          "file": "libs/ddd/src/generators/uow/generator.ts",
+          "hash": "6120919225123618856",
+          "deps": [
+            "npm:@nx/devkit"
+          ]
+        },
+        {
+          "file": "libs/ddd/src/generators/uow/index.ts",
+          "hash": "13012057705978617506"
+        },
+        {
+          "file": "libs/ddd/src/generators/uow/schema.json",
+          "hash": "3794531055293535553"
+        },
+        {
+          "file": "libs/ddd/src/generators/uow/schema.ts",
+          "hash": "11776533271786380145"
+        },
+        {
+          "file": "libs/ddd/src/generators/uow/uow.py.spec.ts",
+          "hash": "2005211554566258142",
+          "deps": [
+            "npm:@nx/devkit"
+          ]
+        },
+        {
+          "file": "libs/ddd/src/generators/uow/uow.spec.ts",
+          "hash": "2116270929541677895",
+          "deps": [
+            "npm:@nx/devkit"
+          ]
+        },
+        {
+          "file": "libs/ddd/src/generators/util/index.ts",
+          "hash": "16481380082736991623",
+          "deps": [
+            "npm:@nx/devkit"
+          ]
+        },
+        {
+          "file": "libs/ddd/src/generators/util/schema.json",
+          "hash": "13250731622474709119"
+        },
+        {
+          "file": "libs/ddd/src/generators/util/schema.ts",
+          "hash": "9553349555522371918"
+        },
+        {
+          "file": "libs/ddd/src/generators/utils/add-ngrx-imports-to-domain.ts",
+          "hash": "15123735006123380165",
+          "deps": [
+            "npm:@nx/devkit"
+          ]
+        },
+        {
+          "file": "libs/ddd/src/generators/utils/add-ts-exports.ts",
+          "hash": "13667493852633702447",
+          "deps": [
+            "npm:@nx/devkit"
+          ]
+        },
+        {
+          "file": "libs/ddd/src/generators/utils/addToNgModule.ts",
+          "hash": "1848538487925841574",
+          "deps": [
+            "npm:@nx/devkit",
+            "npm:typescript",
+            "npm:@nx/js"
+          ]
+        },
+        {
+          "file": "libs/ddd/src/generators/utils/check-rule-exists.ts",
+          "hash": "3311949119083058279"
+        },
+        {
+          "file": "libs/ddd/src/generators/utils/delete-default-component.ts",
+          "hash": "10281848367112425201",
+          "deps": [
+            "npm:@nx/devkit"
+          ]
+        },
+        {
+          "file": "libs/ddd/src/generators/utils/fileContains.ts",
+          "hash": "4150841051318708962",
+          "deps": [
+            "npm:@nx/devkit"
+          ]
+        },
+        {
+          "file": "libs/ddd/src/generators/utils/find-array-literal.ts",
+          "hash": "1138919869776156998",
+          "deps": [
+            "npm:@phenomnomnominal/tsquery"
+          ]
+        },
+        {
+          "file": "libs/ddd/src/generators/utils/get-workspace-scope.ts",
+          "hash": "5394233722927282115",
+          "deps": [
+            "npm:@nx/devkit"
+          ]
+        },
+        {
+          "file": "libs/ddd/src/generators/utils/ngrx-version.ts",
+          "hash": "725266350421451894"
+        },
+        {
+          "file": "libs/ddd/src/generators/utils/npm.ts",
+          "hash": "9986228963120885520",
+          "deps": [
+            "npm:@nx/devkit"
+          ]
+        },
+        {
+          "file": "libs/ddd/src/generators/utils/update-dep-const.ts",
+          "hash": "18008973443843166638",
+          "deps": [
+            "npm:@nx/devkit"
+          ]
+        },
+        {
+          "file": "libs/ddd/src/generators/utils/validate-inputs.ts",
+          "hash": "18128412183093342361"
+        },
+        {
+          "file": "libs/ddd/src/generators/web-app/generator.ts",
+          "hash": "13824217287892277411",
+          "deps": [
+            "npm:@nx/devkit",
+            [
+              "npm:@nx/next",
+              "dynamic"
+            ]
+          ]
+        },
+        {
+          "file": "libs/ddd/src/generators/web-app/index.ts",
+          "hash": "724823160824355707"
+        },
+        {
+          "file": "libs/ddd/src/generators/web-app/schema.json",
+          "hash": "1772681006862238141"
+        },
+        {
+          "file": "libs/ddd/src/generators/web-app/schema.ts",
+          "hash": "14273759196644568185"
+        },
+        {
+          "file": "libs/ddd/src/index.ts",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "libs/ddd/src/schematics/ng-add/index.ts",
+          "hash": "16919784594783499961"
+        },
+        {
+          "file": "libs/ddd/src/schematics/ng-add/schema.json",
+          "hash": "2755799479339830635"
+        },
+        {
+          "file": "libs/ddd/src/schematics/rules/init-linting-rules.ts",
+          "hash": "14084971343574060114"
+        },
+        {
+          "file": "libs/ddd/src/schematics/utils/check-rule-exists.ts",
+          "hash": "14363540369973604927"
+        },
+        {
+          "file": "libs/ddd/src/schematics/utils/ngrx-version.ts",
+          "hash": "725266350421451894"
+        },
+        {
+          "file": "libs/ddd/src/schematics/utils/update-dep-const.ts",
+          "hash": "17723526390158151177"
+        },
+        {
+          "file": "libs/ddd/tsconfig.json",
+          "hash": "2840670722752396445"
+        },
+        {
+          "file": "libs/ddd/tsconfig.lib.json",
+          "hash": "6789591993676711731"
+        },
+        {
+          "file": "libs/ddd/tsconfig.spec.json",
+          "hash": "10595040461224341030"
+        }
+      ]
+    }
+  }
+}
