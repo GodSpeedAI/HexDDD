@@ -1,5 +1,5 @@
 {
-  "name": "@Nx-ddd/hex",
+  "name": "@nx-ddd/hex",
   "version": "0.1.0",
   "license": "MIT",
   "author": "Samuel Prime",
@@ -15,9 +15,6 @@
   },
   "dependencies": {
     "tslib": "^2.3.1"
-  },
-  "optionalDependencies": {
-    
   },
   "peerDependencies": {
     "@nx/next": ">=16.0.0"

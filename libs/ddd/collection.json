@@ -14,7 +14,7 @@
       "description": "adds initial access restrictions to linting rules",
       "schema": "./src/generators/init/schema.json"
     },
-    
+
     "hex-domain": {
       "factory": "./src/generators/hex-domain/index",
       "schema": "./src/generators/hex-domain/schema.json",
