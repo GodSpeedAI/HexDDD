@@ -4,9 +4,8 @@ Grounded in ADR, PRD, SDS, and Technical Specifications. All tasks follow the Re
 
 Legend: [ADR-XXX], [PRD-XXX], [SDS-XXX]
 
-## Phase 1: Foundation & Infrastructure
+## Phase 1: Foundation & Infrastructure (Status: Mostly Complete)
 
-<del>
 ### Task 1.1: Type Generator Hub — Database → TS/Python
 References: [ADR-002], [ADR-003], [PRD-004], [SDS-007], [SDS-013]
 - Red (tests)
@@ -21,9 +20,7 @@ References: [ADR-002], [ADR-003], [PRD-004], [SDS-007], [SDS-013]
   - Extract shared maps/constants; normalize naming; add deterministic file ordering.
 - Regression
   - Run generator twice → no diff; verify task passes.
-</del>
 
-<del>
 ### Task 1.2: Verify Target — Structural Parity
 References: [ADR-003], [PRD-004], [SDS-007], [SDS-016]
 - Red
@@ -34,9 +31,7 @@ References: [ADR-003], [PRD-004], [SDS-007], [SDS-016]
   - Improve error messages and diff output; add ignore list for known exceptions.
 - Regression
   - CI job: generate + verify passes.
-</del>
 
-<del>
 ###  Task 1.3: ESLint Dependency Constraints
 References: [ADR-008], [PRD-007], [SDS-012]
 - Red
@@ -47,8 +42,7 @@ References: [ADR-008], [PRD-007], [SDS-012]
   - Extract reusable ESLint config presets.
 - Regression
   - Nx lint target fails for violations in CI.
-</del>
-<del>
+
 ### Task 1.4: CI/CD Type Sync Workflow
 References: [ADR-009], [PRD-008], [SDS-007]
 - Red
@@ -59,9 +53,8 @@ References: [ADR-009], [PRD-008], [SDS-007]
   - Parameterize Node/Python versions; cache dependencies.
 - Regression
   - CI dry run; pre-commit hook behaves idempotently.
-</del>
 
-## Phase 2: Core Domain Implementation
+## Phase 2: Core Domain Implementation (Status: Implemented)
 
 ### Task 2.1: Hex Domain Scaffold Generator
 References: [ADR-001], [ADR-011], [PRD-001], [SDS-002..SDS-006]
@@ -110,7 +103,10 @@ References: [ADR-006], [PRD-005], [SDS-010]
 - Regression
   - Full test suite remains green.
 
-## Phase 3: Interface Layer Apps
+################## Phases 1 and 2 Complete
+##################
+
+## Phase 3: Interface Layer Apps (In Progress)
 
 ### Task 3.1: FastAPI App Scaffold
 References: [ADR-004], [PRD-003], [SDS-006], [SDS-014], [SDS-015]
@@ -124,16 +120,23 @@ References: [ADR-004], [PRD-003], [SDS-006], [SDS-014], [SDS-015]
 - Regression
   - Pytest + mypy strict pass.
 
-### Task 3.2: Next.js App Scaffold (or Remix)
-References: [ADR-004], [PRD-002], [SDS-006], [SDS-014], [SDS-015]
+### Task 3.2: Universal Web App Scaffold Generator (Next.js | Remix)
+References: [ADR-004], [ADR-012], [PRD-002], [SDS-006], [SDS-014], [SDS-015], [SDS-019]
 - Red
-  - tests/ts/e2e/web-next/app.spec.ts: home route renders; data fetching uses typed client; invalid data throws typed error.
+  - tests/ts/e2e/web-next/app.spec.ts: home route renders expected heading; data fetching uses shared typed client; malformed data mock triggers typed validation error.
+  - tests/ts/e2e/web-remix/app.spec.ts (generated only if framework=remix invoked): root route renders; loader uses shared client; malformed data triggers typed validation error surfaced via ErrorBoundary.
+  - tests/ts/unit/generators/web-app.spec.ts: generator creates app with correct files for framework option; second identical run no diff; generating second framework reuses shared `libs/shared/web` without duplication.
 - Green
-  - Scaffold app; example page uses zod guards and shared types.
+  - Implemented Nx generator `web-app` wrapper that delegates to `@nx/next` or `@nx/remix` when available and always wires shared web lib.
+  - Creates `libs/shared/web` (client.ts, errors.ts, schemas.ts, env.ts) on first run if absent; idempotent re-runs.
+  - Next/Remix app scaffolding is executed when the respective plugin is installed; otherwise, a warning is logged and shared lib is still created.
 - Refactor
-  - Extract API client; add runtime error boundary.
+  - Factor error normalization (ValidationError|NetworkError|UnexpectedError) into shared `errors.ts`.
+  - Ensure deterministic project.json target ordering; abstract template path resolution.
 - Regression
-  - Build + unit tests + simple e2e pass.
+  - Run generator twice (same args) → no file changes.
+  - Build and lint each generated app.
+  - E2E specs pass for each generated framework.
 
 ## Phase 4: Type System Validators & Parity
 
@@ -186,6 +189,18 @@ References: [ADR-010], [PRD-009], [SDS-016], TECHSPEC
 
 ---
 
+## Phase U: Upgrade & De-Angularization
+- Task U.1: Remove Angular Apps/Libs (ADR-013, PRD-010)
+  - Red: Add tests that `rg` finds no `@angular/` or `@nx/angular` in package.json; no Angular projects under apps/libs.
+  - Green: Remove Angular projects and deps.
+  - Refactor: Update eslint/tag configs and tsconfigs.
+  - Regression: CI passes; generators unaffected.
+- Task U.2: Nx + Plugin Upgrade (ADR-014, PRD-011)
+  - Red: Add smoke test to run `nx migrate --run-migrations` in a dry-run harness; validate `@angular-architects/ddd:web-app` idempotency.
+  - Green: Apply `nx migrate latest`; align `@nx/*` plugins; add Remix plugin when supported by Nx.
+  - Refactor: Address migration TODOs and deprecations; consolidate scripts/targets.
+  - Regression: `npm ci`, `nx affected -t lint,test,build` and e2e smoke green.
+
 ## Dependencies & Parallelization
 - Blocking
   - Task 1.1 precedes 1.2; 2.1 precedes 2.2/2.3/2.4; 3.x depends on 2.x.
@@ -206,7 +221,7 @@ References: [ADR-010], [PRD-009], [SDS-016], TECHSPEC
 
 ## Traceability Matrix (Summary)
 - PRD-001 → Tasks 2.1, 2.2, 2.3, 2.4, 5.1
-- PRD-002 → Tasks 3.2, 4.1, 5.2
+- PRD-002 → Tasks 3.2 (universal), 4.1, 5.2
 - PRD-003 → Tasks 3.1, 2.3, 5.2
 - PRD-004 → Tasks 1.1, 1.2, 4.1, 4.2
 - PRD-005 → Tasks 2.2, 2.3, 2.4

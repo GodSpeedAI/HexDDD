@@ -8,6 +8,32 @@ Complementary details with traceability to ADR, PRD, and SDS.
 - Types/Build: Nx, custom type generator (TS), CI with GitHub Actions.
 - Database: Supabase/PostgreSQL.
 
+## Upgrade Plan (ADR-013, ADR-014, PRD-010, PRD-011)
+- Preconditions:
+  - Confirm no business-critical Angular apps remain; archive or port any necessary examples.
+  - Ensure Node version satisfies target Nx release support policy.
+- Step 1 — Angular Decommission:
+  - Remove Angular projects (`apps/*`, `libs/*`) and Angular-specific packages (`@angular/*`, `@nx/angular`).
+  - Clean up tsconfigs, eslint configs, and tags referencing Angular.
+- Step 2 — Nx + Plugin Upgrade:
+  - Run `nx migrate latest`.
+  - Review and commit migration.json and updated files.
+  - Update first-party plugins: `@nx/js`, `@nx/jest`, `@nx/linter`, `@nx/next`, `@nx/workspace`.
+  - Add or update community Python plugin if adopted.
+- Step 3 — Validation:
+  - npm ci, nx graph build, nx format:check, nx affected -t lint,test,build.
+  - End-to-end smoke: run `@angular-architects/ddd:web-app` for both Next and Remix into temp dirs; ensure idempotency.
+  - CI green on branch and main.
+- Rollback:
+  - Keep a branch with pre-migration state; if issues arise, revert via git and re-run in a smaller scope.
+
+## Plugin Matrix (targeted, version-agnostic policy)
+- Nx core: Nx latest stable (or LTS) and matching `@nx/*` packages.
+- Web: `@nx/next` (Next.js), `@nx/remix` when Nx version supports it.
+- Testing: `@nx/jest`.
+- Lint: `@nx/linter` with ESLint latest supported.
+- Python: community plugin (optional) or `run-commands` for serve/test/type-check.
+
 ## Integration Requirements (ADR-002, ADR-003, PRD-004, SDS-007)
 - Type generator reads Supabase schema and outputs:
   - TS `libs/shared/database-types`, `libs/shared/api-types`, `libs/shared/domain-types`.
@@ -36,6 +62,20 @@ Complementary details with traceability to ADR, PRD, and SDS.
   - infrastructure → may import application and externals; apps may not import infrastructure directly.
   - apps → may import application only.
 
+## Universal Web App Generator (ADR-012, PRD-002)
+- Purpose: Single generator scaffolds web app using Next.js or Remix based on `--framework` option while reusing a shared API client and validation layer.
+- Options:
+  - `name`: project name (required)
+  - `framework`: `next` | `remix` (required)
+  - `apiClient`: boolean (default true) – create shared client if missing
+  - `includeExamplePage`: boolean (default true)
+  - `routerStyle`: (Next.js only) `app` | `pages` (default `app`)
+- Shared Artifacts Location: `libs/shared/web` (client.ts, errors.ts, schemas.ts, env.ts)
+- Idempotency Strategy: Pre-existence checks per file; import insertion via marker `// <hex-web-client-exports>`; no duplication when generating both frameworks.
+- Testing Strategy: Framework-specific e2e specs reuse shared fixtures; idempotency double-run test per framework.
+- Error Handling: Normalized error types (ValidationError, NetworkError, UnexpectedError) with zod parse integration.
+- Extensibility: Future frameworks add template directory + schema extension without changing base logic.
+
 ## Traceability Matrix
 - ADR → PRD
   - ADR-001 → PRD-001
@@ -49,6 +89,7 @@ Complementary details with traceability to ADR, PRD, and SDS.
   - ADR-009 → PRD-008
   - ADR-010 → PRD-009
   - ADR-011 → PRD-001
+  - ADR-012 → PRD-002
 - PRD → SDS
   - PRD-001 → SDS-001..SDS-006, SDS-011, SDS-012
   - PRD-002 → SDS-006, SDS-014, SDS-015
@@ -60,7 +101,7 @@ Complementary details with traceability to ADR, PRD, and SDS.
   - PRD-009 → SDS-016
 
 ## MVP Scope Summary
-- ADR: ADR-001/2/3/5/6/7/8/9/10/11
+- ADR: ADR-001/2/3/5/6/7/8/9/10/11/12
 - PRD: PRD-001/2/3/4/5/6/7/9
 - SDS: SDS-001..SDS-012, SDS-016..SDS-017
 

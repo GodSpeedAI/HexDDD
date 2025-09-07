@@ -70,6 +70,38 @@ This ADR consolidates final decisions derived from `docs/types-spec.md` and `doc
 
 ---
 
-MVP ADRs: ADR-001, ADR-002, ADR-003, ADR-005, ADR-006, ADR-007, ADR-008, ADR-009, ADR-010, ADR-011.
+## ADR-012: Universal Web App Scaffold Generator (Next.js & Remix)
+- Decision: Provide a single Nx generator that scaffolds a React web application using either Next.js or Remix selected via an option (`--framework=next|remix`) with idempotent behavior, reusable shared web client code, and consistent test scaffolding.
+- Rationale: Eliminates duplication between separate framework-specific generators, ensures shared abstractions (typed API client, validation schemas) remain single-sourced, and simplifies maintenance while supporting both frameworks per ADR-004.
+- Alternatives: Two distinct generators (next-app, remix-app); manual app setup.
+- Trade-offs: Slightly more complex generator logic (conditional templates, option handling) and broader test coverage matrix.
+- Implementation Notes: Read-before-write, marker regions for DI/client insertion, reuse or create shared library `libs/shared/web` for API client & schemas, ensure rerun with same args produces no diff, allow multiple invocations to create both frameworks under distinct names (e.g., `web-next`, `web-remix`).
+- Consequences: Unified maintenance path; easier extension for future frameworks; clearer traceability to PRD-002 and SDS interface layer specs.
+
+---
+
+MVP ADRs: ADR-001, ADR-002, ADR-003, ADR-005, ADR-006, ADR-007, ADR-008, ADR-009, ADR-010, ADR-011, ADR-012.
 
 Unresolved: None flagged.
+
+---
+
+## ADR-013: Deprecate Angular and Consolidate on React + FastAPI
+- Decision: Remove Angular applications, libraries, and Angular-specific Nx plugins from the workspace. Consolidate the frontend strategy on React (Next.js and Remix) and keep FastAPI for backend.
+- Rationale: Simplifies stack, reduces plugin upgrade coupling, and aligns with PRD focus on universal React apps. Enables smooth Nx upgrades without Angular migration constraints.
+- Alternatives: Maintain Angular in parallel until after Nx upgrade. This adds upgrade complexity and long-lived dual-stack maintenance.
+- Trade-offs: One-time migration effort to remove Angular projects and packages; temporary loss of any Angular demo apps.
+- Consequences: All new interface-layer work targets Next.js/Remix; documentation and generators reflect React-only.
+
+## ADR-014: Nx Upgrade Policy and Plugin Matrix
+- Decision: Adopt an explicit upgrade policy: upgrade Nx to the latest stable (or LTS) along with first-party plugins (@nx/js, @nx/next, @nx/jest, @nx/linter, @nx/workspace) and community Python plugin when used. Upgrades run via `nx migrate`, with code mods reviewed in PR and a defined rollback path.
+- Rationale: Keeps developer experience modern and secure; reduces drift across generators and executors.
+- Alternatives: Ad-hoc upgrades per-package; increases risk of version skew.
+- Trade-offs: Scheduled maintenance windows and CI validation during upgrades.
+- Implementation Notes:
+  - Use `nx migrate latest` and commit the migration.json.
+  - Upgrade Node to a version supported by target Nx release (see TECHSPEC for matrix).
+  - Apply plugin matrix updates (Next/Remix/Python) in lockstep.
+  - Run workspace-wide lint, typecheck, tests, and sample generator e2e after migration.
+
+Planned: ADR-013 and ADR-014 are enacted in the upgrade initiative.

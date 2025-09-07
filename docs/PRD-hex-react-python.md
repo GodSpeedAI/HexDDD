@@ -8,9 +8,10 @@ Based on `docs/types-spec.md` and `docs/react-python-hex-migration.md`.
 - Success Metric: 100% of new domains created via generator; boundaries enforced by ESLint tags.
 
 ## PRD-002: React Frontends (Next.js/Remix)
-- EARS: The system shall provide templates to create Next.js or Remix apps that consume the application layer via typed clients and zod validation (ADR-004).
-- Acceptance: New apps boot with example route and typed API call with guards.
-- Success Metric: App compilations succeed; example page fetches and validates data.
+- EARS: The system shall provide a single universal generator to create a Next.js or Remix app (selected via `--framework=next|remix`) that consumes the application layer via a shared typed API client and zod validation (ADR-004, ADR-012).
+- Generator Options: `name` (required), `framework` (required: next|remix), `apiClient` (boolean default true), `includeExamplePage` (boolean default true), `routerStyle` (next only: app|pages, default app).
+- Acceptance: Running the generator creates an app with an example route/page using the shared API client and validation guards. Re-running with identical options yields no file changes. Invoking for the alternate framework adds a second app while reusing shared code without duplication.
+- Success Metric: App build passes; example page/route fetches and validates data; invalid/malformed data path produces typed validation error surfaced in tests; double-run idempotency test passes.
 
 ## PRD-003: FastAPI Backend
 - EARS: The system shall generate a FastAPI app with typed routers/controllers, DI setup, and a per-request UoW (ADR-004, ADR-006).
@@ -48,6 +49,16 @@ Based on `docs/types-spec.md` and `docs/react-python-hex-migration.md`.
 - Success Metric: Zero type-check warnings/errors in templates.
 
 ---
+
+## PRD-010: Angular Decommissioning
+- EARS: The system shall remove Angular applications, libraries, and Angular-specific Nx packages from the repository.
+- Acceptance: No Angular projects remain under `apps/` or `libs/`; package.json has no `@angular/*` or `@nx/angular`; CI passes.
+- Success Metric: Zero Angular-related dependencies; all generators/tests unaffected.
+
+## PRD-011: Nx and Plugin Upgrades
+- EARS: The system shall upgrade Nx and first-party plugins to the latest stable (or LTS) and align community plugins (e.g., Python) accordingly.
+- Acceptance: `nx migrate` changes are applied; code compiles; lint/typecheck/tests pass; generator e2e smoke runs.
+- Success Metric: CI green on main; no deprecated executor warnings.
 
 MVP Scope: PRD-001, PRD-002, PRD-003, PRD-004, PRD-005, PRD-006, PRD-007, PRD-009.
 

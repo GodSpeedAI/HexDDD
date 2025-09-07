@@ -13,8 +13,9 @@ Technical design derived from `docs/types-spec.md` and `docs/react-python-hex-mi
 - libs/
   - shared/{type-system,database-types,api-types,domain-types,backend/type_utils}
   - <domain>/{domain,application,infrastructure}
-  - frontend/type-utils
+  - shared/web (client, schemas, errors, env)
 - tools/type-generator/
+  - libs/shared/web (added by universal generator when first web app created)
 
 ## SDS-003: Domain Layer (PRD-001)
 - Entities, Value Objects, Aggregates, Domain Events, Domain Services (TS classes; Python dataclasses/pydantic optional).
@@ -32,6 +33,20 @@ Technical design derived from `docs/types-spec.md` and `docs/react-python-hex-mi
 ## SDS-006: Interface Layer (PRD-002, PRD-003)
 - React apps call application layer via typed clients and zod guards.
 - FastAPI routers/controllers use pydantic models, inject UoW and ports via Depends/container.
+- Universal generator (ADR-012) ensures shared client & validation live in `libs/shared/web` consumed by both Next.js and Remix variants without duplication.
+
+## SDS-020: Angular Decommissioning and Nx Upgrade (PRD-010, PRD-011)
+- Angular Removal Steps:
+  - Remove Angular apps/libs under `apps/` and `libs/`.
+  - Remove Angular-specific packages from package.json (`@angular/*`, `@nx/angular`, schematics).
+  - Update eslint configs and tags to drop Angular paths.
+  - Verify workspace graph builds without Angular.
+- Nx Upgrade Steps:
+  - Ensure Node version matches target Nx support window.
+  - Run `nx migrate latest`; commit migration.json and generated changes.
+  - Align first-party plugins (@nx/next, @nx/jest, @nx/linter, @nx/js, @nx/workspace) and community Python tooling.
+  - Re-run type generation + verify; run unit/integration tests; run sample `@angular-architects/ddd:web-app` generator against a temp dir.
+  - Address breaking changes flagged by migration notes.
 
 ## SDS-007: Type Generation Hub (PRD-004)
 - Generator inputs: database/api/schema; outputs TS and Python artifacts.
@@ -82,8 +97,30 @@ Technical design derived from `docs/types-spec.md` and `docs/react-python-hex-mi
 - Security: input validation at edges; secrets via env; least-privilege DB roles.
 - Performance: caching where safe; target generation < 30s; validation < 1ms/object (per spec metrics).
 
----
+## SDS-019: Universal Web App Generator (ADR-012, PRD-002)
+- Purpose: Single Nx generator scaffolds React interface layer selecting Next.js or Remix via `--framework` option while enforcing reuse of shared web assets.
+- Inputs / Options:
+  - `name`: app project name (required)
+  - `framework`: `next` | `remix` (required)
+  - `apiClient`: boolean (default true) – create shared client if absent
+  - `includeExamplePage`: boolean (default true) – adds sample data-fetching page/route
+  - `routerStyle`: Next.js only (`app` | `pages`, default `app`)
+- Outputs:
+  - App directory under `apps/<name>` with framework-specific structure.
+  - Shared library `libs/shared/web` (client.ts, env.ts, errors.ts, schemas.ts) created once and imported by all web apps.
+- Design:
+  - Idempotent writes; generator reads existing files before creating.
+  - Marker comments for future extension: `// <hex-web-client-exports>` inside shared client index for safe augmentation.
+  - Error normalization abstraction: discriminated union (ValidationError | NetworkError | UnexpectedError).
+- Testing:
+  - Unit: template rendering logic; path resolution for routerStyle.
+  - E2E: Each app’s home route renders; data fetch success & malformed payload failure case.
+  - Idempotency: double-run same args → no diff; second framework run adds only new app files.
+- Dependency Rules:
+  - Web apps depend on shared/web and application layer only; no direct infrastructure imports.
+- Extensibility: Add frameworks by supplying a template directory plus schema extension; no core generator rewrite.
 
-MVP: SDS-001..SDS-012, SDS-016..SDS-017.
+---
+MVP: SDS-001..SDS-012, SDS-016..SDS-017, SDS-019.
 
 Unresolved: Non-in-memory event bus adapters (defer to phase 2).
