@@ -29,3 +29,17 @@ def test_uow_rollback_on_error():
     res = client.get(f'/users/{uid}')
     assert res.status_code == 404
 
+
+def test_uow_update_rollback_on_error():
+    client = _client()
+    uid = '55555555-5555-5555-5555-555555555555'
+    # Seed a user
+    res = client.post('/users', json={"id": uid, "name": "Original"})
+    assert res.status_code == 200
+    # Attempt to update then fail
+    res = client.put(f'/users/{uid}/with-error', json={"id": uid, "name": "Changed"})
+    assert res.status_code == 500
+    # Verify name has not changed
+    res = client.get(f'/users/{uid}')
+    assert res.status_code == 200
+    assert res.json().get('name') == 'Original'

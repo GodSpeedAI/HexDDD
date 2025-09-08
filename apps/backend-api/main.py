@@ -66,3 +66,21 @@ def delete_user(user_id: str, uow: UnitOfWork = Depends(inject_uow)):
     svc = UserService()
     svc.delete_user(uow, id=user_id)
     return None
+
+
+@app.put("/users/{user_id}/with-error", status_code=500)
+def update_user_then_fail(user_id: str, user: User, uow: UnitOfWork = Depends(inject_uow)):
+    """Simulate an update followed by a failure to exercise rollback semantics."""
+    try:
+        with uow.transaction():
+            # Ensure exists before simulating failure
+            if uow.users_get(user_id) is None:
+                raise HTTPException(status_code=404, detail="User not found")
+            uow.users_update(UserEntity(id=user_id, name=user.name))
+            raise RuntimeError("boom")
+    except HTTPException:
+        # Propagate not found
+        raise
+    except RuntimeError:
+        # Deliberate failure to test rollback
+        raise HTTPException(status_code=500, detail="simulated failure")

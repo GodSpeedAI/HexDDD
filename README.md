@@ -41,6 +41,13 @@ This repository provides a plugin for Nx monorepos that facilitates the implemen
 - Serve: `nx serve backend-api` (runs `uvicorn main:app` in `apps/backend-api`)
 - Health: `GET /health` → `{ "status": "ok" }`
 - Sample route: `GET /users/{id}` returns a demo user payload validating via pydantic model.
+- CRUD routes:
+  - `POST /users` creates a user (uses application-layer `UserService` for orchestration with a `UnitOfWork`).
+  - `PUT /users/{id}` updates the user name (also via `UserService`).
+  - `DELETE /users/{id}` deletes a user.
+  - Failure simulations (rollback tests):
+    - `POST /users/with-error` simulates failure after create within a transaction.
+    - `PUT /users/{id}/with-error` simulates failure after update within a transaction.
 
 ## CI Smoke
 
