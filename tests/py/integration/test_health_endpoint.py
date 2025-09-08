@@ -21,3 +21,11 @@ def test_health_endpoint_ok():
     body = res.json()
     assert body.get('status') == 'ok'
 
+
+def test_api_health_endpoint_ok():
+    app = _load_app()
+    client = TestClient(app)
+    res = client.get('/api/health')
+    assert res.status_code == 200
+    body = res.json()
+    assert body.get('status') == 'ok'

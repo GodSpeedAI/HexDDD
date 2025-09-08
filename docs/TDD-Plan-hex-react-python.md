@@ -114,11 +114,13 @@ References: [ADR-004], [PRD-003], [SDS-006], [SDS-014], [SDS-015]
   - tests/py/integration/test_health_endpoint.py: GET /health → 200 OK.
   - tests/py/integration/test_user_route.py: request/response models validated.
 - Green
-  - Scaffold backend-api app; minimal `main.py` with `/health` and `/users/{id}` using pydantic model.
+  - Scaffold backend-api app; minimal `main.py` with `/health`, `/api/health`, and `/users/{id}` using pydantic model.
+- Green (DI/UoW)
+  - Add `apps/backend-api/uow.py` stub and `apps/backend-api/di.py` for FastAPI Depends wiring; inject UoW into route.
 - Refactor
   - Extract settings; add error handlers. (Deferred)
 - Regression
-  - Pytest + mypy strict pass. (Pending env setup)
+  - Pytest integration runs in CI via `.github/workflows/python-tests.yml`.
 
 ### ~~Task 3.2: Universal Web App Scaffold Generator (Next.js | Remix | Expo)~~
 References: [ADR-004], [ADR-012], [PRD-002], [SDS-006], [SDS-014], [SDS-015], [SDS-019]
