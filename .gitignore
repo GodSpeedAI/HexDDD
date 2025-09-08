@@ -48,3 +48,54 @@ Thumbs.db
 
 .cursor/rules/nx-rules.mdc
 .github/instructions/nx.instructions.md
+
+# --- Added by Codex: repo-specific ignores ---
+
+# Nx workspace data
+.nx/workspace-data/
+
+# Python caches and tooling
+__pycache__/
+.pytest_cache/
+*.py[cod]
+.mypy_cache/
+.ruff_cache/
+.tox/
+.coverage
+.coverage.*
+
+# TypeScript/TS Server caches
+*.tsbuildinfo
+
+# ESLint cache
+.eslintcache
+
+# Next.js
+apps/web-next/.next/
+
+# Remix
+apps/web-remix/.cache/
+apps/web-remix/build/
+apps/web-remix/public/build/
+
+# Env and direnv
+.env
+.env.local
+.env.*.local
+.envrc.local
+.direnv/
+
+# Logs (all package managers)
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Editor swap/project files
+*.swp
+*.swo
+*.iml
+
+# Generated reports
+nx-graph.html
