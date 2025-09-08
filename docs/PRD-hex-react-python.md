@@ -7,11 +7,11 @@ Based on `docs/types-spec.md` and `docs/react-python-hex-migration.md`.
 - Acceptance: Running the generator creates the three-layer structure with tagged Nx projects and example files.
 - Success Metric: 100% of new domains created via generator; boundaries enforced by ESLint tags.
 
-## PRD-002: React Frontends (Next.js/Remix)
-- EARS: The system shall provide a single universal generator to create a Next.js or Remix app (selected via `--framework=next|remix`) that consumes the application layer via a shared typed API client and zod validation (ADR-004, ADR-012).
-- Generator Options: `name` (required), `framework` (required: next|remix), `apiClient` (boolean default true), `includeExamplePage` (boolean default true), `routerStyle` (next only: app|pages, default app).
-- Acceptance: Running the generator creates an app with an example route/page using the shared API client and validation guards. Re-running with identical options yields no file changes. Invoking for the alternate framework adds a second app while reusing shared code without duplication.
-- Success Metric: App build passes; example page/route fetches and validates data; invalid/malformed data path produces typed validation error surfaced in tests; double-run idempotency test passes.
+## PRD-002: React Frontends (Next.js/Remix/Expo)
+- EARS: The system shall provide a single universal generator to create a Next.js, Remix, or Expo app (selected via `--framework=next|remix|expo`) that consumes the application layer via a shared typed API client and zod validation (ADR-004, ADR-012).
+- Generator Options: `name` (required), `framework` (required: next|remix|expo), `apiClient` (boolean default true), `includeExamplePage` (boolean default true), `routerStyle` (next only: app|pages, default app).
+- Acceptance: Running the generator creates an app with an example route/page (or screen for Expo) using the shared API client and validation guards. Re-running with identical options yields no file changes. Invoking for alternate frameworks adds additional apps while reusing shared code without duplication.
+- Success Metric: App build passes; example route/screen fetches and validates data; invalid/malformed data path produces typed validation error surfaced in tests; double-run idempotency test passes.
 
 ## PRD-003: FastAPI Backend
 - EARS: The system shall generate a FastAPI app with typed routers/controllers, DI setup, and a per-request UoW (ADR-004, ADR-006).

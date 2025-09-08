@@ -15,7 +15,7 @@
     },
     "framework": {
       "type": "string",
-      "enum": ["next", "remix"],
+      "enum": ["next", "remix", "expo"],
       "description": "Which framework to scaffold"
     },
     "apiClient": {
@@ -32,9 +32,8 @@
       "type": "string",
       "enum": ["app", "pages"],
       "default": "app",
-      "description": "Next.js router style (ignored for Remix)"
+      "description": "Next.js router style (ignored for Remix/Expo)"
     }
   },
   "required": ["name", "framework"]
 }
-

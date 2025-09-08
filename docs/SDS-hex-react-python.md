@@ -8,7 +8,7 @@ Technical design derived from `docs/types-spec.md` and `docs/react-python-hex-mi
 
 ## SDS-002: Repository Structure (PRD-001)
 - apps/
-  - web-next/ or web-remix/
+  - web-next/ or web-remix/ or web-expo/
   - backend-api/
 - libs/
   - shared/{type-system,database-types,api-types,domain-types,backend/type_utils}
@@ -33,7 +33,7 @@ Technical design derived from `docs/types-spec.md` and `docs/react-python-hex-mi
 ## SDS-006: Interface Layer (PRD-002, PRD-003)
 - React apps call application layer via typed clients and zod guards.
 - FastAPI routers/controllers use pydantic models, inject UoW and ports via Depends/container.
-- Universal generator (ADR-012) ensures shared client & validation live in `libs/shared/web` consumed by both Next.js and Remix variants without duplication.
+- Universal generator (ADR-012) ensures shared client & validation live in `libs/shared/web` consumed by Next.js, Remix, and Expo variants without duplication.
 
 ## SDS-020: Angular Decommissioning and Nx Upgrade (PRD-010, PRD-011)
 - Angular Removal Steps:
@@ -98,16 +98,16 @@ Technical design derived from `docs/types-spec.md` and `docs/react-python-hex-mi
 - Performance: caching where safe; target generation < 30s; validation < 1ms/object (per spec metrics).
 
 ## SDS-019: Universal Web App Generator (ADR-012, PRD-002)
-- Purpose: Single Nx generator scaffolds React interface layer selecting Next.js or Remix via `--framework` option while enforcing reuse of shared web assets.
+- Purpose: Single Nx generator scaffolds React interface layer selecting Next.js, Remix, or Expo via `--framework` option while enforcing reuse of shared web assets.
 - Inputs / Options:
   - `name`: app project name (required)
-  - `framework`: `next` | `remix` (required)
+  - `framework`: `next` | `remix` | `expo` (required)
   - `apiClient`: boolean (default true) – create shared client if absent
   - `includeExamplePage`: boolean (default true) – adds sample data-fetching page/route
   - `routerStyle`: Next.js only (`app` | `pages`, default `app`)
 - Outputs:
   - App directory under `apps/<name>` with framework-specific structure.
-  - Shared library `libs/shared/web` (client.ts, env.ts, errors.ts, schemas.ts) created once and imported by all web apps.
+  - Shared library `libs/shared/web` (client.ts, env.ts, errors.ts, schemas.ts) created once and imported by all web and mobile apps.
 - Design:
   - Idempotent writes; generator reads existing files before creating.
   - Marker comments for future extension: `// <hex-web-client-exports>` inside shared client index for safe augmentation.

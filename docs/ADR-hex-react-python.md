@@ -70,12 +70,12 @@ This ADR consolidates final decisions derived from `docs/types-spec.md` and `doc
 
 ---
 
-## ADR-012: Universal Web App Scaffold Generator (Next.js & Remix)
-- Decision: Provide a single Nx generator that scaffolds a React web application using either Next.js or Remix selected via an option (`--framework=next|remix`) with idempotent behavior, reusable shared web client code, and consistent test scaffolding.
+## ADR-012: Universal Web App Scaffold Generator (Next.js, Remix, Expo)
+- Decision: Provide a single Nx generator that scaffolds a React web/mobile application using Next.js, Remix, or Expo selected via an option (`--framework=next|remix|expo`) with idempotent behavior, reusable shared web client code, and consistent test scaffolding.
 - Rationale: Eliminates duplication between separate framework-specific generators, ensures shared abstractions (typed API client, validation schemas) remain single-sourced, and simplifies maintenance while supporting both frameworks per ADR-004.
-- Alternatives: Two distinct generators (next-app, remix-app); manual app setup.
+- Alternatives: Separate generators (next-app, remix-app, expo-app); manual app setup.
 - Trade-offs: Slightly more complex generator logic (conditional templates, option handling) and broader test coverage matrix.
-- Implementation Notes: Read-before-write, marker regions for DI/client insertion, reuse or create shared library `libs/shared/web` for API client & schemas, ensure rerun with same args produces no diff, allow multiple invocations to create both frameworks under distinct names (e.g., `web-next`, `web-remix`).
+- Implementation Notes: Read-before-write, marker regions for DI/client insertion, reuse or create shared library `libs/shared/web` for API client & schemas, ensure rerun with same args produces no diff, allow multiple invocations to create each framework under distinct names (e.g., `web-next`, `web-remix`, `web-expo`).
 - Consequences: Unified maintenance path; easier extension for future frameworks; clearer traceability to PRD-002 and SDS interface layer specs.
 
 ---

@@ -120,14 +120,15 @@ References: [ADR-004], [PRD-003], [SDS-006], [SDS-014], [SDS-015]
 - Regression
   - Pytest + mypy strict pass.
 
-### Task 3.2: Universal Web App Scaffold Generator (Next.js | Remix)
+### Task 3.2: Universal Web App Scaffold Generator (Next.js | Remix | Expo)
 References: [ADR-004], [ADR-012], [PRD-002], [SDS-006], [SDS-014], [SDS-015], [SDS-019]
 - Red
   - tests/ts/e2e/web-next/app.spec.ts: home route renders expected heading; data fetching uses shared typed client; malformed data mock triggers typed validation error.
   - tests/ts/e2e/web-remix/app.spec.ts (generated only if framework=remix invoked): root route renders; loader uses shared client; malformed data triggers typed validation error surfaced via ErrorBoundary.
+  - tests/ts/e2e/web-expo/app.spec.ts (generated only if framework=expo invoked): initial screen renders; fetch via shared client validates data; malformed data path surfaced via error boundary/log.
   - tests/ts/unit/generators/web-app.spec.ts: generator creates app with correct files for framework option; second identical run no diff; generating second framework reuses shared `libs/shared/web` without duplication.
 - Green
-  - Implemented Nx generator `web-app` wrapper that delegates to `@nx/next` or `@nx/remix` when available and always wires shared web lib.
+- Implemented Nx generator `web-app` wrapper that delegates to `@nx/next`, `@nx/remix`, or `@nx/expo` when available and always wires shared web lib.
   - Creates `libs/shared/web` (client.ts, errors.ts, schemas.ts, env.ts) on first run if absent; idempotent re-runs.
   - Next/Remix app scaffolding is executed when the respective plugin is installed; otherwise, a warning is logged and shared lib is still created.
 - Refactor

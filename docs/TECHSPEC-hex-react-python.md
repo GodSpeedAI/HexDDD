@@ -29,7 +29,7 @@ Complementary details with traceability to ADR, PRD, and SDS.
 
 ## Plugin Matrix (targeted, version-agnostic policy)
 - Nx core: Nx latest stable (or LTS) and matching `@nx/*` packages.
-- Web: `@nx/next` (Next.js), `@nx/remix` when Nx version supports it.
+- Web: `@nx/next` (Next.js), `@nx/remix` when supported, and `@nx/expo` for React Native/Expo.
 - Testing: `@nx/jest`.
 - Lint: `@nx/linter` with ESLint latest supported.
 - Python: community plugin (optional) or `run-commands` for serve/test/type-check.
@@ -63,15 +63,15 @@ Complementary details with traceability to ADR, PRD, and SDS.
   - apps → may import application only.
 
 ## Universal Web App Generator (ADR-012, PRD-002)
-- Purpose: Single generator scaffolds web app using Next.js or Remix based on `--framework` option while reusing a shared API client and validation layer.
+- Purpose: Single generator scaffolds web/mobile app using Next.js, Remix, or Expo based on `--framework` option while reusing a shared API client and validation layer.
 - Options:
   - `name`: project name (required)
-  - `framework`: `next` | `remix` (required)
+  - `framework`: `next` | `remix` | `expo` (required)
   - `apiClient`: boolean (default true) – create shared client if missing
   - `includeExamplePage`: boolean (default true)
   - `routerStyle`: (Next.js only) `app` | `pages` (default `app`)
 - Shared Artifacts Location: `libs/shared/web` (client.ts, errors.ts, schemas.ts, env.ts)
-- Idempotency Strategy: Pre-existence checks per file; import insertion via marker `// <hex-web-client-exports>`; no duplication when generating both frameworks.
+- Idempotency Strategy: Pre-existence checks per file; import insertion via marker `// <hex-web-client-exports>`; no duplication when generating multiple frameworks.
 - Testing Strategy: Framework-specific e2e specs reuse shared fixtures; idempotency double-run test per framework.
 - Error Handling: Normalized error types (ValidationError, NetworkError, UnexpectedError) with zod parse integration.
 - Extensibility: Future frameworks add template directory + schema extension without changing base logic.

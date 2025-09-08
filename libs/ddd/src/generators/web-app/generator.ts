@@ -35,6 +35,20 @@ async function tryGenerateRemixApp(tree: Tree, options: WebAppGeneratorSchema) {
   }
 }
 
+async function tryGenerateExpoApp(tree: Tree, options: WebAppGeneratorSchema) {
+  try {
+    const gen = require('@nx/expo/src/generators/application/application').default;
+    await gen(tree, {
+      name: options.name,
+      linter: 'eslint',
+      unitTestRunner: 'jest',
+    });
+  } catch (e) {
+    // eslint-disable-next-line no-console
+    console.warn('[web-app] @nx/expo not available or failed, proceeding with shared lib only');
+  }
+}
+
 function ensureSharedWeb(tree: Tree, opts: WebAppGeneratorSchema) {
   const base = 'libs/shared/web/src/lib';
   const files: Record<string, string> = {
@@ -55,8 +69,10 @@ function ensureSharedWeb(tree: Tree, opts: WebAppGeneratorSchema) {
 export async function webAppGenerator(tree: Tree, options: WebAppGeneratorSchema) {
   if (options.framework === 'next') {
     await tryGenerateNextApp(tree, options);
-  } else {
+  } else if (options.framework === 'remix') {
     await tryGenerateRemixApp(tree, options);
+  } else if (options.framework === 'expo') {
+    await tryGenerateExpoApp(tree, options);
   }
 
   if (options.apiClient !== false) {
@@ -68,4 +84,3 @@ export async function webAppGenerator(tree: Tree, options: WebAppGeneratorSchema
 }
 
 export default webAppGenerator;
-
