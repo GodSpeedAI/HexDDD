@@ -25,10 +25,19 @@ class InMemoryUserRepository:
     target = staging if staging is not None else self._store
     target[user.id] = user
 
+  def update(self, user: UserEntity, *, staging: Optional[Dict[str, UserEntity]] = None) -> None:
+    target = staging if staging is not None else self._store
+    if user.id not in target:
+      raise KeyError("user not found")
+    target[user.id] = user
+
+  def delete(self, user_id: str, *, staging: Optional[Dict[str, UserEntity]] = None) -> None:
+    target = staging if staging is not None else self._store
+    target.pop(user_id, None)
+
   # Commit staged changes into the main store
   def commit(self, staged: Dict[str, UserEntity]) -> None:
     self._store = dict(staged)
 
   def snapshot(self) -> Dict[str, UserEntity]:
     return dict(self._store)
-

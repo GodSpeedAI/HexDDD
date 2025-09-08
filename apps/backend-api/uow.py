@@ -47,3 +47,15 @@ class UnitOfWork:
       self._repo.save(user)
     else:
       self._repo.save(user, staging=self._staged)
+
+  def users_update(self, user: UserEntity) -> None:
+    if self._staged is None:
+      self._repo.update(user)
+    else:
+      self._repo.update(user, staging=self._staged)
+
+  def users_delete(self, user_id: str) -> None:
+    if self._staged is None:
+      self._repo.delete(user_id)
+    else:
+      self._repo.delete(user_id, staging=self._staged)

@@ -3,6 +3,7 @@ from pydantic import BaseModel
 from .di import inject_uow
 from .uow import UnitOfWork
 from .repository import UserEntity
+from .services import UserService
 
 
 app = FastAPI(title="Backend API")
@@ -34,9 +35,9 @@ def get_user(user_id: str, uow: UnitOfWork = Depends(inject_uow)) -> User:
 
 @app.post("/users", response_model=User)
 def create_user(user: User, uow: UnitOfWork = Depends(inject_uow)) -> User:
-    with uow.transaction():
-        uow.users_save(UserEntity(**user.dict()))
-    return user
+    svc = UserService()
+    created = svc.create_user(uow, id=user.id, name=user.name)
+    return User(id=created.id, name=created.name)
 
 
 @app.post("/users/with-error", status_code=500)
@@ -48,3 +49,20 @@ def create_user_then_fail(user: User, uow: UnitOfWork = Depends(inject_uow)):
     except RuntimeError:
         # Deliberate failure to test rollback
         raise HTTPException(status_code=500, detail="simulated failure")
+
+
+@app.put("/users/{user_id}", response_model=User)
+def update_user(user_id: str, user: User, uow: UnitOfWork = Depends(inject_uow)) -> User:
+    svc = UserService()
+    try:
+        updated = svc.rename_user(uow, id=user_id, name=user.name)
+    except KeyError:
+        raise HTTPException(status_code=404, detail="User not found")
+    return User(id=updated.id, name=updated.name)
+
+
+@app.delete("/users/{user_id}", status_code=204)
+def delete_user(user_id: str, uow: UnitOfWork = Depends(inject_uow)):
+    svc = UserService()
+    svc.delete_user(uow, id=user_id)
+    return None
