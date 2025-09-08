@@ -6,7 +6,7 @@ Legend: [ADR-XXX], [PRD-XXX], [SDS-XXX]
 
 ## Phase 1: Foundation & Infrastructure (Status: Mostly Complete)
 
-### Task 1.1: Type Generator Hub — Database → TS/Python
+### ~~Task 1.1: Type Generator Hub — Database → TS/Python~~
 References: [ADR-002], [ADR-003], [PRD-004], [SDS-007], [SDS-013]
 - Red (tests)
   - tests/ts/unit/typegen/db-to-ts.spec.ts: should map postgres types (uuid, bigint, timestamptz) to TS targets with transforms.
@@ -21,7 +21,7 @@ References: [ADR-002], [ADR-003], [PRD-004], [SDS-007], [SDS-013]
 - Regression
   - Run generator twice → no diff; verify task passes.
 
-### Task 1.2: Verify Target — Structural Parity
+### ~~Task 1.2: Verify Target — Structural Parity~~
 References: [ADR-003], [PRD-004], [SDS-007], [SDS-016]
 - Red
   - tests/ts/unit/typegen/verify.spec.ts: should detect mismatched nullability and type drift.
@@ -32,7 +32,7 @@ References: [ADR-003], [PRD-004], [SDS-007], [SDS-016]
 - Regression
   - CI job: generate + verify passes.
 
-###  Task 1.3: ESLint Dependency Constraints
+###  ~~Task 1.3: ESLint Dependency Constraints~~
 References: [ADR-008], [PRD-007], [SDS-012]
 - Red
   - tests/ts/unit/lint/dependency-rules.spec.ts: importing infrastructure from domain triggers lint error; importing application from ui passes.
@@ -43,7 +43,7 @@ References: [ADR-008], [PRD-007], [SDS-012]
 - Regression
   - Nx lint target fails for violations in CI.
 
-### Task 1.4: CI/CD Type Sync Workflow
+### ~~Task 1.4: CI/CD Type Sync Workflow~~
 References: [ADR-009], [PRD-008], [SDS-007]
 - Red
   - tests/ci/workflow.test.ts: simulate changed schema → workflow triggers generate + verify → PR created when diffs exist (mock).
@@ -56,7 +56,7 @@ References: [ADR-009], [PRD-008], [SDS-007]
 
 ## Phase 2: Core Domain Implementation (Status: Implemented)
 
-### Task 2.1: Hex Domain Scaffold Generator
+### ~~Task 2.1: Hex Domain Scaffold Generator~~
 References: [ADR-001], [ADR-011], [PRD-001], [SDS-002..SDS-006]
 - Red
   - tests/ts/unit/generators/hex-domain.spec.ts: generates domain/application/infrastructure folders with tags; includes marker regions.
@@ -67,7 +67,7 @@ References: [ADR-001], [ADR-011], [PRD-001], [SDS-002..SDS-006]
 - Regression
   - Double-run produces no changes.
 
-### Task 2.2: Port Generator (TS + Python Protocol)
+### ~~Task 2.2: Port Generator (TS + Python Protocol)~~
 References: [ADR-005], [PRD-005], [SDS-004], [SDS-008]
 - Red
   - tests/ts/unit/generators/port.spec.ts: generates TS interface and in-memory adapter; DI binding markers added.
@@ -79,7 +79,7 @@ References: [ADR-005], [PRD-005], [SDS-004], [SDS-008]
 - Regression
   - Re-run no-diff; lint/typecheck green.
 
-### Task 2.3: UoW Generator (TS interface, Python Protocol + SQLAlchemy impl)
+### ~~Task 2.3: UoW Generator (TS interface, Python Protocol + SQLAlchemy impl)~~
 References: [ADR-006], [PRD-005], [SDS-009]
 - Red
   - tests/ts/unit/generators/uow.spec.ts: interface emission and in-memory impl supports withTransaction.
@@ -91,7 +91,7 @@ References: [ADR-006], [PRD-005], [SDS-009]
 - Regression
   - Unit + integration pass; idempotent generator checks.
 
-### Task 2.4: Event Bus Generator (TS interface, Python Protocol)
+### ~~Task 2.4: Event Bus Generator (TS interface, Python Protocol)~~
 References: [ADR-006], [PRD-005], [SDS-010]
 - Red
   - tests/ts/unit/generators/event-bus.spec.ts: in-memory pub/sub; handlers invoked in order.
@@ -120,7 +120,7 @@ References: [ADR-004], [PRD-003], [SDS-006], [SDS-014], [SDS-015]
 - Regression
   - Pytest + mypy strict pass.
 
-### Task 3.2: Universal Web App Scaffold Generator (Next.js | Remix | Expo)
+### ~~Task 3.2: Universal Web App Scaffold Generator (Next.js | Remix | Expo)~~
 References: [ADR-004], [ADR-012], [PRD-002], [SDS-006], [SDS-014], [SDS-015], [SDS-019]
 - Red
   - tests/ts/e2e/web-next/app.spec.ts: home route renders expected heading; data fetching uses shared typed client; malformed data mock triggers typed validation error.
@@ -191,12 +191,12 @@ References: [ADR-010], [PRD-009], [SDS-016], TECHSPEC
 ---
 
 ## Phase U: Upgrade & De-Angularization
-- Task U.1: Remove Angular Apps/Libs (ADR-013, PRD-010)
+ - ~~Task U.1: Remove Angular Apps/Libs (ADR-013, PRD-010)~~
   - Red: Add tests that `rg` finds no `@angular/` or `@nx/angular` in package.json; no Angular projects under apps/libs.
   - Green: Remove Angular projects and deps.
   - Refactor: Update eslint/tag configs and tsconfigs.
   - Regression: CI passes; generators unaffected.
-- Task U.2: Nx + Plugin Upgrade (ADR-014, PRD-011)
+ - ~~Task U.2: Nx + Plugin Upgrade (ADR-014, PRD-011)~~
   - Red: Add smoke test to run `nx migrate --run-migrations` in a dry-run harness; validate `@angular-architects/ddd:web-app` idempotency.
   - Green: Apply `nx migrate latest`; align `@nx/*` plugins; add Remix plugin when supported by Nx.
   - Refactor: Address migration TODOs and deprecations; consolidate scripts/targets.
@@ -265,8 +265,8 @@ References: [ADR-010], [PRD-009], [SDS-016], TECHSPEC
 ---
 
 ## Checklists
-- [ ] Phase 1 complete (gen + verify + rules + CI)
-- [ ] Phase 2 complete (hex scaffolds + ports + UoW + EventBus)
+- [x] Phase 1 complete (gen + verify + rules + CI)
+- [x] Phase 2 complete (hex scaffolds + ports + UoW + EventBus)
 - [ ] Phase 3 complete (apps)
 - [ ] Phase 4 complete (validators + parity)
 - [ ] Phase 5 complete (idempotency + gates)
