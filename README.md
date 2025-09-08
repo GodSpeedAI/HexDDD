@@ -2,6 +2,10 @@
 
 This repository provides a plugin for Nx monorepos that facilitates the implementation of Domain-Driven Design (DDD) and Hexagonal Architecture principles. It includes tools for type generation, dependency management, and project structuring to help developers build scalable and maintainable applications.
 
+## CI Status
+
+[![Example Apps Smoke](https://github.com/SPRIME01/nx-ddd-hex-plugin/actions/workflows/smoke.yml/badge.svg)](https://github.com/SPRIME01/nx-ddd-hex-plugin/actions/workflows/smoke.yml)
+
 ## Nx Project Graph (Offline)
 
 - An offline Nx project graph is checked into the repo for convenience: `nx-graph.html` at the workspace root.
@@ -36,4 +40,4 @@ This repository provides a plugin for Nx monorepos that facilitates the implemen
 - Run `npm run ci:smoke` to smoke-check examples:
   - Next: `nx run web-next:build`
   - Remix: `nx run web-remix:build`
-  - Expo: `nx run web-expo:lint` (build/start skipped for CI portability)
+  - Expo: `nx run web-expo:type-check` and `nx run web-expo:lint` (start skipped for CI portability)

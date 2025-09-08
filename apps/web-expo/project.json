@@ -4,6 +4,12 @@
   "projectType": "application",
   "sourceRoot": "apps/web-expo",
   "targets": {
+    "type-check": {
+      "executor": "@nx/js:tsc",
+      "options": {
+        "tsConfig": "apps/web-expo/tsconfig.json"
+      }
+    },
     "start": {
       "executor": "@nx/expo:start",
       "options": {}
@@ -32,4 +38,3 @@
   },
   "tags": ["type:app", "framework:expo"]
 }
-
