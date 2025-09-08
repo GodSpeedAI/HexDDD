@@ -270,6 +270,6 @@ References: [ADR-010], [PRD-009], [SDS-016], TECHSPEC
 ## Checklists
 - [x] Phase 1 complete (gen + verify + rules + CI)
 - [x] Phase 2 complete (hex scaffolds + ports + UoW + EventBus)
-- [ ] Phase 3 complete (apps)
-- [ ] Phase 4 complete (validators + parity)
+- [x] Phase 3 complete (apps)
+- [x] Phase 4 complete (validators + parity)
 - [ ] Phase 5 complete (idempotency + gates)
