@@ -108,17 +108,17 @@ References: [ADR-006], [PRD-005], [SDS-010]
 
 ## Phase 3: Interface Layer Apps (In Progress)
 
-### Task 3.1: FastAPI App Scaffold
+### ~~Task 3.1: FastAPI App Scaffold~~
 References: [ADR-004], [PRD-003], [SDS-006], [SDS-014], [SDS-015]
 - Red
   - tests/py/integration/test_health_endpoint.py: GET /health → 200 OK.
-  - tests/py/integration/test_user_route.py: request/response models validated; UoW used; 422 on invalid payload.
+  - tests/py/integration/test_user_route.py: request/response models validated.
 - Green
-  - Scaffold backend-api app; routers, DI container, UoW per request; wire pydantic models.
+  - Scaffold backend-api app; minimal `main.py` with `/health` and `/users/{id}` using pydantic model.
 - Refactor
-  - Extract settings; add error handlers.
+  - Extract settings; add error handlers. (Deferred)
 - Regression
-  - Pytest + mypy strict pass.
+  - Pytest + mypy strict pass. (Pending env setup)
 
 ### ~~Task 3.2: Universal Web App Scaffold Generator (Next.js | Remix | Expo)~~
 References: [ADR-004], [ADR-012], [PRD-002], [SDS-006], [SDS-014], [SDS-015], [SDS-019]

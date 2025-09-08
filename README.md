@@ -35,6 +35,13 @@ This repository provides a plugin for Nx monorepos that facilitates the implemen
 - Start (dev): `nx run web-expo:start`
 - App: `apps/web-expo/App.tsx` shows sample schema usage and a simple health indicator that probes `<NX_API_URL>/health` when absolute, or assumes local ok for relative/unset.
 
+## FastAPI Backend
+
+- Install Python deps (suggested): `pip install fastapi uvicorn pydantic httpx`
+- Serve: `nx serve backend-api` (runs `uvicorn main:app` in `apps/backend-api`)
+- Health: `GET /health` → `{ "status": "ok" }`
+- Sample route: `GET /users/{id}` returns a demo user payload validating via pydantic model.
+
 ## CI Smoke
 
 - Run `npm run ci:smoke` to smoke-check examples:
