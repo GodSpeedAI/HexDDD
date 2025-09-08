@@ -41,6 +41,7 @@ This repository provides a plugin for Nx monorepos that facilitates the implemen
 - Serve: `nx serve backend-api` (runs `uvicorn main:app` in `apps/backend-api`)
 - Health: `GET /health` → `{ "status": "ok" }`
 - Sample route: `GET /users/{id}` returns a demo user payload validating via pydantic model.
+- API Docs: OpenAPI/Swagger at `/docs` and ReDoc at `/redoc`.
 - CRUD routes:
   - `POST /users` creates a user (uses application-layer `UserService` for orchestration with a `UnitOfWork`).
   - `PUT /users/{id}` updates the user name (also via `UserService`).
