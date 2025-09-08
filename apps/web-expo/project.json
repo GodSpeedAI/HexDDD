@@ -1,0 +1,35 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "name": "web-expo",
+  "projectType": "application",
+  "sourceRoot": "apps/web-expo",
+  "targets": {
+    "start": {
+      "executor": "@nx/expo:start",
+      "options": {}
+    },
+    "build": {
+      "executor": "@nx/expo:build",
+      "options": {
+        "outputPath": "dist/apps/web-expo"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "options": {
+        "lintFilePatterns": [
+          "apps/web-expo/**/*.ts",
+          "apps/web-expo/**/*.tsx"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "options": {
+        "jestConfig": "apps/web-expo/jest.config.ts"
+      }
+    }
+  },
+  "tags": ["type:app", "framework:expo"]
+}
+

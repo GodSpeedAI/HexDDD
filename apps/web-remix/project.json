@@ -1,0 +1,37 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "name": "web-remix",
+  "projectType": "application",
+  "sourceRoot": "apps/web-remix",
+  "targets": {
+    "build": {
+      "executor": "@nx/remix:build",
+      "options": {
+        "outputPath": "dist/apps/web-remix"
+      }
+    },
+    "serve": {
+      "executor": "@nx/remix:serve",
+      "options": {
+        "buildTarget": "web-remix:build"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "options": {
+        "lintFilePatterns": [
+          "apps/web-remix/**/*.ts",
+          "apps/web-remix/**/*.tsx"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "options": {
+        "jestConfig": "apps/web-remix/jest.config.ts"
+      }
+    }
+  },
+  "tags": ["type:app", "framework:remix"]
+}
+
