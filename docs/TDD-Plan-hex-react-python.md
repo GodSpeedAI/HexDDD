@@ -121,6 +121,7 @@ References: [ADR-004], [PRD-003], [SDS-006], [SDS-014], [SDS-015]
   - Extract settings; add error handlers. (Deferred)
 - Regression
   - Pytest integration runs in CI via `.github/workflows/python-tests.yml`.
+  - Added tests: `tests/py/integration/test_uow_behavior.py` validates commit and rollback semantics.
 
 ### ~~Task 3.2: Universal Web App Scaffold Generator (Next.js | Remix | Expo)~~
 References: [ADR-004], [ADR-012], [PRD-002], [SDS-006], [SDS-014], [SDS-015], [SDS-019]
