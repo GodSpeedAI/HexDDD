@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Text, View, SafeAreaView, StyleSheet } from 'react-native';
-import { UserSchema, ENV } from '../../libs/shared/web/src';
+import { UserSchema, ENV } from '@shared/web';
 
 const sample = {
   id: '00000000-0000-0000-0000-000000000000',

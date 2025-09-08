@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { ENV } from '../../../../../libs/shared/web/src';
+import { ENV } from '@shared/web';
 
 function isAbsoluteUrl(url: string): boolean {
   return /^https?:\/\//i.test(url);
@@ -35,4 +35,3 @@ export async function GET() {
     );
   }
 }
-

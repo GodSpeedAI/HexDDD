@@ -5,9 +5,9 @@
   "sourceRoot": "apps/web-expo",
   "targets": {
     "type-check": {
-      "executor": "@nx/js:tsc",
+      "executor": "nx:run-commands",
       "options": {
-        "tsConfig": "apps/web-expo/tsconfig.json"
+        "command": "tsc -p apps/web-expo/tsconfig.json --noEmit"
       }
     },
     "start": {

@@ -44,6 +44,7 @@ Thumbs.db
 
 # Python virtual env
 .venv/
+.venv-ci/
 
 .cursor/rules/nx-rules.mdc
 .github/instructions/nx.instructions.md
