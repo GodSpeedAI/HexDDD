@@ -1,7 +1,7 @@
 from __future__ import annotations
 
-from .uow import UnitOfWork
-from .repository import UserEntity
+from uow import UnitOfWork
+from repository import UserEntity
 
 
 class UserService:

@@ -38,22 +38,6 @@
   ],
   "fileMap": {
     "projectFileMap": {
-      "backend-api": [
-        {
-          "file": "apps/backend-api/project.json",
-          "hash": "4737404117412733397"
-        }
-      ],
-      "my-test-domain-application": [
-        {
-          "file": "libs/my-test-domain/application/project.json",
-          "hash": "3736293771213913500"
-        },
-        {
-          "file": "libs/my-test-domain/application/src/index.ts",
-          "hash": "1072255038736215347"
-        }
-      ],
       "@fixture/fixture-application": [
         {
           "file": "tests/fixtures/hex-architecture/application/.eslintrc.json",
@@ -74,6 +58,319 @@
         {
           "file": "tests/fixtures/hex-architecture/application/src/lib/user.service.ts",
           "hash": "13638196785515257859",
+          "deps": [
+            "@fixture/fixture-domain"
+          ]
+        }
+      ],
+      "ddd-e2e": [
+        {
+          "file": "apps/ddd-e2e/jest.config.ts",
+          "hash": "5777859814217205684"
+        },
+        {
+          "file": "apps/ddd-e2e/project.json",
+          "hash": "1644058362789572015"
+        },
+        {
+          "file": "apps/ddd-e2e/tests/ddd.spec.ts",
+          "hash": "15572701343314855247",
+          "deps": [
+            "npm:@nx/plugin"
+          ]
+        },
+        {
+          "file": "apps/ddd-e2e/tsconfig.json",
+          "hash": "4138663062042646066"
+        },
+        {
+          "file": "apps/ddd-e2e/tsconfig.spec.json",
+          "hash": "10595040461224341030"
+        }
+      ],
+      "backend-api": [
+        {
+          "file": "apps/backend-api/__pycache__/di.cpython-312.pyc",
+          "hash": "14803430135519330335"
+        },
+        {
+          "file": "apps/backend-api/__pycache__/main.cpython-312.pyc",
+          "hash": "1095867656380877162"
+        },
+        {
+          "file": "apps/backend-api/__pycache__/repository.cpython-312.pyc",
+          "hash": "15945401199078918063"
+        },
+        {
+          "file": "apps/backend-api/__pycache__/services.cpython-312.pyc",
+          "hash": "17200472650198075591"
+        },
+        {
+          "file": "apps/backend-api/__pycache__/uow.cpython-312.pyc",
+          "hash": "9595205397803701436"
+        },
+        {
+          "file": "apps/backend-api/di.py",
+          "hash": "11618381014693168301"
+        },
+        {
+          "file": "apps/backend-api/main.py",
+          "hash": "10331168909275939999"
+        },
+        {
+          "file": "apps/backend-api/project.json",
+          "hash": "4737404117412733397"
+        },
+        {
+          "file": "apps/backend-api/repository.py",
+          "hash": "16774082206142678967"
+        },
+        {
+          "file": "apps/backend-api/services.py",
+          "hash": "4978441208843806514"
+        },
+        {
+          "file": "apps/backend-api/uow.py",
+          "hash": "2837865955463086685"
+        }
+      ],
+      "my-test-domain-infrastructure": [
+        {
+          "file": "libs/my-test-domain/infrastructure/project.json",
+          "hash": "13383646362752408566"
+        },
+        {
+          "file": "libs/my-test-domain/infrastructure/src/index.ts",
+          "hash": "17485638343730217183"
+        },
+        {
+          "file": "libs/my-test-domain/infrastructure/src/lib/adapters/event-bus.in-memory.adapter.ts",
+          "hash": "8383532287153840287"
+        },
+        {
+          "file": "libs/my-test-domain/infrastructure/src/lib/adapters/event_bus_in_memory_adapter.py",
+          "hash": "17601958247146642791"
+        },
+        {
+          "file": "libs/my-test-domain/infrastructure/src/lib/adapters/myTestPort.in-memory.adapter.ts",
+          "hash": "6285534335141458684"
+        },
+        {
+          "file": "libs/my-test-domain/infrastructure/src/lib/adapters/my_test_port_fake_adapter.py",
+          "hash": "941169961000337368"
+        },
+        {
+          "file": "libs/my-test-domain/infrastructure/src/lib/adapters/unit-of-work.in-memory.adapter.ts",
+          "hash": "11695019042967785516"
+        },
+        {
+          "file": "libs/my-test-domain/infrastructure/src/lib/adapters/unit_of_work_sqlalchemy_adapter.py",
+          "hash": "17250209885187234111"
+        }
+      ],
+      "my-test-domain-domain": [
+        {
+          "file": "libs/my-test-domain/domain/project.json",
+          "hash": "2804090607300375552"
+        },
+        {
+          "file": "libs/my-test-domain/domain/src/index.ts",
+          "hash": "7705032399463697305"
+        },
+        {
+          "file": "libs/my-test-domain/domain/src/lib/ports/event-bus.port.ts",
+          "hash": "9085767173745970975"
+        },
+        {
+          "file": "libs/my-test-domain/domain/src/lib/ports/event_bus_port.py",
+          "hash": "15679653008650275118"
+        },
+        {
+          "file": "libs/my-test-domain/domain/src/lib/ports/myTestPort.port.ts",
+          "hash": "319125700103584069"
+        },
+        {
+          "file": "libs/my-test-domain/domain/src/lib/ports/my_test_port_port.py",
+          "hash": "6209496747277588926"
+        },
+        {
+          "file": "libs/my-test-domain/domain/src/lib/ports/unit-of-work.port.ts",
+          "hash": "9308124907470335875"
+        },
+        {
+          "file": "libs/my-test-domain/domain/src/lib/ports/unit_of_work_port.py",
+          "hash": "2042317272432674729"
+        }
+      ],
+      "@fixture/fixture-domain": [
+        {
+          "file": "tests/fixtures/hex-architecture/domain/package.json",
+          "hash": "8550332924197575872"
+        },
+        {
+          "file": "tests/fixtures/hex-architecture/domain/project.json",
+          "hash": "10761254133326428994"
+        },
+        {
+          "file": "tests/fixtures/hex-architecture/domain/src/index.ts",
+          "hash": "3818028850465915397"
+        },
+        {
+          "file": "tests/fixtures/hex-architecture/domain/src/lib/invalid-import.ts",
+          "hash": "9953178328214900119",
+          "deps": [
+            "@fixture/fixture-infrastructure"
+          ]
+        },
+        {
+          "file": "tests/fixtures/hex-architecture/domain/src/lib/user.entity.ts",
+          "hash": "17086130301662866164"
+        }
+      ],
+      "web-remix": [
+        {
+          "file": "apps/web-remix/.eslintrc.json",
+          "hash": "3366282393113447750"
+        },
+        {
+          "file": "apps/web-remix/app/entry.client.tsx",
+          "hash": "14681383573508879381",
+          "deps": [
+            "npm:@remix-run/react",
+            "npm:react",
+            "npm:react-dom"
+          ]
+        },
+        {
+          "file": "apps/web-remix/app/entry.server.tsx",
+          "hash": "1640619501735611565",
+          "deps": [
+            "npm:@remix-run/node",
+            "npm:@remix-run/react",
+            "npm:react-dom"
+          ]
+        },
+        {
+          "file": "apps/web-remix/app/root.tsx",
+          "hash": "6857082300858085339",
+          "deps": [
+            "npm:@remix-run/node",
+            "npm:@remix-run/react"
+          ]
+        },
+        {
+          "file": "apps/web-remix/app/routes/_index.tsx",
+          "hash": "110040051995215060"
+        },
+        {
+          "file": "apps/web-remix/app/routes/health.ts",
+          "hash": "10837685251962813825",
+          "deps": [
+            "npm:@remix-run/node"
+          ]
+        },
+        {
+          "file": "apps/web-remix/jest.config.ts",
+          "hash": "6548690841008523147",
+          "deps": [
+            "npm:jest"
+          ]
+        },
+        {
+          "file": "apps/web-remix/project.json",
+          "hash": "12934204690096062205"
+        },
+        {
+          "file": "apps/web-remix/remix.config.js",
+          "hash": "2030480992491646300"
+        },
+        {
+          "file": "apps/web-remix/tsconfig.json",
+          "hash": "16454429497755383407"
+        }
+      ],
+      "my-test-domain-application": [
+        {
+          "file": "libs/my-test-domain/application/project.json",
+          "hash": "3736293771213913500"
+        },
+        {
+          "file": "libs/my-test-domain/application/src/index.ts",
+          "hash": "1072255038736215347"
+        }
+      ],
+      "ts-tests": [
+        {
+          "file": "tests/ts/jest.config.js",
+          "hash": "6571346136412520319"
+        },
+        {
+          "file": "tests/ts/project.json",
+          "hash": "2920376985153108192"
+        },
+        {
+          "file": "tests/ts/tsconfig.json",
+          "hash": "4527870151428910052"
+        },
+        {
+          "file": "tests/ts/tsconfig.spec.json",
+          "hash": "6747623379304039029"
+        },
+        {
+          "file": "tests/ts/unit/generators/web-app.spec.ts",
+          "hash": "4885835433618110812",
+          "deps": [
+            "npm:@nx/devkit",
+            "@Nx-ddd/hex"
+          ]
+        },
+        {
+          "file": "tests/ts/unit/lint/dependency-rules.spec.ts",
+          "hash": "10051477987047672430",
+          "deps": [
+            "npm:eslint"
+          ]
+        },
+        {
+          "file": "tests/ts/unit/python/backend-api-project.spec.ts",
+          "hash": "290397791248517725"
+        },
+        {
+          "file": "tests/ts/unit/typegen/db-to-ts.spec.ts",
+          "hash": "16629052623028372970"
+        },
+        {
+          "file": "tests/ts/unit/typegen/verify.spec.ts",
+          "hash": "6372123352085406507"
+        },
+        {
+          "file": "tests/ts/unit/validators/user.spec.ts",
+          "hash": "16709240308032080822",
+          "deps": [
+            "npm:zod"
+          ]
+        }
+      ],
+      "@fixture/fixture-infrastructure": [
+        {
+          "file": "tests/fixtures/hex-architecture/infrastructure/.eslintrc.json",
+          "hash": "13743103059181335207"
+        },
+        {
+          "file": "tests/fixtures/hex-architecture/infrastructure/package.json",
+          "hash": "15596620188942714889"
+        },
+        {
+          "file": "tests/fixtures/hex-architecture/infrastructure/project.json",
+          "hash": "13035162877420102721"
+        },
+        {
+          "file": "tests/fixtures/hex-architecture/infrastructure/src/index.ts",
+          "hash": "18318837324817567028"
+        },
+        {
+          "file": "tests/fixtures/hex-architecture/infrastructure/src/lib/user.repository.ts",
+          "hash": "4954142218801557077",
           "deps": [
             "@fixture/fixture-domain"
           ]
@@ -589,11 +886,19 @@
         },
         {
           "file": "libs/ddd/src/generators/web-app/generator.ts",
-          "hash": "13824217287892277411",
+          "hash": "7757873616486796193",
           "deps": [
             "npm:@nx/devkit",
             [
               "npm:@nx/next",
+              "dynamic"
+            ],
+            [
+              "npm:@nx/remix",
+              "dynamic"
+            ],
+            [
+              "npm:@nx/expo",
               "dynamic"
             ]
           ]
@@ -604,11 +909,11 @@
         },
         {
           "file": "libs/ddd/src/generators/web-app/schema.json",
-          "hash": "1772681006862238141"
+          "hash": "4093225394712364623"
         },
         {
           "file": "libs/ddd/src/generators/web-app/schema.ts",
-          "hash": "14273759196644568185"
+          "hash": "7733455228640882176"
         },
         {
           "file": "libs/ddd/src/index.ts",
@@ -651,150 +956,11 @@
           "hash": "10595040461224341030"
         }
       ],
-      "my-test-domain-domain": [
-        {
-          "file": "libs/my-test-domain/domain/project.json",
-          "hash": "2804090607300375552"
-        },
-        {
-          "file": "libs/my-test-domain/domain/src/index.ts",
-          "hash": "7705032399463697305"
-        },
-        {
-          "file": "libs/my-test-domain/domain/src/lib/ports/event-bus.port.ts",
-          "hash": "9085767173745970975"
-        },
-        {
-          "file": "libs/my-test-domain/domain/src/lib/ports/event_bus_port.py",
-          "hash": "15679653008650275118"
-        },
-        {
-          "file": "libs/my-test-domain/domain/src/lib/ports/myTestPort.port.ts",
-          "hash": "319125700103584069"
-        },
-        {
-          "file": "libs/my-test-domain/domain/src/lib/ports/my_test_port_port.py",
-          "hash": "6209496747277588926"
-        },
-        {
-          "file": "libs/my-test-domain/domain/src/lib/ports/unit-of-work.port.ts",
-          "hash": "9308124907470335875"
-        },
-        {
-          "file": "libs/my-test-domain/domain/src/lib/ports/unit_of_work_port.py",
-          "hash": "2042317272432674729"
-        }
-      ],
-      "ddd-e2e": [
-        {
-          "file": "apps/ddd-e2e/jest.config.ts",
-          "hash": "5777859814217205684"
-        },
-        {
-          "file": "apps/ddd-e2e/project.json",
-          "hash": "1644058362789572015"
-        },
-        {
-          "file": "apps/ddd-e2e/tests/ddd.spec.ts",
-          "hash": "15572701343314855247",
-          "deps": [
-            "npm:@nx/plugin"
-          ]
-        },
-        {
-          "file": "apps/ddd-e2e/tsconfig.json",
-          "hash": "4138663062042646066"
-        },
-        {
-          "file": "apps/ddd-e2e/tsconfig.spec.json",
-          "hash": "10595040461224341030"
-        }
-      ],
-      "@fixture/fixture-infrastructure": [
-        {
-          "file": "tests/fixtures/hex-architecture/infrastructure/.eslintrc.json",
-          "hash": "13743103059181335207"
-        },
-        {
-          "file": "tests/fixtures/hex-architecture/infrastructure/package.json",
-          "hash": "15596620188942714889"
-        },
-        {
-          "file": "tests/fixtures/hex-architecture/infrastructure/project.json",
-          "hash": "13035162877420102721"
-        },
-        {
-          "file": "tests/fixtures/hex-architecture/infrastructure/src/index.ts",
-          "hash": "18318837324817567028"
-        },
-        {
-          "file": "tests/fixtures/hex-architecture/infrastructure/src/lib/user.repository.ts",
-          "hash": "4954142218801557077",
-          "deps": [
-            "@fixture/fixture-domain"
-          ]
-        }
-      ],
-      "@fixture/fixture-domain": [
-        {
-          "file": "tests/fixtures/hex-architecture/domain/package.json",
-          "hash": "8550332924197575872"
-        },
-        {
-          "file": "tests/fixtures/hex-architecture/domain/project.json",
-          "hash": "10761254133326428994"
-        },
-        {
-          "file": "tests/fixtures/hex-architecture/domain/src/index.ts",
-          "hash": "3818028850465915397"
-        },
-        {
-          "file": "tests/fixtures/hex-architecture/domain/src/lib/invalid-import.ts",
-          "hash": "9953178328214900119",
-          "deps": [
-            "@fixture/fixture-infrastructure"
-          ]
-        },
-        {
-          "file": "tests/fixtures/hex-architecture/domain/src/lib/user.entity.ts",
-          "hash": "17086130301662866164"
-        }
-      ],
-      "my-test-domain-infrastructure": [
-        {
-          "file": "libs/my-test-domain/infrastructure/project.json",
-          "hash": "13383646362752408566"
-        },
-        {
-          "file": "libs/my-test-domain/infrastructure/src/index.ts",
-          "hash": "17485638343730217183"
-        },
-        {
-          "file": "libs/my-test-domain/infrastructure/src/lib/adapters/event-bus.in-memory.adapter.ts",
-          "hash": "8383532287153840287"
-        },
-        {
-          "file": "libs/my-test-domain/infrastructure/src/lib/adapters/event_bus_in_memory_adapter.py",
-          "hash": "17601958247146642791"
-        },
-        {
-          "file": "libs/my-test-domain/infrastructure/src/lib/adapters/myTestPort.in-memory.adapter.ts",
-          "hash": "6285534335141458684"
-        },
-        {
-          "file": "libs/my-test-domain/infrastructure/src/lib/adapters/my_test_port_fake_adapter.py",
-          "hash": "941169961000337368"
-        },
-        {
-          "file": "libs/my-test-domain/infrastructure/src/lib/adapters/unit-of-work.in-memory.adapter.ts",
-          "hash": "11695019042967785516"
-        },
-        {
-          "file": "libs/my-test-domain/infrastructure/src/lib/adapters/unit_of_work_sqlalchemy_adapter.py",
-          "hash": "17250209885187234111"
-        }
-      ],
       "web-next": [
+        {
+          "file": "apps/web-next/.env.local.example",
+          "hash": "5017816482326978653"
+        },
         {
           "file": "apps/web-next/.eslintrc.json",
           "hash": "16736920716437763310"
@@ -837,6 +1003,39 @@
           "file": "apps/web-next/tsconfig.json",
           "hash": "1729865881289975199"
         }
+      ],
+      "web-expo": [
+        {
+          "file": "apps/web-expo/.eslintrc.json",
+          "hash": "3366282393113447750"
+        },
+        {
+          "file": "apps/web-expo/App.tsx",
+          "hash": "5384099055694104982",
+          "deps": [
+            "npm:react",
+            "npm:react-native"
+          ]
+        },
+        {
+          "file": "apps/web-expo/app.json",
+          "hash": "8740204665201882487"
+        },
+        {
+          "file": "apps/web-expo/jest.config.ts",
+          "hash": "12091978739797394427",
+          "deps": [
+            "npm:jest"
+          ]
+        },
+        {
+          "file": "apps/web-expo/project.json",
+          "hash": "12055762569994782985"
+        },
+        {
+          "file": "apps/web-expo/tsconfig.json",
+          "hash": "4860447437518016868"
+        }
       ]
     },
     "nonProjectFiles": [
@@ -845,12 +1044,24 @@
         "hash": "5443105041930014821"
       },
       {
+        "file": ".envrc",
+        "hash": "3244421341483603138"
+      },
+      {
         "file": ".eslintignore",
         "hash": "7663861978715868291"
       },
       {
         "file": ".eslintrc.json",
         "hash": "9747026852123211696"
+      },
+      {
+        "file": ".github/workflows/python-tests.yml",
+        "hash": "11245675284065516699"
+      },
+      {
+        "file": ".github/workflows/smoke.yml",
+        "hash": "15011639488269677248"
       },
       {
         "file": ".github/workflows/type-sync.yml",
@@ -886,7 +1097,7 @@
       },
       {
         "file": "README.md",
-        "hash": "11023225333642822417"
+        "hash": "10248172533509968371"
       },
       {
         "file": "apps/.gitkeep",
@@ -898,23 +1109,23 @@
       },
       {
         "file": "docs/ADR-hex-react-python.md",
-        "hash": "6383930096234370771"
+        "hash": "590451584339149681"
       },
       {
         "file": "docs/PRD-hex-react-python.md",
-        "hash": "2754557940018673523"
+        "hash": "2662572568801886590"
       },
       {
         "file": "docs/SDS-hex-react-python.md",
-        "hash": "15148488345195606459"
+        "hash": "17326522823487169690"
       },
       {
         "file": "docs/TDD-Plan-hex-react-python.md",
-        "hash": "11177190305440362501"
+        "hash": "490863986671128336"
       },
       {
         "file": "docs/TECHSPEC-hex-react-python.md",
-        "hash": "4360425870469727650"
+        "hash": "814907743852563673"
       },
       {
         "file": "docs/react-python-hex-migration.md",
@@ -949,8 +1160,20 @@
         "hash": "14470648835641264530"
       },
       {
+        "file": "libs/backend/type_utils/validators/__pycache__/user.cpython-312.pyc",
+        "hash": "12446876654590060150"
+      },
+      {
+        "file": "libs/backend/type_utils/validators/user.py",
+        "hash": "16136994275584491918"
+      },
+      {
         "file": "libs/shared/__init__.py",
         "hash": "12533451310798131487"
+      },
+      {
+        "file": "libs/shared/__pycache__/__init__.cpython-312.pyc",
+        "hash": "6007272577098764622"
       },
       {
         "file": "libs/shared/database-types/comments.ts",
@@ -963,6 +1186,10 @@
       {
         "file": "libs/shared/database-types/users.ts",
         "hash": "7780287665793498466"
+      },
+      {
+        "file": "libs/shared/type_system/generators/__pycache__/db_to_python.cpython-312.pyc",
+        "hash": "3352316335187355959"
       },
       {
         "file": "libs/shared/type_system/generators/db_to_python.py",
@@ -989,8 +1216,16 @@
         "hash": "3756589773324295923"
       },
       {
+        "file": "libs/shared/web/src/validators/user.ts",
+        "hash": "17118881449732842084"
+      },
+      {
         "file": "migrations.json",
         "hash": "6002396235639935645"
+      },
+      {
+        "file": "nx-graph.html",
+        "hash": "12560290355241016586"
       },
       {
         "file": "nx.json",
@@ -998,19 +1233,59 @@
       },
       {
         "file": "package-lock.json",
-        "hash": "11209315804659592754"
+        "hash": "839751746100261465"
       },
       {
         "file": "package.json",
-        "hash": "7227582587071986061"
+        "hash": "17367084530314120520"
       },
       {
         "file": "pyproject.toml",
         "hash": "6093493642344425122"
       },
       {
+        "file": "static/environment.js",
+        "hash": "6453452531710043178"
+      },
+      {
+        "file": "static/favicon.ico",
+        "hash": "9303420814833116677"
+      },
+      {
+        "file": "static/main.js",
+        "hash": "9122774692629226032"
+      },
+      {
+        "file": "static/runtime.js",
+        "hash": "14980783667260047515"
+      },
+      {
+        "file": "static/styles.css",
+        "hash": "3977373496830333654"
+      },
+      {
+        "file": "static/styles.js",
+        "hash": "1959530864379323269"
+      },
+      {
         "file": "tests/ci/workflow.test.ts",
         "hash": "6523057787607706712"
+      },
+      {
+        "file": "tests/cross/__pycache__/test_validation_parity.cpython-312-pytest-8.4.2.pyc",
+        "hash": "10732203639974852978"
+      },
+      {
+        "file": "tests/cross/test_validation_parity.py",
+        "hash": "7749808004676194973"
+      },
+      {
+        "file": "tests/cross/user_test_cases.json",
+        "hash": "11200751399560634845"
+      },
+      {
+        "file": "tests/cross/validate_user.ts",
+        "hash": "8337473029439906053"
       },
       {
         "file": "tests/e2e/typegen/generate-all.spec.ts",
@@ -1021,40 +1296,52 @@
         "hash": "8069589284216445823"
       },
       {
+        "file": "tests/py/integration/__pycache__/test_health_endpoint.cpython-312-pytest-8.4.2.pyc",
+        "hash": "13615091259235663583"
+      },
+      {
+        "file": "tests/py/integration/__pycache__/test_uow_behavior.cpython-312-pytest-8.4.2.pyc",
+        "hash": "15166104657911150456"
+      },
+      {
+        "file": "tests/py/integration/__pycache__/test_user_route.cpython-312-pytest-8.4.2.pyc",
+        "hash": "14465044981668200226"
+      },
+      {
+        "file": "tests/py/integration/__pycache__/test_user_update_delete.cpython-312-pytest-8.4.2.pyc",
+        "hash": "9033526986678094159"
+      },
+      {
+        "file": "tests/py/integration/test_health_endpoint.py",
+        "hash": "1265600863011935982"
+      },
+      {
+        "file": "tests/py/integration/test_uow_behavior.py",
+        "hash": "7206947011643365092"
+      },
+      {
+        "file": "tests/py/integration/test_user_route.py",
+        "hash": "8986474405792246565"
+      },
+      {
+        "file": "tests/py/integration/test_user_update_delete.py",
+        "hash": "1241948031215763421"
+      },
+      {
+        "file": "tests/py/unit/typegen/__pycache__/test_db_to_python.cpython-312-pytest-8.4.2.pyc",
+        "hash": "14351125220053049627"
+      },
+      {
         "file": "tests/py/unit/typegen/test_db_to_python.py",
         "hash": "11737881398781282766"
       },
       {
-        "file": "tests/ts/jest.config.js",
-        "hash": "6571346136412520319"
+        "file": "tests/py/unit/validators/__pycache__/test_user.cpython-312-pytest-8.4.2.pyc",
+        "hash": "6655053778717583051"
       },
       {
-        "file": "tests/ts/tsconfig.json",
-        "hash": "4527870151428910052"
-      },
-      {
-        "file": "tests/ts/tsconfig.spec.json",
-        "hash": "6747623379304039029"
-      },
-      {
-        "file": "tests/ts/unit/generators/web-app.spec.ts",
-        "hash": "1691901419934192242"
-      },
-      {
-        "file": "tests/ts/unit/lint/dependency-rules.spec.ts",
-        "hash": "10051477987047672430"
-      },
-      {
-        "file": "tests/ts/unit/python/backend-api-project.spec.ts",
-        "hash": "290397791248517725"
-      },
-      {
-        "file": "tests/ts/unit/typegen/db-to-ts.spec.ts",
-        "hash": "16629052623028372970"
-      },
-      {
-        "file": "tests/ts/unit/typegen/verify.spec.ts",
-        "hash": "6372123352085406507"
+        "file": "tests/py/unit/validators/test_user.py",
+        "hash": "16019144597801322981"
       },
       {
         "file": "tools/tsconfig.tools.json",
