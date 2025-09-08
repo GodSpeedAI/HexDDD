@@ -1,0 +1,79 @@
+[
+  {
+    "description": "Valid user",
+    "data": {
+      "id": "a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11",
+      "name": "John Doe",
+      "email": "john.doe@example.com",
+      "created_at": "2024-01-01T12:00:00.000Z",
+      "updated_at": "2024-01-01T12:00:00.000Z"
+    },
+    "expected_valid": true
+  },
+  {
+    "description": "Valid user with null updated_at",
+    "data": {
+      "id": "a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11",
+      "name": "John Doe",
+      "email": "john.doe@example.com",
+      "created_at": "2024-01-01T12:00:00.000Z",
+      "updated_at": null
+    },
+    "expected_valid": true
+  },
+  {
+    "description": "Invalid UUID",
+    "data": {
+      "id": "not-a-uuid",
+      "name": "John Doe",
+      "email": "john.doe@example.com",
+      "created_at": "2024-01-01T12:00:00.000Z",
+      "updated_at": null
+    },
+    "expected_valid": false
+  },
+  {
+    "description": "Empty name",
+    "data": {
+      "id": "a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11",
+      "name": "",
+      "email": "john.doe@example.com",
+      "created_at": "2024-01-01T12:00:00.000Z",
+      "updated_at": null
+    },
+    "expected_valid": false
+  },
+  {
+    "description": "Invalid email",
+    "data": {
+      "id": "a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11",
+      "name": "John Doe",
+      "email": "not-an-email",
+      "created_at": "2024-01-01T12:00:00.000Z",
+      "updated_at": null
+    },
+    "expected_valid": false
+  },
+  {
+    "description": "Invalid created_at",
+    "data": {
+      "id": "a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11",
+      "name": "John Doe",
+      "email": "john.doe@example.com",
+      "created_at": "not-a-date",
+      "updated_at": null
+    },
+    "expected_valid": false
+  },
+  {
+    "description": "Invalid updated_at",
+    "data": {
+      "id": "a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11",
+      "name": "John Doe",
+      "email": "john.doe@example.com",
+      "created_at": "2024-01-01T12:00:00.000Z",
+      "updated_at": "not-a-date"
+    },
+    "expected_valid": false
+  }
+]

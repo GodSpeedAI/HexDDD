@@ -1,5 +1,5 @@
 import { json, type LoaderFunctionArgs } from '@remix-run/node';
-import { ENV } from '../../../../../libs/shared/web/src';
+import { ENV } from '@shared/web';
 
 function isAbsoluteUrl(url: string): boolean {
   return /^https?:\/\//i.test(url);
@@ -26,4 +26,3 @@ export async function loader(_args: LoaderFunctionArgs) {
     return json({ ok: false, upstream, error: (err as Error).message }, { status: 503 });
   }
 }
-

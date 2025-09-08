@@ -1,4 +1,4 @@
-import { UserSchema, type User } from '../../../libs/shared/web/src';
+import { UserSchema, type User } from '@shared/web';
 
 const sample = { id: '00000000-0000-0000-0000-000000000000', name: 'Ada Lovelace', email: 'ada@example.com' };
 
@@ -12,4 +12,3 @@ export default function Page() {
     </main>
   );
 }
-

@@ -5,21 +5,21 @@
   "sourceRoot": "apps/backend-api",
   "targets": {
     "serve": {
-      "executor": "@nx/workspace:run-commands",
+      "executor": "nx:run-commands",
       "options": {
         "cwd": "apps/backend-api",
         "command": "uvicorn main:app --reload --host 0.0.0.0 --port 8000"
       }
     },
     "test": {
-      "executor": "@nx/workspace:run-commands",
+      "executor": "nx:run-commands",
       "options": {
         "cwd": ".",
         "command": "pytest -q"
       }
     },
     "type-check": {
-      "executor": "@nx/workspace:run-commands",
+      "executor": "nx:run-commands",
       "options": {
         "cwd": ".",
         "command": "mypy --strict ."
@@ -28,4 +28,3 @@
   },
   "tags": ["type:ui", "scope:backend"]
 }
-

@@ -1,7 +1,7 @@
 from fastapi import Depends
 
-from .uow import UnitOfWork
-from .repository import InMemoryUserRepository
+from uow import UnitOfWork
+from repository import InMemoryUserRepository
 
 _singleton_user_repo = InMemoryUserRepository()
 

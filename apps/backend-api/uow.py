@@ -3,7 +3,7 @@ from __future__ import annotations
 from contextlib import contextmanager
 from typing import Dict, Optional
 
-from .repository import InMemoryUserRepository, UserEntity
+from repository import InMemoryUserRepository, UserEntity
 
 
 class UnitOfWork:

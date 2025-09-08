@@ -1,9 +1,9 @@
 from fastapi import Depends, FastAPI, HTTPException
 from pydantic import BaseModel
-from .di import inject_uow
-from .uow import UnitOfWork
-from .repository import UserEntity
-from .services import UserService
+from di import inject_uow
+from uow import UnitOfWork
+from repository import UserEntity
+from services import UserService
 
 
 app = FastAPI(title="Backend API")

@@ -5,7 +5,8 @@ const config: Config = {
   preset: '../../jest.preset.js',
   testEnvironment: 'jsdom',
   transform: {
-    '^.+\.[tj]sx?$': ['ts-jest', { tsconfig: '<rootDir>/tsconfig.json' }],
+    // eslint-disable-next-line no-useless-escape
+    '^.+\\.[tj]sx?$': ['ts-jest', { tsconfig: '<rootDir>/tsconfig.json' }],
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
   testMatch: ['**/*.spec.ts', '**/*.spec.tsx'],

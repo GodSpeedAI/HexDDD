@@ -15,6 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@shared/web": [
+        "libs/shared/web/src/index.ts"
+      ],
       "@angular-architects/checkin/domain": [
         "libs/checkin/domain/src/index.ts"
       ],
