@@ -1,20 +1,12 @@
 {
   "name": "@Nx-ddd/hex",
   "version": "0.0.1",
-  "schematics": {
-    "ng-add": {
-      "factory": "./src/schematics/ng-add/index",
-      "description": "adds initial access restrictions to linting rules",
-      "schema": "./src/schematics/ng-add/schema.json"
-    }
-  },
   "generators": {
     "init": {
       "factory": "./src/generators/init/index",
       "description": "adds initial access restrictions to linting rules",
       "schema": "./src/generators/init/schema.json"
     },
-    
     "hex-domain": {
       "factory": "./src/generators/hex-domain/index",
       "schema": "./src/generators/hex-domain/schema.json",

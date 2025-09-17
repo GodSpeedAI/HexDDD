@@ -37,11 +37,6 @@
       ],
       "description": "A type to determine if and how to build the library.",
       "default": "internal"
-    },
-    "standalone": {
-      "type": "boolean",
-      "default": true,
-      "description": "Use standalone components?"
     }
   }
 }

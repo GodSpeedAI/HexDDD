@@ -14,15 +14,14 @@
     "yarn": "^1.22.17"
   },
   "dependencies": {
+    "@nx/devkit": ">=16.0.0",
     "tslib": "^2.3.1"
   },
-  "optionalDependencies": {
-    
-  },
   "peerDependencies": {
+    "@nx/js": ">=16.0.0",
+    "@nx/react": ">=16.0.0",
     "@nx/next": ">=16.0.0"
   },
   "main": "src/index.js",
-  "schematics": "./collection.json",
   "generators": "./collection.json"
 }
