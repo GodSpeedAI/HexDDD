@@ -4,7 +4,7 @@ import { updateDepConst } from '../utils/update-dep-const';
 export default async function (tree: Tree, schema: any) {
   updateDepConst(tree, (depConst) => {
     const jokerIndex = depConst.findIndex(
-      (entry) =>
+      (entry: any) =>
         entry['sourceTag'] &&
         entry['sourceTag'] === '*' &&
         entry['onlyDependOnLibsWithTags'] &&

@@ -41,7 +41,12 @@ export function updateDepConst(
     }
   }
 
-  const text = host.read(filePath).toString();
+  const content = host.read(filePath);
+  if (!content) {
+    console.warn(`Could not read file: ${filePath}`);
+    return;
+  }
+  const text = content.toString();
 
   if (isJson) {
     const json = JSON.parse(text);
@@ -49,7 +54,7 @@ export function updateDepConst(
     if (rules['overrides']) {
       const overrides = rules['overrides'];
       rules = overrides.find(
-        (e) => e.rules && e.rules['@nx/enforce-module-boundaries']
+        (e: any) => e.rules && e.rules['@nx/enforce-module-boundaries']
       );
     }
 

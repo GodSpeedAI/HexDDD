@@ -5,5 +5,6 @@ export function fileContains(
   appModulePath: string,
   subStr: string
 ) {
-  return tree.read(appModulePath).toString('utf-8').indexOf(subStr) !== -1;
+  const content = tree.read(appModulePath);
+  return content ? content.toString('utf-8').indexOf(subStr) !== -1 : false;
 }

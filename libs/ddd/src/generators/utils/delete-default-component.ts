@@ -13,7 +13,9 @@ export function deleteDefaultComponent(tree: Tree, finalDirectory: string, final
     const index = path.join(finalDirectory, 'src', 'index.ts');
     if (deleteIndex && deleted && tree.exists(index)) {
         const contents = tree.read(index, 'utf-8');
-        const rest = contents.split('\n').slice(1);
-        tree.write(index, (rest || []).join('\n'));
+        if (contents) {
+            const rest = contents.split('\n').slice(1);
+            tree.write(index, (rest || []).join('\n'));
+        }
     }
 }
