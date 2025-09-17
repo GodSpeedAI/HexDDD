@@ -1,5 +1,3 @@
-import { SchematicContext } from '@angular-devkit/schematics';
-
 export function checkRuleExists(
   filePath: string,
   rule: string,

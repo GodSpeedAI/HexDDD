@@ -1,5 +1,5 @@
 {
-  "name": "@Nx-ddd/hex",
+  "name": "@ddd-plugin/ddd",
   "version": "0.1.0",
   "license": "MIT",
   "author": "Samuel Prime",
@@ -23,5 +23,6 @@
     "@nx/next": ">=16.0.0"
   },
   "main": "src/index.js",
-  "generators": "./collection.json"
+  "generators": "./collection.json",
+  "executors": "./executors.json"
 }

@@ -1,11 +1,16 @@
 {
-  "name": "@Nx-ddd/hex",
+  "name": "@ddd-plugin/ddd",
   "version": "0.0.1",
   "generators": {
     "init": {
       "factory": "./src/generators/init/index",
       "description": "adds initial access restrictions to linting rules",
       "schema": "./src/generators/init/schema.json"
+    },
+    "ddd": {
+      "factory": "./src/generators/ddd/generator",
+      "schema": "./src/generators/ddd/schema.json",
+      "description": "creates a workspace-level DDD toolkit wrapper"
     },
     "hex-domain": {
       "factory": "./src/generators/hex-domain/index",

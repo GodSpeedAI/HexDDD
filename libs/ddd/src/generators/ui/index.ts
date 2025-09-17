@@ -28,6 +28,7 @@ export default async function (tree: Tree, options: UiOptions) {
     importPath: options.importPath ?? importPath,
     style: 'scss',
     component: true,
+    linter: 'eslint',
   });
 
   await formatFiles(tree);

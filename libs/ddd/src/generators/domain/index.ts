@@ -60,6 +60,7 @@ export default async function (tree: Tree, options: DomainOptions) {
       tags: `domain:${appName},type:app`,
       style: 'scss',
       e2eTestRunner: 'none',
+      linter: 'eslint',
     });
   }
 

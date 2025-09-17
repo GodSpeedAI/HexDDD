@@ -2,6 +2,7 @@ import {
   Tree,
   formatFiles,
   installPackagesTask,
+  joinPathFragments,
   names,
 } from '@nx/devkit';
 import { libraryGenerator as jsLibraryGenerator } from '@nx/js';
@@ -33,9 +34,16 @@ export default async function (tree: Tree, options: FeatureOptions) {
     importPath: importPath,
   });
 
+  const componentPath = joinPathFragments(
+    featureDirectory,
+    'src/lib',
+    featureName,
+    `${featureName}.tsx`
+  );
+
   await reactComponentGenerator(tree, {
     name: featureName,
-    project: featureProjectName,
+    path: componentPath,
     style: 'scss',
     export: true,
   });
