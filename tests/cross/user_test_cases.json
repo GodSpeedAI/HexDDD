@@ -44,6 +44,17 @@
     "expected_valid": false
   },
   {
+    "description": "Whitespace-only name",
+    "data": {
+      "id": "a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11",
+      "name": "   ",
+      "email": "john.doe@example.com",
+      "created_at": "2024-01-01T12:00:00.000Z",
+      "updated_at": null
+    },
+    "expected_valid": false
+  },
+  {
     "description": "Invalid email",
     "data": {
       "id": "a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11",

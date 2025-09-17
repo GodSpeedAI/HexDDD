@@ -144,6 +144,8 @@ References: [ADR-004], [ADR-012], [PRD-002], [SDS-006], [SDS-014], [SDS-015], [S
 
 ## Phase 4: Type System Validators & Parity
 
+ * use context7
+
 ### Task 4.1: TS Zod Validators from Types
 References: [ADR-002], [PRD-004], [SDS-014], [SDS-015]
 - Red

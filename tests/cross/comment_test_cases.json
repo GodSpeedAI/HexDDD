@@ -1,0 +1,79 @@
+[
+  {
+    "description": "Valid comment with all fields",
+    "data": {
+      "id": "123e4567-e89b-12d3-a456-426614174000",
+      "post_id": "123e4567-e89b-12d3-a456-426614174001",
+      "user_id": "123e4567-e89b-12d3-a456-426614174002",
+      "content": "This is a test comment.",
+      "created_at": "2023-01-01T12:00:00Z"
+    },
+    "expected_valid": true
+  },
+  {
+    "description": "Invalid comment with non-UUID id",
+    "data": {
+      "id": "not-a-uuid",
+      "post_id": "123e4567-e89b-12d3-a456-426614174001",
+      "user_id": "123e4567-e89b-12d3-a456-426614174002",
+      "content": "This is a test comment.",
+      "created_at": "2023-01-01T12:00:00Z"
+    },
+    "expected_valid": false
+  },
+  {
+    "description": "Invalid comment with non-UUID post_id",
+    "data": {
+      "id": "123e4567-e89b-12d3-a456-426614174000",
+      "post_id": "not-a-uuid",
+      "user_id": "123e4567-e89b-12d3-a456-426614174002",
+      "content": "This is a test comment.",
+      "created_at": "2023-01-01T12:00:00Z"
+    },
+    "expected_valid": false
+  },
+  {
+    "description": "Invalid comment with non-UUID user_id",
+    "data": {
+      "id": "123e4567-e89b-12d3-a456-426614174000",
+      "post_id": "123e4567-e89b-12d3-a456-426614174001",
+      "user_id": "not-a-uuid",
+      "content": "This is a test comment.",
+      "created_at": "2023-01-01T12:00:00Z"
+    },
+    "expected_valid": false
+  },
+  {
+    "description": "Invalid comment with empty content",
+    "data": {
+      "id": "123e4567-e89b-12d3-a456-426614174000",
+      "post_id": "123e4567-e89b-12d3-a456-426614174001",
+      "user_id": "123e4567-e89b-12d3-a456-426614174002",
+      "content": "",
+      "created_at": "2023-01-01T12:00:00Z"
+    },
+    "expected_valid": false
+  },
+  {
+    "description": "Invalid comment with whitespace-only content",
+    "data": {
+      "id": "123e4567-e89b-12d3-a456-426614174000",
+      "post_id": "123e4567-e89b-12d3-a456-426614174001",
+      "user_id": "123e4567-e89b-12d3-a456-426614174002",
+      "content": "   ",
+      "created_at": "2023-01-01T12:00:00Z"
+    },
+    "expected_valid": false
+  },
+  {
+    "description": "Invalid comment with invalid created_at format",
+    "data": {
+      "id": "123e4567-e89b-12d3-a456-426614174000",
+      "post_id": "123e4567-e89b-12d3-a456-426614174001",
+      "user_id": "123e4567-e89b-12d3-a456-426614174002",
+      "content": "This is a test comment.",
+      "created_at": "invalid-date"
+    },
+    "expected_valid": false
+  }
+]

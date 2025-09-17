@@ -1,0 +1,132 @@
+[
+  {
+    "description": "Valid post with all fields",
+    "data": {
+      "id": "123e4567-e89b-12d3-a456-426614174000",
+      "user_id": "123e4567-e89b-12d3-a456-426614174001",
+      "title": "Test Post",
+      "content": "This is a test post content.",
+      "published": true,
+      "created_at": "2023-01-01T12:00:00Z",
+      "updated_at": "2023-01-01T12:00:00Z"
+    },
+    "expected_valid": true
+  },
+  {
+    "description": "Valid post with null content and updated_at",
+    "data": {
+      "id": "123e4567-e89b-12d3-a456-426614174000",
+      "user_id": "123e4567-e89b-12d3-a456-426614174001",
+      "title": "Test Post",
+      "content": null,
+      "published": true,
+      "created_at": "2023-01-01T12:00:00Z",
+      "updated_at": null
+    },
+    "expected_valid": true
+  },
+  {
+    "description": "Invalid post with non-UUID id",
+    "data": {
+      "id": "not-a-uuid",
+      "user_id": "123e4567-e89b-12d3-a456-426614174001",
+      "title": "Test Post",
+      "content": "This is a test post content.",
+      "published": true,
+      "created_at": "2023-01-01T12:00:00Z",
+      "updated_at": "2023-01-01T12:00:00Z"
+    },
+    "expected_valid": false
+  },
+  {
+    "description": "Invalid post with non-UUID user_id",
+    "data": {
+      "id": "123e4567-e89b-12d3-a456-426614174000",
+      "user_id": "not-a-uuid",
+      "title": "Test Post",
+      "content": "This is a test post content.",
+      "published": true,
+      "created_at": "2023-01-01T12:00:00Z",
+      "updated_at": "2023-01-01T12:00:00Z"
+    },
+    "expected_valid": false
+  },
+  {
+    "description": "Invalid post with empty title",
+    "data": {
+      "id": "123e4567-e89b-12d3-a456-426614174000",
+      "user_id": "123e4567-e89b-12d3-a456-426614174001",
+      "title": "",
+      "content": "This is a test post content.",
+      "published": true,
+      "created_at": "2023-01-01T12:00:00Z",
+      "updated_at": "2023-01-01T12:00:00Z"
+    },
+    "expected_valid": false
+  },
+  {
+    "description": "Invalid post with whitespace-only title",
+    "data": {
+      "id": "123e4567-e89b-12d3-a456-426614174000",
+      "user_id": "123e4567-e89b-12d3-a456-426614174001",
+      "title": "   ",
+      "content": "This is a test post content.",
+      "published": true,
+      "created_at": "2023-01-01T12:00:00Z",
+      "updated_at": "2023-01-01T12:00:00Z"
+    },
+    "expected_valid": false
+  },
+  {
+    "description": "Invalid post with non-boolean published",
+    "data": {
+      "id": "123e4567-e89b-12d3-a456-426614174000",
+      "user_id": "123e4567-e89b-12d3-a456-426614174001",
+      "title": "Test Post",
+      "content": "This is a test post content.",
+      "published": "true",
+      "created_at": "2023-01-01T12:00:00Z",
+      "updated_at": "2023-01-01T12:00:00Z"
+    },
+    "expected_valid": false
+  },
+  {
+    "description": "Invalid post with whitespace-only content",
+    "data": {
+      "id": "123e4567-e89b-12d3-a456-426614174000",
+      "user_id": "123e4567-e89b-12d3-a456-426614174001",
+      "title": "Test Post",
+      "content": "   ",
+      "published": true,
+      "created_at": "2023-01-01T12:00:00Z",
+      "updated_at": "2023-01-01T12:00:00Z"
+    },
+    "expected_valid": false
+  },
+  {
+    "description": "Invalid post with invalid created_at format",
+    "data": {
+      "id": "123e4567-e89b-12d3-a456-426614174000",
+      "user_id": "123e4567-e89b-12d3-a456-426614174001",
+      "title": "Test Post",
+      "content": "This is a test post content.",
+      "published": true,
+      "created_at": "invalid-date",
+      "updated_at": "2023-01-01T12:00:00Z"
+    },
+    "expected_valid": false
+  },
+  {
+    "description": "Invalid post with invalid updated_at format",
+    "data": {
+      "id": "123e4567-e89b-12d3-a456-426614174000",
+      "user_id": "123e4567-e89b-12d3-a456-426614174001",
+      "title": "Test Post",
+      "content": "This is a test post content.",
+      "published": true,
+      "created_at": "2023-01-01T12:00:00Z",
+      "updated_at": "invalid-date"
+    },
+    "expected_valid": false
+  }
+]
