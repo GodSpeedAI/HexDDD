@@ -2,7 +2,7 @@
 
 > A comprehensive Nx plugin for building scalable applications with Domain-Driven Design and Hexagonal Architecture patterns.
 
-[![CI Status](https://github.com/SPRIME01/nx-ddd-hex-plugin/actions/workflows/smoke.yml/badge.svg)](https://github.com/SPRIME01/nx-ddd-hex-plugin/actions/workflows/smoke.yml)
+[![CI Status](https://github.com/SPRIME01/nx-ddd-hex-plugin/actions/workflows/smoke.yml/badge.svg?branch=main&cache=bust)](https://github.com/SPRIME01/nx-ddd-hex-plugin/actions/workflows/smoke.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## What is this?
