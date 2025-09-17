@@ -142,11 +142,11 @@ References: [ADR-004], [ADR-012], [PRD-002], [SDS-006], [SDS-014], [SDS-015], [S
   - Build and lint each generated app.
   - E2E specs pass for each generated framework.
 
-## Phase 4: Type System Validators & Parity
+## ~~Phase 4: Type System Validators & Parity~~
 
  * use context7
 
-### Task 4.1: TS Zod Validators from Types
+### ~~Task 4.1: TS Zod Validators from Types~~
 References: [ADR-002], [PRD-004], [SDS-014], [SDS-015]
 - Red
   - tests/ts/unit/validators/user.spec.ts: zod schemas match DB constraints; invalid inputs fail with helpful messages.
@@ -157,7 +157,7 @@ References: [ADR-002], [PRD-004], [SDS-014], [SDS-015]
 - Regression
   - Unit tests pass; no circular deps.
 
-### Task 4.2: Python Pydantic Validators & Parity Tests
+### ~~Task 4.2: Python Pydantic Validators & Parity Tests~~
 References: [ADR-002], [PRD-004], [SDS-016]
 - Red
   - tests/py/unit/validators/test_user.py: pydantic models enforce same constraints.
