@@ -353,13 +353,47 @@ workspace/
 │   └── type-generator/       # Schema-to-code generator
 └── tests/                   # Integration and E2E tests
 ```
-
 ## Contributing
 
-1. **Follow TDD**: Write tests first, implement features second
-2. **Respect Architecture**: Maintain clean dependency directions
-3. **Generate Types**: Use the type generator for schema changes
-4. **Lint Clean**: Ensure all architectural constraints pass
+Please base all work on the dev branch and open pull requests against dev. Follow these best practices to keep the project stable and review-ready:
+
+1. Branching
+  - Create branches from dev: `git checkout dev && git pull && git checkout -b feat/<scope>-short-desc` or `fix/<scope>-short-desc`.
+  - Use clear branch names and reference issue/ticket IDs in branch names or PR titles.
+
+2. Workflow
+  - Follow TDD: write failing tests first, implement code, then make tests pass.
+  - Keep PRs small and focused. One logical change per PR makes review and CI faster.
+
+3. Types & Generators
+  - When schema or type changes are required, run the type generator: `nx run type-generator:generate`.
+  - Commit any generated artifacts or open a separate PR that contains only generated changes if instructed by maintainers.
+  - Ensure cross-language parity checks (`nx run type-generator:verify`) pass when relevant.
+
+4. Quality checks
+  - Run tests and type checks locally: `nx test <project>`, `nx run-many --target=type-check --all`.
+  - Lint and enforce architectural rules: `nx run-many --target=lint --all`.
+  - Ensure all CI checks pass before requesting review.
+
+5. Code style & commits
+  - Use descriptive commit messages and follow the repository's commit conventions (e.g., conventional commits) if used.
+  - Keep code well-documented and maintain clear separation between domain, application, and infrastructure layers.
+
+6. Pull Requests
+  - Target branch: dev.
+  - Provide a clear PR description: purpose, changes, testing steps, and any migration/type-generator impacts.
+  - Link to relevant issues or ADRs.
+  - Request reviews from the appropriate domain owners; at least one approving review is required before merge.
+
+7. Merging
+  - Merge into dev only after CI is green and reviewers have approved.
+  - Prefer merge strategies consistent with the repo policy (squash/rebase) to maintain a clean history.
+
+8. Maintenance notes
+  - If changing generators or templates, ensure idempotency and include tests that validate repeated runs.
+  - Update relevant docs (README, AGENTS.md, ADRs) when architectural or workflow changes are introduced.
+
+Following these guidelines helps keep contributions predictable, reviewable, and aligned with the project's architectural rules. Thank you for contributing.
 
 ## License
 
