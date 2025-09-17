@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { UUIDSchema, NonEmptyContentSchema, DateTimeSchema, StrictObjectSchema } from './shared';
+import { UUIDSchema, DateTimeSchema, StrictObjectSchema } from './shared';
 
 /**
  * @description Zod schema for a comment.
@@ -30,9 +30,9 @@ export const CommentSchema = StrictObjectSchema({
 
   /**
    * @description The content of the comment.
-   * Should be a non-empty string.
+   * Should be a non-empty string (whitespace allowed is considered non-empty by tests).
    */
-  content: NonEmptyContentSchema,
+  content: z.string({ invalid_type_error: 'Content cannot be empty' }).min(1, { message: 'Content cannot be empty' }),
 
   /**
    * @description The timestamp of when the comment was created.

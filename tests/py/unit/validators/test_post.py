@@ -7,7 +7,6 @@ from tests.py.fixtures import (
     get_invalid_uuid_data,
     get_empty_string_data,
     get_null_content_data,
-    get_null_updated_at_data,
     get_non_boolean_data,
     get_invalid_date_data,
     get_whitespace_only_data,
@@ -18,7 +17,7 @@ def test_post_validation_success():
     Tests that a valid post object is successfully validated.
     """
     post_data = get_valid_post_data()
-    post = Post(**post_data)
+    post: Post = Post(**post_data)
     assert post.id == post_data["id"]
     assert post.user_id == post_data["user_id"]
     assert post.title == post_data["title"]
@@ -32,7 +31,7 @@ def test_post_validation_content_none():
     Tests that a valid post object with content as None is successfully validated.
     """
     post_data = get_null_content_data(get_valid_post_data())
-    post = Post(**post_data)
+    post: Post = Post(**post_data)
     assert post.content is None
     assert post.updated_at is None
 

@@ -1,5 +1,5 @@
 from datetime import datetime
-from typing import Optional
+from typing import Optional, Any
 from uuid import UUID
 
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, field_validator
@@ -20,7 +20,7 @@ class Post(BaseModel):
 
     @field_validator("title", mode="before")
     @classmethod
-    def validate_title(cls, value: str) -> str:
+    def validate_title(cls, value: Any) -> str:
         if not isinstance(value, str):
             raise TypeError("Title must be a string")
         trimmed = value.strip()
@@ -30,7 +30,7 @@ class Post(BaseModel):
 
     @field_validator("content", mode="before")
     @classmethod
-    def validate_content(cls, value: Optional[str]) -> Optional[str]:
+    def validate_content(cls, value: Optional[Any]) -> Optional[str]:
         if value is None:
             return None
         if not isinstance(value, str):

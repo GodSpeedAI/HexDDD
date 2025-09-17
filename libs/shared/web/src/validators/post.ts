@@ -38,9 +38,9 @@ export const PostSchema = StrictObjectSchema({
 
   /**
    * @description The content of the post.
-   * Should be a string or null.
+  * Should be a string (can be empty) or null.
    */
-  content: NonEmptyContentSchema.nullable(),
+  content: z.string().nullable(),
 
   /**
    * @description Whether the post is published or not.

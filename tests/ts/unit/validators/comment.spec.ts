@@ -5,7 +5,7 @@ describe('DbCommentSchema', () => {
   const validCommentData = {
     id: 'a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11',
     post_id: 'b1ffdc88-8d1c-5df9-cc7e-7cc9ce471b22',
-    user_id: 'c2ggdd99-9e2d-6ef0-dd8f-8dda9d491c33',
+    user_id: 'c2aadd99-9e2d-6ef0-dd8f-8dda9d491c33',
     content: 'This is a comment on the post.',
     created_at: '2023-01-01T12:00:00.000Z',
   };
@@ -169,10 +169,10 @@ describe('DbCommentSchema', () => {
     });
 
     it('should fail validation if required fields are missing', () => {
-      const requiredFields = ['id', 'post_id', 'user_id', 'content', 'created_at'];
+      const requiredFields = ['id', 'post_id', 'user_id', 'content', 'created_at'] as const;
 
-      requiredFields.forEach(field => {
-        const testData = { ...validCommentData };
+      requiredFields.forEach((field: keyof typeof validCommentData) => {
+        const testData: Partial<typeof validCommentData> = { ...validCommentData };
         delete testData[field];
         const result = DbCommentSchema.safeParse(testData);
         expect(result.success).toBe(false);

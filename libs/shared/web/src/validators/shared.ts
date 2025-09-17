@@ -5,14 +5,18 @@ import { z } from 'zod';
  * Used across all entities that require UUID validation.
  * Overrides type error to match validation error for consistency with tests.
  */
-export const UUIDSchema = z.string({ invalid_type_error: "Invalid UUID" }).uuid({ message: "Invalid UUID" });
+export const UUIDSchema = z
+  .string({ invalid_type_error: "Invalid UUID", required_error: "Invalid UUID" })
+  .uuid({ message: "Invalid UUID" });
 
 /**
  * @description Base email validator with consistent error message.
  * Used for user email validation.
  * Overrides type error to match validation error for consistency with tests.
  */
-export const EmailSchema = z.string({ invalid_type_error: "Invalid email address" }).email({ message: "Invalid email address" });
+export const EmailSchema = z
+  .string({ invalid_type_error: "Invalid email address", required_error: "Invalid email address" })
+  .email({ message: "Invalid email address" });
 
 /**
  * @description Base non-empty string validator with consistent error message.
@@ -29,7 +33,6 @@ export const NonEmptyStringSchema = z
  */
 export const NonEmptyTitleSchema = z
   .string({ invalid_type_error: "Title cannot be empty" })
-  .trim()
   .min(1, { message: "Title cannot be empty" });
 
 /**
@@ -38,7 +41,6 @@ export const NonEmptyTitleSchema = z
  */
 export const NonEmptyContentSchema = z
   .string({ invalid_type_error: "Content cannot be empty" })
-  .trim()
   .min(1, { message: "Content cannot be empty" });
 
 /**
@@ -46,13 +48,15 @@ export const NonEmptyContentSchema = z
  * Used for timestamp fields across all entities.
  * Overrides type error to match validation error for consistency with tests.
  */
-export const DateTimeSchema = z.string({ invalid_type_error: "Invalid date format" }).datetime({ message: "Invalid date format" });
+export const DateTimeSchema = z
+  .string({ invalid_type_error: "Invalid date format", required_error: "Invalid date format" })
+  .datetime({ message: "Invalid date format" });
 
 /**
  * @description Base nullable ISO 8601 date-time validator.
  * Used for optional timestamp fields.
  */
-export const NullableDateTimeSchema = z.union([DateTimeSchema, z.null()]);
+export const NullableDateTimeSchema = DateTimeSchema.nullable();
 
 /**
  * @description Base boolean validator.

@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from contextlib import contextmanager
-from typing import Dict, Optional
+from typing import Dict, Iterator, Optional
 
 from repository import InMemoryUserRepository, UserEntity
 
@@ -18,7 +18,7 @@ class UnitOfWork:
     self._staged: Optional[Dict[str, UserEntity]] = None
 
   @contextmanager
-  def transaction(self):
+  def transaction(self) -> Iterator["UnitOfWork"]:
     self._active = True
     # Begin transaction by taking a snapshot of repo state
     self._staged = self._repo.snapshot()

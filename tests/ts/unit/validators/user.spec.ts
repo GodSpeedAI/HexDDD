@@ -171,10 +171,10 @@ describe('DbUserSchema', () => {
     });
 
     it('should fail validation if required fields are missing', () => {
-      const requiredFields = ['id', 'name', 'email', 'created_at'];
+      const requiredFields = ['id', 'name', 'email', 'created_at'] as const;
 
-      requiredFields.forEach(field => {
-        const testData = { ...validUserData };
+      requiredFields.forEach((field: keyof typeof validUserData) => {
+        const testData: Partial<typeof validUserData> = { ...validUserData };
         delete testData[field];
         const result = DbUserSchema.safeParse(testData);
         expect(result.success).toBe(false);

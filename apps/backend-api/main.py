@@ -1,21 +1,26 @@
+from __future__ import annotations
+
+from typing import Dict
+
 from fastapi import Depends, FastAPI, HTTPException
 from pydantic import BaseModel
+
 from di import inject_uow
-from uow import UnitOfWork
 from repository import UserEntity
 from services import UserService
+from uow import UnitOfWork
 
 
 app = FastAPI(title="Backend API")
 
 
 @app.get("/health", summary="Service health", tags=["health"])
-def health():
+def health() -> Dict[str, str]:
     return {"status": "ok"}
 
 
 @app.get("/api/health", summary="API base health", tags=["health"])
-def api_health():
+def api_health() -> Dict[str, str]:
     # Mirror /health for clients using "/api" base path.
     return {"status": "ok"}
 
@@ -56,10 +61,10 @@ def create_user(user: User, uow: UnitOfWork = Depends(inject_uow)) -> User:
     summary="Simulate create failure (rollback)",
     tags=["users"],
 )
-def create_user_then_fail(user: User, uow: UnitOfWork = Depends(inject_uow)):
+def create_user_then_fail(user: User, uow: UnitOfWork = Depends(inject_uow)) -> None:
     try:
         with uow.transaction():
-            uow.users_save(UserEntity(**user.dict()))
+            uow.users_save(UserEntity(**user.model_dump()))
             raise RuntimeError("boom")
     except RuntimeError:
         # Deliberate failure to test rollback
@@ -84,10 +89,11 @@ def update_user(user_id: str, user: User, uow: UnitOfWork = Depends(inject_uow))
 @app.delete(
     "/users/{user_id}",
     status_code=204,
+    response_model=None,
     summary="Delete user",
     tags=["users"],
 )
-def delete_user(user_id: str, uow: UnitOfWork = Depends(inject_uow)):
+def delete_user(user_id: str, uow: UnitOfWork = Depends(inject_uow)) -> None:
     svc = UserService()
     svc.delete_user(uow, id=user_id)
     return None
@@ -99,7 +105,7 @@ def delete_user(user_id: str, uow: UnitOfWork = Depends(inject_uow)):
     summary="Simulate update failure (rollback)",
     tags=["users"],
 )
-def update_user_then_fail(user_id: str, user: User, uow: UnitOfWork = Depends(inject_uow)):
+def update_user_then_fail(user_id: str, user: User, uow: UnitOfWork = Depends(inject_uow)) -> None:
     """Simulate an update followed by a failure to exercise rollback semantics."""
     try:
         with uow.transaction():

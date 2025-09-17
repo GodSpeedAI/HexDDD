@@ -1,4 +1,4 @@
-from typing import Dict, Any, Optional
+from typing import Dict, Any, Optional, cast
 import json
 import os
 
@@ -13,7 +13,7 @@ class DbToPython:
 
         return types
 
-    def _write_types_to_files(self, types: Dict[str, Dict[str, str]], output_dir: str):
+    def _write_types_to_files(self, types: Dict[str, Dict[str, str]], output_dir: str) -> None:
         """Write generated Python types to individual files."""
         os.makedirs(output_dir, exist_ok=True)
 
@@ -39,7 +39,10 @@ class DbToPython:
     def _parse_schema(self, schema_path: str) -> Dict[str, Any]:
         """Parse database schema file."""
         with open(schema_path, 'r') as f:
-            return json.load(f)
+            data = json.load(f)
+        if not isinstance(data, dict):
+            raise ValueError("Schema must deserialize to a mapping")
+        return cast(Dict[str, Any], data)
 
     def _generate_types(self, schema: Dict[str, Any]) -> Dict[str, Dict[str, str]]:
         """Generate Python type definitions from schema."""
@@ -114,4 +117,3 @@ if __name__ == "__main__":
         print(f"Python types generated successfully in {output_dir}")
     else:
         print("Python types generated successfully (no output directory specified)")
-

@@ -1,0 +1,18 @@
+{
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "name": "quality-typecheck",
+    "projectType": "application",
+    "sourceRoot": "tools/typecheck",
+    "targets": {
+        "type-check": {
+            "executor": "nx:run-commands",
+            "options": {
+                "cwd": ".",
+                "command": "uv run mypy --strict ."
+            }
+        }
+    },
+    "tags": [
+        "quality"
+    ]
+}

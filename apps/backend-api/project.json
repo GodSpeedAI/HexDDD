@@ -22,7 +22,7 @@
       "executor": "nx:run-commands",
       "options": {
         "cwd": ".",
-        "command": "mypy --strict ."
+        "command": "uv run mypy --strict ."
       }
     }
   },

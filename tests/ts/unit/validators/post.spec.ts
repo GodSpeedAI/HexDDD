@@ -220,11 +220,11 @@ describe('DbPostSchema', () => {
     });
 
     it('should fail validation if required fields are missing', () => {
-      const requiredFields = ['id', 'user_id', 'title', 'published', 'created_at'];
+      const requiredFields = ['id', 'user_id', 'title', 'published', 'created_at'] as const;
 
-      requiredFields.forEach(field => {
-        const testData = { ...validPostData };
-        delete testData[field];
+      requiredFields.forEach((field: keyof typeof validPostData) => {
+        const testData: Partial<typeof validPostData> = { ...validPostData };
+        delete (testData as any)[field];
         const result = DbPostSchema.safeParse(testData);
         expect(result.success).toBe(false);
         if (!result.success) {
