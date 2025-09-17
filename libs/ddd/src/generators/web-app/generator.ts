@@ -4,10 +4,14 @@ import { WebAppGeneratorSchema } from './schema';
 async function tryGenerateNextApp(tree: Tree, options: WebAppGeneratorSchema) {
   try {
     // Dynamically require the Next.js application generator to avoid hard dependency during tests
-    const gen = require('@nx/next/src/generators/application/application').default;
+    // eslint-disable-next-line @typescript-eslint/no-var-requires
+    const { applicationGenerator } = require('@nx/next/src/generators/application/application');
+    const appNames = names(options.name);
+    const directory = joinPathFragments('apps', appNames.fileName);
     const appDir = options.routerStyle !== 'pages';
-    await gen(tree, {
-      name: options.name,
+    await applicationGenerator(tree, {
+      name: appNames.fileName,
+      directory,
       style: 'css',
       unitTestRunner: 'jest',
       linter: 'eslint',
@@ -22,9 +26,13 @@ async function tryGenerateNextApp(tree: Tree, options: WebAppGeneratorSchema) {
 
 async function tryGenerateRemixApp(tree: Tree, options: WebAppGeneratorSchema) {
   try {
-    const gen = require('@nx/remix/src/generators/application/application').default;
-    await gen(tree, {
-      name: options.name,
+    // eslint-disable-next-line @typescript-eslint/no-var-requires
+    const { applicationGenerator } = require('@nx/remix/generators');
+    const appNames = names(options.name);
+    const directory = joinPathFragments('apps', appNames.fileName);
+    await applicationGenerator(tree, {
+      name: appNames.fileName,
+      directory,
       linter: 'eslint',
       unitTestRunner: 'jest',
       // Additional options can be passed if supported by plugin version
@@ -37,9 +45,13 @@ async function tryGenerateRemixApp(tree: Tree, options: WebAppGeneratorSchema) {
 
 async function tryGenerateExpoApp(tree: Tree, options: WebAppGeneratorSchema) {
   try {
+    // eslint-disable-next-line @typescript-eslint/no-var-requires
     const gen = require('@nx/expo/src/generators/application/application').default;
+    const appNames = names(options.name);
+    const directory = joinPathFragments('apps', appNames.fileName);
     await gen(tree, {
-      name: options.name,
+      name: appNames.fileName,
+      directory,
       linter: 'eslint',
       unitTestRunner: 'jest',
     });

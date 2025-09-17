@@ -8,21 +8,13 @@
     "default": {
       "runner": "nx/tasks-runners/default",
       "options": {
-        "cacheableOperations": [
-          "build",
-          "test",
-          "lint",
-          "type-check"
-        ],
+        "cacheableOperations": ["build", "test", "lint", "type-check"],
         "parallel": 3
       }
     }
   },
   "namedInputs": {
-    "default": [
-      "{projectRoot}/**/*",
-      "sharedGlobals"
-    ],
+    "default": ["{projectRoot}/**/*", "sharedGlobals"],
     "sharedGlobals": [
       "{workspaceRoot}/tsconfig.base.json",
       "{workspaceRoot}/jest.preset.js",
@@ -38,18 +30,9 @@
       "!{projectRoot}/cypress.config.[jt]s",
       "!{projectRoot}/cypress.json"
     ],
-    "unitTest": [
-      "default",
-      "{workspaceRoot}/jest.preset.js"
-    ],
-    "e2e": [
-      "default",
-      "!{projectRoot}/**/__snapshots__/**"
-    ],
-    "python": [
-      "{projectRoot}/**/*.py",
-      "sharedGlobals"
-    ],
+    "unitTest": ["default", "{workspaceRoot}/jest.preset.js"],
+    "e2e": ["default", "!{projectRoot}/**/__snapshots__/**"],
+    "python": ["{projectRoot}/**/*.py", "sharedGlobals"],
     "nxPlugin": [
       "default",
       "{projectRoot}/collection.json",
@@ -59,25 +42,13 @@
   },
   "targetDefaults": {
     "build": {
-      "dependsOn": [
-        "^build"
-      ],
-      "inputs": [
-        "production",
-        "^production"
-      ],
-      "outputs": [
-        "{options.outputPath}"
-      ]
+      "dependsOn": ["^build"],
+      "inputs": ["production", "^production"],
+      "outputs": ["{options.outputPath}"]
     },
     "test": {
-      "inputs": [
-        "unitTest",
-        "^production"
-      ],
-      "outputs": [
-        "{workspaceRoot}/coverage/{projectRoot}"
-      ],
+      "inputs": ["unitTest", "^production"],
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
         "passWithNoTests": true
       },
@@ -89,24 +60,14 @@
       }
     },
     "lint": {
-      "inputs": [
-        "default"
-      ],
-      "outputs": [
-        "{options.outputFile}"
-      ]
+      "inputs": ["default"],
+      "outputs": ["{options.outputFile}"]
     },
     "e2e": {
-      "inputs": [
-        "e2e",
-        "^production"
-      ]
+      "inputs": ["e2e", "^production"]
     },
     "type-check": {
-      "inputs": [
-        "python",
-        "sharedGlobals"
-      ],
+      "inputs": ["python", "sharedGlobals"],
       "cache": true
     }
   },
@@ -169,12 +130,16 @@
         "buildDepsTargetName": "build-deps",
         "watchDepsTargetName": "watch-deps"
       }
+    },
+    {
+      "plugin": "@nx/eslint/plugin",
+      "options": {
+        "targetName": "eslint:lint"
+      }
     }
   ],
   "release": {
-    "projects": [
-      "@ddd-plugin/ddd"
-    ]
+    "projects": ["@ddd-plugin/ddd"]
   },
   "namedInputsVersion": 1
 }
