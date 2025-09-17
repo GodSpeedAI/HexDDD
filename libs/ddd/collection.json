@@ -1,20 +1,17 @@
 {
-  "name": "@Nx-ddd/hex",
+  "name": "@ddd-plugin/ddd",
   "version": "0.0.1",
-  "schematics": {
-    "ng-add": {
-      "factory": "./src/schematics/ng-add/index",
-      "description": "adds initial access restrictions to linting rules",
-      "schema": "./src/schematics/ng-add/schema.json"
-    }
-  },
   "generators": {
     "init": {
       "factory": "./src/generators/init/index",
       "description": "adds initial access restrictions to linting rules",
       "schema": "./src/generators/init/schema.json"
     },
-    
+    "ddd": {
+      "factory": "./src/generators/ddd/generator",
+      "schema": "./src/generators/ddd/schema.json",
+      "description": "creates a workspace-level DDD toolkit wrapper"
+    },
     "hex-domain": {
       "factory": "./src/generators/hex-domain/index",
       "schema": "./src/generators/hex-domain/schema.json",

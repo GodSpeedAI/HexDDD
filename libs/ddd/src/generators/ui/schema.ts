@@ -29,9 +29,6 @@ export interface UiOptions {
   /**
    * A type to determine if and how to build the library.
    */
-  
-  standalone: boolean;
-
   type?: "internal" | "buildable" | "publishable";
   [k: string]: any;
 }

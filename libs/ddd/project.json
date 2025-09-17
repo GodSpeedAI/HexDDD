@@ -1,5 +1,5 @@
 {
-  "name": "@Nx-ddd/hex",
+  "name": "@ddd-plugin/ddd",
   "$schema": "..\\..\\node_modules\\nx\\schemas\\project-schema.json",
   "sourceRoot": "libs/ddd/src",
   "projectType": "library",

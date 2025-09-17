@@ -10,9 +10,9 @@
         "jestConfig": "apps/ddd-e2e/jest.config.ts",
         "runInBand": true
       },
-      "dependsOn": ["@Nx-ddd/hex:build"]
+      "dependsOn": ["@ddd-plugin/ddd:build"]
     }
   },
   "tags": [],
-  "implicitDependencies": ["@Nx-ddd/hex"]
+  "implicitDependencies": ["@ddd-plugin/ddd"]
 }

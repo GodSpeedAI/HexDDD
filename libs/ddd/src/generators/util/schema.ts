@@ -30,8 +30,6 @@ export interface UtilOptions {
    * A type to determine if and how to build the library.
    */
   type?: "internal" | "buildable" | "publishable";
-
-  standalone: boolean;
   
   [k: string]: any;
 }

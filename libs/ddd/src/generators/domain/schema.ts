@@ -23,10 +23,6 @@
      */
     addApp?: boolean;
     /**
-     * Add ngrx for the associated app (addApp required)
-     */
-    ngrx?: boolean;
-    /**
      * A type to determine if and how to build the library.
      */
     type?: "internal" | "buildable" | "publishable";
@@ -34,7 +30,5 @@
      * For publishable libs: Official package name used in import statements
      */
     importPath?: string;
-    standalone: boolean;
     [k: string]: any;
   }
-  

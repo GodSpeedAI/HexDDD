@@ -1,9 +1,7 @@
-import { Tree, formatFiles } from '@nx/devkit';
-import { libraryGenerator } from '@nx/angular/generators';
+import { Tree, formatFiles, names } from '@nx/devkit';
+import { libraryGenerator as jsLibraryGenerator } from '@nx/js';
 import { ApiOptions } from './schema';
-import { strings } from '@angular-devkit/core';
 import { validateInputs } from '../utils/validate-inputs';
-import { deleteDefaultComponent } from '../utils/delete-default-component';
 import { getWorkspaceScope } from '../utils/get-workspace-scope';
 
 export default async function (tree: Tree, options: ApiOptions) {
@@ -12,33 +10,27 @@ export default async function (tree: Tree, options: ApiOptions) {
   const workspaceName = getWorkspaceScope(tree);
 
   const libName = options.name
-    ? `api-${strings.dasherize(options.name)}`
+    ? `api-${names(options.name).fileName}`
     : 'api';
   const libDirectory = options.directory
-    ? strings.dasherize(options.directory)
+    ? names(options.directory).fileName
     : libName;
   const domainName = options.shared ? 'shared' : options.domain;
   const isPublishableLib = options.type === 'publishable';
 
-  // additions for Nx20 by LXT
-  const finalName = domainName + '-' + libName;
+  const finalName = `${domainName}-${libName}`;
   const finalDirectory = `libs/${domainName}/${libDirectory}`;
 
-  const prefix = strings.dasherize(finalName).split('/').join('-');
   const importPath = `${workspaceName}/${domainName}/${libDirectory}`;
 
-  await libraryGenerator(tree, {
+  await jsLibraryGenerator(tree, {
     name: finalName,
-    prefix: prefix,
     directory: finalDirectory,
     tags: `domain:${domainName},domain:${domainName}/${libName},type:api`,
     publishable: isPublishableLib,
     buildable: options.type === 'buildable',
     importPath: options.importPath ?? importPath,
-    standalone: options.standalone,
   });
-
-  deleteDefaultComponent(tree, finalDirectory, finalName);
 
   console.info(
     `\nHINT: Don\'t forget to extend the rules in your "eslint.config.js" to allow selected domains to access this API.\nFor this, add the tag domain:${domainName}/${libName} to the respective domains' rule sets.\n `

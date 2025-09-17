@@ -3,6 +3,11 @@
   "name": "ddd",
   "version": "0.0.1",
   "generators": {
+    "init": {
+      "factory": "./src/generators/init/index",
+      "schema": "./src/generators/init/schema.json",
+      "description": "Initializes the workspace with DDD linting rules."
+    },
     "ddd": {
       "factory": "./src/generators/ddd/generator",
       "schema": "./src/generators/ddd/schema.json",

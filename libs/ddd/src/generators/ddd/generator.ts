@@ -3,6 +3,7 @@ import {
   formatFiles,
   generateFiles,
   getWorkspaceLayout,
+  joinPathFragments,
   names,
   offsetFromRoot,
   Tree,
@@ -26,7 +27,12 @@ function normalizeOptions(
     ? `${names(options.directory).fileName}/${name}`
     : name;
   const projectName = projectDirectory.replace(new RegExp('/', 'g'), '-');
-  const projectRoot = `${getWorkspaceLayout(tree).libsDir}/${projectDirectory}`;
+  const workspaceLayout = getWorkspaceLayout(tree);
+  const libsDir =
+    workspaceLayout.libsDir && workspaceLayout.libsDir !== '.'
+      ? workspaceLayout.libsDir
+      : 'libs';
+  const projectRoot = joinPathFragments(libsDir, projectDirectory);
   const parsedTags = options.tags
     ? options.tags.split(',').map((s) => s.trim())
     : [];
