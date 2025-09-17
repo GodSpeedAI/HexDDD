@@ -169,9 +169,9 @@ References: [ADR-002], [PRD-004], [SDS-016]
 - Regression
   - Full suite including parity stays green.
 
-## Phase 5: Dependency Rules, Idempotency, and CI Hardening
+## ~~Phase 5: Dependency Rules, Idempotency, and CI Hardening~~
 
-### Task 5.1: Generator Idempotency Tests
+### ~~Task 5.1: Generator Idempotency Tests~~
 References: [ADR-007], [PRD-006], [SDS-017]
 - Red
   - tests/ts/unit/generators/idempotency.spec.ts: double-run equals no diff for each generator.
@@ -182,7 +182,7 @@ References: [ADR-007], [PRD-006], [SDS-017]
 - Regression
   - CI proves stable outputs on re-runs.
 
-### Task 5.2: Lint/Typecheck Gates & Quality Metrics
+### ~~Task 5.2: Lint/Typecheck Gates & Quality Metrics~~
 References: [ADR-010], [PRD-009], [SDS-016], TECHSPEC
 - Red
   - tests/quality/targets.spec.ts: nx run lint/type-check returns success; failing case triggers errors.
