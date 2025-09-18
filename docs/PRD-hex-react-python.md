@@ -50,6 +50,11 @@ Based on `docs/types-spec.md` and `docs/react-python-hex-migration.md`.
 
 ---
 
+## PRD-012: Supabase Development Stack Automation
+- EARS: The system shall provide a ready-to-run Supabase stack (Docker Compose) exposed through Nx targets so developers can start/stop/reset local infrastructure and configure env files for hosted or local Supabase usage (ADR-002, ADR-015).
+- Acceptance: `tools/supabase/project.json` registers `supabase-devstack:start|stop|reset|status`; `docker/docker-compose.supabase.yml`, `example.env`, and app-specific `.env.example` files exist with documented variables.
+- Success Metric: New developers can run `cp example.env .env.supabase.local` and `nx run supabase-devstack:start` to obtain a working stack; docs and tests verify presence of targets and env scaffolding.
+
 ## PRD-010: Angular Decommissioning
 - EARS: The system shall remove Angular applications, libraries, and Angular-specific Nx packages from the repository.
 - Acceptance: No Angular projects remain under `apps/` or `libs/`; package.json has no `@angular/*` or `@nx/angular`; CI passes.

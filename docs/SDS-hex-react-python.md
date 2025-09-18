@@ -35,6 +35,13 @@ Technical design derived from `docs/types-spec.md` and `docs/react-python-hex-mi
 - FastAPI routers/controllers use pydantic models, inject UoW and ports via Depends/container.
 - Universal generator (ADR-012) ensures shared client & validation live in `libs/shared/web` consumed by Next.js, Remix, and Expo variants without duplication.
 
+## SDS-021: Supabase Dev Stack Orchestration (PRD-012, ADR-015)
+- Nx Targets: `tools/supabase/project.json` defines `supabase-devstack:start|stop|reset|status` via `docker compose` with `--env-file .env.supabase.local`.
+- Environment Templates: `example.env` (root), per-app `.env.example` files, and optional `.env.supabase.local` copied by developers; secrets exclude service-role from frontend templates.
+- Docker Compose: `docker/docker-compose.supabase.yml` provisions db, auth, rest, realtime, storage, inbucket, edge-runtime, kong, studio with shared volumes and health checks.
+- Functions Stub: `supabase/functions/` (git-kept) provides place for edge functions consumed by compose.
+- Testing/Tooling: Jest unit tests assert target registration and command flags; docs tests ensure README/TDD mention the workflow.
+
 ## SDS-020: Angular Decommissioning and Nx Upgrade (PRD-010, PRD-011)
 - Angular Removal Steps:
   - Remove Angular apps/libs under `apps/` and `libs/`.

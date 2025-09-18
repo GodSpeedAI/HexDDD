@@ -29,6 +29,18 @@ nx g @ddd-plugin/ddd:web-app admin-portal --framework=next
 nx g @ddd-plugin/ddd:web-app mobile-app --framework=expo
 ```
 
+## Local Supabase Stack
+
+1. Copy the template secrets into a local file: `cp example.env .env.supabase.local`.
+2. (Optional) Duplicate per-app env templates (`apps/*/.env.example`) to `.env.local` files when you need framework-specific overrides.
+3. Start the default stack: `nx run supabase-devstack:start`. Use `nx run supabase-devstack:status` to verify and `nx run supabase-devstack:stop` when finished. (This launches Postgres + PostgREST + Kong + Inbucket.)
+4. Reset volumes with `nx run supabase-devstack:reset` if you need a clean database.
+5. The compose file lives at `docker/docker-compose.supabase.yml`; local edge functions can be added under `supabase/functions/`.
+
+To point the repo at a remote Supabase project, skip the start command and update `.env.supabase.local` with your hosted project URL, anon key, and service role key while leaving the app-level `.env` files in sync.
+
+Want the full Supabase surface area (GoTrue, Realtime, Storage, Studio, Edge Runtime)? Authenticate with `docker login ghcr.io` and run `nx run supabase-devstack:start -- --profile full`.
+
 ## Architecture Overview
 
 ```

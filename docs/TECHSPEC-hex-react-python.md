@@ -76,6 +76,13 @@ Complementary details with traceability to ADR, PRD, and SDS.
 - Error Handling: Normalized error types (ValidationError, NetworkError, UnexpectedError) with zod parse integration.
 - Extensibility: Future frameworks add template directory + schema extension without changing base logic.
 
+## Supabase Dev Stack Tooling (ADR-015, PRD-012, SDS-021)
+- Nx Project: `supabase-devstack` under `tools/supabase` wraps docker compose commands (`start`, `stop`, `reset`, `status`) and enforces use of `.env.supabase.local`.
+- Compose Assets: `docker/docker-compose.supabase.yml` captures Supabase services, shared volumes, and logging defaults; validated via unit tests and optional `docker compose config`.
+- Environment Templates: Root `example.env` plus app `.env.example` files define safe defaults (public anon key for frontends, service-role scoped to backend).
+- Developer Flow: Copy template to `.env.supabase.local`, run `nx run supabase-devstack:start`, and tail `nx run supabase-devstack:status`; remote Supabase instances reuse same env schema.
+- Extensibility: Additional Nx targets (e.g., `logs`, `seed`) can be layered on the same project; compose file remains source of truth for local infra.
+
 ## Traceability Matrix
 - ADR → PRD
   - ADR-001 → PRD-001
@@ -90,6 +97,7 @@ Complementary details with traceability to ADR, PRD, and SDS.
   - ADR-010 → PRD-009
   - ADR-011 → PRD-001
   - ADR-012 → PRD-002
+  - ADR-015 → PRD-012
 - PRD → SDS
   - PRD-001 → SDS-001..SDS-006, SDS-011, SDS-012
   - PRD-002 → SDS-006, SDS-014, SDS-015
@@ -99,11 +107,12 @@ Complementary details with traceability to ADR, PRD, and SDS.
   - PRD-006 → SDS-017
   - PRD-007 → SDS-012
   - PRD-009 → SDS-016
+  - PRD-012 → SDS-021
 
 ## MVP Scope Summary
-- ADR: ADR-001/2/3/5/6/7/8/9/10/11/12
-- PRD: PRD-001/2/3/4/5/6/7/9
-- SDS: SDS-001..SDS-012, SDS-016..SDS-017
+- ADR: ADR-001/2/3/5/6/7/8/9/10/11/12/15
+- PRD: PRD-001/2/3/4/5/6/7/9/12
+- SDS: SDS-001..SDS-012, SDS-016..SDS-017, SDS-021
 
 Unresolved/Deferred
 - Non-in-memory event/messaging adapters; advanced caching strategies.

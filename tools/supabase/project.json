@@ -1,0 +1,37 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "name": "supabase-devstack",
+  "projectType": "application",
+  "sourceRoot": "tools/supabase",
+  "targets": {
+    "start": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": ".",
+        "command": "docker compose --env-file .env.supabase.local --project-name supabase-local -f docker/docker-compose.supabase.yml up --detach --remove-orphans"
+      }
+    },
+    "stop": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": ".",
+        "command": "docker compose --env-file .env.supabase.local --project-name supabase-local -f docker/docker-compose.supabase.yml down --remove-orphans"
+      }
+    },
+    "reset": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": ".",
+        "command": "docker compose --env-file .env.supabase.local --project-name supabase-local -f docker/docker-compose.supabase.yml down -v && docker compose --env-file .env.supabase.local --project-name supabase-local -f docker/docker-compose.supabase.yml up --detach --remove-orphans"
+      }
+    },
+    "status": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": ".",
+        "command": "docker compose --env-file .env.supabase.local --project-name supabase-local -f docker/docker-compose.supabase.yml ps"
+      }
+    }
+  },
+  "tags": ["infra", "local-dev"]
+}

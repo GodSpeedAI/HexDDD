@@ -4,6 +4,33 @@ Grounded in ADR, PRD, SDS, and Technical Specifications. All tasks follow the Re
 
 Legend: [ADR-XXX], [PRD-XXX], [SDS-XXX]
 
+## Phase 0: Local Supabase Dev Stack (Status: Implemented)
+
+### ~~Task 0.1: Supabase Devstack Orchestration~~
+References: [ADR-002], [ADR-007], [ADR-009], [ADR-015], [PRD-012], [SDS-021]
+- Red
+  - tests/ts/unit/supabase/targets.spec.ts: ensures `nx show project supabase-devstack` exposes start/stop/reset/status.
+  - tests/ts/unit/supabase/envfile.spec.ts: validates run-commands include `--env-file .env.supabase.local` for compose substitution.
+- Green
+  - Add `tools/supabase/project.json` with docker compose start/stop/reset/status commands.
+- Refactor
+  - Extract shared tooling helpers if additional infra targets require compose orchestration.
+- Regression
+  - Manual smoke: `nx run supabase-devstack:start` then `nx run supabase-devstack:status`; stop via `nx run supabase-devstack:stop`.
+
+### ~~Task 0.2: Supabase Compose + Environment Scaffolding~~
+References: [ADR-002], [ADR-005], [ADR-007], [ADR-015], [PRD-012], [SDS-021]
+- Red
+  - tests/infra/supabase/compose-idempotent.spec.ts: double-apply templates should yield no diff.
+  - tests/docs/supabase-docs.spec.ts: README references local Supabase workflow and env setup.
+- Green
+  - Add `docker/docker-compose.supabase.yml`, populate root `example.env`, and create app-level `.env.example` mirrors.
+- Refactor
+  - Provide generator hooks for customizing secrets and ports when scaffolded by Nx.
+- Regression
+  - `docker compose --env-file .env.supabase.local -f docker/docker-compose.supabase.yml config` succeeds; Nx reset target runs without diff.
+
+
 ## Phase 1: Foundation & Infrastructure (Status: Mostly Complete)
 
 ### ~~Task 1.1: Type Generator Hub — Database → TS/Python~~
@@ -103,8 +130,6 @@ References: [ADR-006], [PRD-005], [SDS-010]
 - Regression
   - Full test suite remains green.
 
-################## Phases 1 and 2 Complete
-##################
 
 ## Phase 3: Interface Layer Apps (In Progress)
 
@@ -274,4 +299,4 @@ References: [ADR-010], [PRD-009], [SDS-016], TECHSPEC
 - [x] Phase 2 complete (hex scaffolds + ports + UoW + EventBus)
 - [x] Phase 3 complete (apps)
 - [x] Phase 4 complete (validators + parity)
-- [ ] Phase 5 complete (idempotency + gates)
+- [x] Phase 5 complete (idempotency + gates)

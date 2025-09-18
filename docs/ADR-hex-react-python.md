@@ -104,4 +104,11 @@ Unresolved: None flagged.
   - Apply plugin matrix updates (Next/Remix/Python) in lockstep.
   - Run workspace-wide lint, typecheck, tests, and sample generator e2e after migration.
 
+## ADR-015: Built-In Supabase Development Stack
+- Decision: Bundle a Docker Compose-based Supabase stack and expose Nx run-command targets (`supabase-devstack:start|stop|reset|status`) that require an `.env.supabase.local` file cloned from `example.env`.
+- Rationale: Streamlines onboarding and testing by aligning local infrastructure with Supabase, the canonical data source (ADR-002), without manual CLI setup.
+- Alternatives: Require developers to install Supabase CLI or provision external Supabase instances manually for local development.
+- Trade-offs: Adds Docker dependency for local dev; compose definitions and env templates require maintenance alongside Supabase upgrades.
+- Consequences: Documentation and tests assert presence of the `tools/supabase` project, Docker Compose file, and env templates; CI can opt-in to stack orchestration for integration tests.
+
 Planned: ADR-013 and ADR-014 are enacted in the upgrade initiative.

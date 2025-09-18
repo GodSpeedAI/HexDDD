@@ -1,0 +1,246 @@
+x-logging: &default-logging
+  driver: 'json-file'
+  options:
+    max-size: '10m'
+    max-file: '3'
+
+networks:
+  supabase:
+    driver: bridge
+
+services:
+  db:
+    image: supabase/postgres:15.1.1.65
+    container_name: supabase-db
+    restart: unless-stopped
+    env_file:
+      - ../.env.supabase.local
+    environment:
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      PGPORT: 5432
+    ports:
+      - '${SUPABASE_DB_PORT:-54322}:5432'
+    volumes:
+      - supabase-db:/var/lib/postgresql/data
+    healthcheck:
+      test:
+        [
+          'CMD-SHELL',
+          'pg_isready -U ${POSTGRES_USER:-postgres} -d ${POSTGRES_DB:-postgres}',
+        ]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    logging: *default-logging
+    networks:
+      - supabase
+
+  rest:
+    image: postgrest/postgrest:latest
+    container_name: supabase-rest
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    env_file:
+      - ../.env.supabase.local
+    environment:
+      PGRST_DB_URI: postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB}
+      PGRST_DB_SCHEMA: public,storage,graphql_public
+      PGRST_DB_ANON_ROLE: anon
+      PGRST_DB_EXTRA_SEARCH_PATH: public,extensions
+      PGRST_JWT_SECRET: ${SUPABASE_JWT_SECRET}
+      PGRST_SERVER_PORT: 3000
+      PGRST_SERVER_HOST: 0.0.0.0
+      PGRST_ROLE_CLAIM_KEY: .role
+    logging: *default-logging
+    networks:
+      - supabase
+
+  inbucket:
+    image: inbucket/inbucket:latest
+    container_name: supabase-inbucket
+    restart: unless-stopped
+    env_file:
+      - ../.env.supabase.local
+    ports:
+      - '${SUPABASE_INBUCKET_PORT:-54324}:9000'
+    logging: *default-logging
+    networks:
+      - supabase
+
+  kong:
+    image: kong:3.4
+    container_name: supabase-kong
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+      rest:
+        condition: service_started
+    env_file:
+      - ../.env.supabase.local
+    environment:
+      KONG_DATABASE: 'off'
+      KONG_DECLARATIVE_CONFIG: /etc/kong/kong.yml
+      KONG_DNS_ORDER: LAST,SRV,A,CNAME
+      KONG_LOG_LEVEL: notice
+      SUPABASE_ANON_KEY: ${SUPABASE_ANON_KEY}
+      SUPABASE_SERVICE_ROLE_KEY: ${SUPABASE_SERVICE_ROLE_KEY}
+      SUPABASE_JWT_SECRET: ${SUPABASE_JWT_SECRET}
+      KONG_LUA_SSL_TRUSTED_CERTIFICATE: system
+      KONG_PLUGINS: 'bundled'
+    ports:
+      - '${SUPABASE_API_PORT:-54321}:8000'
+    volumes:
+      - ./kong.yml:/etc/kong/kong.yml:ro
+      - supabase-kong:/var/lib/kong
+    logging: *default-logging
+    networks:
+      - supabase
+
+  auth:
+    profiles: ['full']
+    image: ghcr.io/supabase/gotrue:latest
+    container_name: supabase-auth
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    env_file:
+      - ../.env.supabase.local
+    environment:
+      GOTRUE_DB_DRIVER: postgres
+      GOTRUE_DB_DATABASE: ${POSTGRES_DB}
+      GOTRUE_DB_HOST: db
+      GOTRUE_DB_PORT: 5432
+      GOTRUE_DB_USER: ${POSTGRES_USER}
+      GOTRUE_DB_PASSWORD: ${POSTGRES_PASSWORD}
+      GOTRUE_SITE_URL: ${SUPABASE_PUBLIC_URL}
+      GOTRUE_API_EXTERNAL_URL: ${SUPABASE_AUTH_EXTERNAL_URL}
+      GOTRUE_JWT_SECRET: ${SUPABASE_JWT_SECRET}
+      GOTRUE_DISABLE_SIGNUP: 'false'
+      GOTRUE_MAILER_AUTOCONFIRM: 'true'
+      GOTRUE_EXTERNAL_EMAIL_ENABLED: 'true'
+      GOTRUE_EXTERNAL_PHONE_ENABLED: 'false'
+      GOTRUE_SMTP_HOST: inbucket
+      GOTRUE_SMTP_PORT: 2500
+      GOTRUE_SMTP_USER: ''
+      GOTRUE_SMTP_PASS: ''
+      GOTRUE_SMTP_ADMIN_EMAIL: ${SUPABASE_SMTP_ADMIN_EMAIL}
+      GOTRUE_SMTP_ADMIN_PASSWORD: ${SUPABASE_SMTP_ADMIN_PASSWORD}
+    ports:
+      - '127.0.0.1:${SUPABASE_AUTH_PORT:-9999}:9999'
+    logging: *default-logging
+    networks:
+      - supabase
+
+  realtime:
+    profiles: ['full']
+    image: ghcr.io/supabase/realtime:latest
+    container_name: supabase-realtime
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    env_file:
+      - ../.env.supabase.local
+    environment:
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_NAME: ${POSTGRES_DB}
+      DB_USER: ${POSTGRES_USER}
+      DB_PASSWORD: ${POSTGRES_PASSWORD}
+      API_HOST: 0.0.0.0
+      API_PORT: 4000
+      PORT: 4000
+      JWT_SECRET: ${SUPABASE_JWT_SECRET}
+      ANON_KEY: ${SUPABASE_ANON_KEY}
+      SERVICE_KEY: ${SUPABASE_SERVICE_ROLE_KEY}
+      REPLICATION_MODE: STREAM
+      SECURE_CHANNELS: 'false'
+    logging: *default-logging
+    networks:
+      - supabase
+
+  storage:
+    profiles: ['full']
+    image: ghcr.io/supabase/storage-api:latest
+    container_name: supabase-storage
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+      rest:
+        condition: service_started
+    env_file:
+      - ../.env.supabase.local
+    environment:
+      ANON_KEY: ${SUPABASE_ANON_KEY}
+      SERVICE_KEY: ${SUPABASE_SERVICE_ROLE_KEY}
+      POSTGREST_URL: http://rest:3000
+      DATABASE_URL: postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB}
+      DATABASE_SSL: 'false'
+      JWT_SECRET: ${SUPABASE_JWT_SECRET}
+      STORAGE_BACKEND: file
+      FILE_STORAGE_BACKEND_PATH: /var/lib/storage
+      FILE_SIZE_LIMIT: ${STORAGE_FILE_SIZE_LIMIT}
+      GLOBAL_S3_BUCKET: local-bucket
+      SUPABASE_URL: ${SUPABASE_PUBLIC_URL}
+    volumes:
+      - supabase-storage:/var/lib/storage
+    logging: *default-logging
+    networks:
+      - supabase
+
+  edge-runtime:
+    profiles: ['full']
+    image: ghcr.io/supabase/edge-runtime:latest
+    container_name: supabase-edge-runtime
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    env_file:
+      - ../.env.supabase.local
+    environment:
+      SUPABASE_URL: ${SUPABASE_PUBLIC_URL}
+      SUPABASE_ANON_KEY: ${SUPABASE_ANON_KEY}
+      SUPABASE_SERVICE_ROLE_KEY: ${SUPABASE_SERVICE_ROLE_KEY}
+      SUPABASE_JWT_SECRET: ${SUPABASE_JWT_SECRET}
+      SUPABASE_DB_PASSWORD: ${POSTGRES_PASSWORD}
+      SUPABASE_DB_URL: postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB}
+    volumes:
+      - ../supabase/functions:/home/deno/functions:ro
+    ports:
+      - '${SUPABASE_EDGE_PORT:-54335}:54321'
+    logging: *default-logging
+    networks:
+      - supabase
+
+  studio:
+    profiles: ['full']
+    image: ghcr.io/supabase/studio:latest
+    container_name: supabase-studio
+    restart: unless-stopped
+    depends_on:
+      kong:
+        condition: service_started
+    env_file:
+      - ../.env.supabase.local
+    environment:
+      SUPABASE_URL: ${SUPABASE_PUBLIC_URL}
+      SUPABASE_ANON_KEY: ${SUPABASE_ANON_KEY}
+      STUDIO_PG_META_URL: http://kong:8000/pg
+    ports:
+      - '${SUPABASE_STUDIO_PORT:-54323}:3000'
+    logging: *default-logging
+    networks:
+      - supabase
+
+volumes:
+  supabase-db:
+  supabase-storage:
+  supabase-kong:
