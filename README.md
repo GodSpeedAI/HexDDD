@@ -457,11 +457,24 @@ We welcome contributions! Here's how to get involved:
 
 1. **🌿 Branch Strategy**
    ```bash
-   # Create feature branch
-   git checkout -b feat/your-awesome-feature
+  # Create feature branch (base: dev)
+  ```bash
+  # update local dev
+  git checkout dev
+  git pull origin dev
 
-   # Or bug fix branch
-   git checkout -b fix/specific-issue
+  # create feature branch from dev
+  git checkout -b feat/your-awesome-feature
+  ```
+
+  # Or bug fix branch (base: dev)
+  ```bash
+  git checkout dev
+  git pull origin dev
+  git checkout -b fix/specific-issue
+  ```
+
+  > Push your branch and open a pull request targeting the dev branch.
    ```
 
 2. **🧪 Quality Checks**
