@@ -1,412 +1,543 @@
-# Nx DDD Hexagonal Architecture Plugin
+# 🏗️ HexDDD Full-Stack Platform
 
-> A comprehensive Nx plugin for building scalable applications with Domain-Driven Design and Hexagonal Architecture patterns.
-
+[![Example Apps Smoke](https://github.com/SPRIME01/nx-ddd-hex-plugin/actions/workflows/smoke.yml/badge.svg)](https://github.com/SPRIME01/nx-ddd-hex-plugin/actions/workflows/smoke.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-blue.svg)](https://www.typescriptlang.org/)
+[![Python](https://img.shields.io/badge/Python-3.11+-green.svg)](https://www.python.org/)
+[![Nx](https://img.shields.io/badge/Nx-21.5+-purple.svg)](https://nx.dev/)
 
-## What is this?
+> 🚀 **The complete full-stack platform** that eliminates architectural chaos with type-safe, domain-driven development across React and Python ecosystems.
 
-This plugin brings enterprise-grade architectural patterns to Nx monorepos. It scaffolds applications following Domain-Driven Design (DDD) and Hexagonal Architecture principles, ensuring clean separation of concerns and maintainable codebases at scale.
+## 🎯 Why HexDDD?
 
-**Key Benefits:**
-- 🏗️ **Structured Architecture**: Enforced domain/application/infrastructure layers
-- 🔄 **Type Safety**: End-to-end type generation from database to UI
-- 🚀 **Multi-Framework**: Supports React (Next.js), Remix, Expo, and FastAPI
-- 📊 **Dependency Rules**: ESLint constraints prevent architectural violations
-- 🧪 **Battle-Tested**: Comprehensive test coverage and CI validation
+**Stop wrestling with:**
+- ❌ **Type drift** between frontend and backend
+- ❌ **Spaghetti architecture** that becomes unmaintainable
+- ❌ **Inconsistent patterns** across team members
+- ❌ **Complex setup** for modern full-stack apps
+- ❌ **Testing nightmares** with tightly coupled code
 
-## Quick Start
+**Start shipping with:**
+- ✅ **End-to-end type safety** from database to UI
+- ✅ **Clean architecture** that scales with your team
+- ✅ **Consistent patterns** enforced by tooling
+- ✅ **Production-ready** apps in minutes, not weeks
+- ✅ **Testable code** with clear boundaries and mocks
+
+## 🌟 What Makes HexDDD Special?
+
+HexDDD is a **batteries-included development platform** that combines:
+
+### 🎯 **Architectural Excellence**
+- **Hexagonal Architecture** + **Domain-Driven Design** principles
+- **Clean separation** of business logic from infrastructure
+- **Port & Adapter** patterns with Protocol-based contracts
+- **ESLint-enforced boundaries** prevent architectural violations
+
+### 🔄 **Type Safety Across Languages**
+- **Single source of truth** from Supabase/PostgreSQL schema
+- **Auto-generated TypeScript** (zod) and **Python** (pydantic) types
+- **CI/CD verification** prevents type drift
+- **Runtime validation** with compile-time guarantees
+
+### ⚡ **Modern Full-Stack Experience**
+- **React frontends**: Next.js, Remix, and Expo with shared client
+- **FastAPI backend** with async/await and dependency injection
+- **Shared validation layer** across all applications
+- **Hot reloading** and **type checking** in development
+
+### 🛠️ **Developer Experience First**
+- **Nx generators** for consistent scaffolding
+- **Idempotent operations** - safe to run multiple times
+- **Comprehensive testing** with Protocol-based mocking
+- **Visual dependency graphs** to understand your architecture
+
+## 📁 Architecture Overview
+
+```
+🏛️ HEXAGONAL ARCHITECTURE + DDD LAYERS
+┌─────────────────────────────────────────────────────────────────┐
+│                    🌐 INTERFACE LAYER                          │
+│  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐            │
+│  │   Next.js   │  │   Remix     │  │    Expo     │            │
+│  │   Web App   │  │   Web App   │  │  Mobile App │            │
+│  └─────────────┘  └─────────────┘  └─────────────┘            │
+│                          │                                     │
+│                    📡 Shared API Client                        │
+└─────────────────────────────────────────────────────────────────┘
+                             │
+┌─────────────────────────────────────────────────────────────────┐
+│                   ⚙️ APPLICATION LAYER                         │
+│  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐            │
+│  │  Use Cases  │  │    Ports    │  │  Services   │            │
+│  │  Handlers   │  │ (Protocols) │  │    DTOs     │            │
+│  └─────────────┘  └─────────────┘  └─────────────┘            │
+└─────────────────────────────────────────────────────────────────┘
+                             │
+┌─────────────────────────────────────────────────────────────────┐
+│                    🏗️ INFRASTRUCTURE LAYER                     │
+│  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐            │
+│  │  FastAPI    │  │  Supabase   │  │   Redis     │            │
+│  │  Adapters   │  │ Repository  │  │ Event Bus   │            │
+│  └─────────────┘  └─────────────┘  └─────────────┘            │
+└─────────────────────────────────────────────────────────────────┘
+                             │
+┌─────────────────────────────────────────────────────────────────┐
+│                     💎 DOMAIN LAYER                            │
+│  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐            │
+│  │  Entities   │  │ Value       │  │  Domain     │            │
+│  │ Aggregates  │  │ Objects     │  │  Events     │            │
+│  └─────────────┘  └─────────────┘  └─────────────┘            │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+## 🗂️ Project Structure
+
+```
+📦 nx-ddd-hex-plugin/
+├── 🌐 apps/                          # Interface Layer Applications
+│   ├── 🔗 backend-api/               # FastAPI service with DI & UoW
+│   ├── ⚛️ web-next/                  # Next.js web application
+│   ├── 🎵 web-remix/                 # Remix web application
+│   └── 📱 web-expo/                  # Expo React Native app
+│
+├── 📚 libs/                          # Shared Libraries & Domains
+│   ├── 🔧 ddd/                       # Nx plugin source (@ddd-plugin/ddd)
+│   ├── 🔗 shared/                    # Cross-platform types & clients
+│   │   ├── 📊 database-types/        # Generated DB types (TypeScript)
+│   │   ├── 🔌 api-types/             # Generated API contract types
+│   │   ├── 🌐 web/                   # Shared web client & validation
+│   │   └── 🐍 type_system/           # Python type utilities
+│   ├── 🐍 backend/                   # Python-specific utilities
+│   │   └── ⚙️ type_utils/            # Generated Python types
+│   └── 🏗️ <domain>/                  # Domain Boundaries
+│       ├── 💎 domain/                # Pure business logic
+│       ├── ⚙️ application/           # Use cases & ports
+│       └── 🔌 infrastructure/        # Adapters & implementations
+│
+├── 🛠️ tools/                         # Development Tools
+│   ├── 🔄 type-generator/            # Schema-driven type generation
+│   └── 🗄️ supabase/                  # Local development stack
+│
+└── 📋 tests/                         # Test Suites
+    ├── 🌊 e2e/                       # End-to-end tests
+    ├── 🔗 cross/                     # Cross-language validation
+    └── 🧪 fixtures/                  # Test fixtures & examples
+```
+
+## 🚀 Quick Start
+
+### 📥 Installation
 
 ```bash
-# Install the plugin
-npm install @ddd-plugin/ddd
+# Clone the repository
+git clone https://github.com/SPRIME01/nx-ddd-hex-plugin.git
+cd nx-ddd-hex-plugin
 
-# Generate a domain
+# Install dependencies
+npm install
+
+# Optional: Use Volta for Node.js version management
+# volta install node@20.x.x
+```
+
+### 🏃‍♂️ Run the Demo Applications
+
+Get started immediately with our reference implementations:
+
+#### 🔗 Backend API (FastAPI)
+```bash
+nx serve backend-api
+# 🌐 Visit: http://localhost:8000
+# 📚 API Docs: http://localhost:8000/docs
+```
+
+#### ⚛️ Next.js Web App
+```bash
+nx run web-next:dev
+# 🌐 Visit: http://localhost:4200
+```
+
+#### 🎵 Remix Web App
+```bash
+nx run web-remix:dev
+# 🌐 Visit: http://localhost:4201
+```
+
+#### 📱 Expo Mobile App
+```bash
+nx run web-expo:start
+# 📱 Opens Expo DevTools for iOS/Android
+```
+
+> 💡 **Pro Tip**: All frontends share the same type-safe API client and validation schemas, so changes to the backend automatically flow through to all applications!
+
+### 🗄️ Optional: Local Supabase Stack
+
+For full database integration and type generation:
+
+```bash
+# Copy environment template
+cp example.env .env.supabase.local
+
+# Start local Supabase services
+nx run supabase-devstack:start
+# 🌐 Supabase Studio: http://localhost:54323
+
+# Later, stop services
+nx run supabase-devstack:stop
+```
+
+## 🎨 Scaffolding with Nx Generators
+
+Transform your ideas into production-ready code with our intelligent generators:
+
+### 🏗️ Create a New Domain
+
+```bash
+# Generate a complete hexagonal domain with all layers
 nx g @ddd-plugin/ddd:hex-domain user-management
 
-# Generate applications
+# Creates:
+# - libs/user-management/domain/       (Entities, Value Objects)
+# - libs/user-management/application/  (Use Cases, Ports)
+# - libs/user-management/infrastructure/ (Adapters, Repositories)
+# - Proper ESLint tags and boundaries
+```
+
+### 🌐 Add React Applications
+
+```bash
+# Next.js application with shared API client
 nx g @ddd-plugin/ddd:web-app admin-portal --framework=next
+
+# Remix application reusing shared types
+nx g @ddd-plugin/ddd:web-app customer-portal --framework=remix
+
+# Expo mobile app with same contracts
 nx g @ddd-plugin/ddd:web-app mobile-app --framework=expo
 ```
 
-## Local Supabase Stack
+**Generator Options:**
+- `name` (required): Project name
+- `framework` (required): `next` | `remix` | `expo`
+- `apiClient` (default: true): Generate shared API client
+- `includeExamplePage` (default: true): Include demo routes
+- `routerStyle` (Next.js only): `app` | `pages` router
 
-1. Copy the template secrets into a local file: `cp example.env .env.supabase.local`.
-2. (Optional) Duplicate per-app env templates (`apps/*/.env.example`) to `.env.local` files when you need framework-specific overrides.
-3. Start the default stack: `nx run supabase-devstack:start`. Use `nx run supabase-devstack:status` to verify and `nx run supabase-devstack:stop` when finished. (This launches Postgres + PostgREST + Kong + Inbucket.)
-4. Reset volumes with `nx run supabase-devstack:reset` if you need a clean database.
-5. The compose file lives at `docker/docker-compose.supabase.yml`; local edge functions can be added under `supabase/functions/`.
-
-To point the repo at a remote Supabase project, skip the start command and update `.env.supabase.local` with your hosted project URL, anon key, and service role key while leaving the app-level `.env` files in sync.
-
-Want the full Supabase surface area (GoTrue, Realtime, Storage, Studio, Edge Runtime)? Authenticate with `docker login ghcr.io` and run `nx run supabase-devstack:start -- --profile full`.
-
-## Architecture Overview
-
-```
-┌─────────────────┐  ┌─────────────────┐  ┌─────────────────┐
-│   Interface     │  │   Application   │  │     Domain      │
-│  (Next/Remix)   │──│   Use Cases     │──│   Entities      │
-└─────────────────┘  └─────────────────┘  └─────────────────┘
-         │                      │                      │
-┌─────────────────┐  ┌─────────────────┐  ┌─────────────────┐
-│ Infrastructure  │  │     Ports       │  │   Value Objects │
-│  (FastAPI/DB)   │──│  (Interfaces)   │──│   Domain Events │
-└─────────────────┘  └─────────────────┘  └─────────────────┘
-```
-
-## Generators Reference
-
-### Web Applications
-
-#### Next.js Application
+### 🔧 Domain Extensions
 
 ```bash
-nx g @ddd-plugin/ddd:web-app my-app --framework=next
+# Add ports and adapters
+nx g @ddd-plugin/ddd:port notification-service
+
+# Add Unit of Work pattern
+nx g @ddd-plugin/ddd:uow user-management
+
+# Add Event Bus support
+nx g @ddd-plugin/ddd:event-bus user-management
 ```
 
-**Generated Structure:**
-```
-my-app/
-├── src/
-│   └── app/
-│       ├── layout.tsx           # Root layout with providers
-│       ├── page.tsx             # Home page with shared client
-│       ├── globals.css          # Global styles
-│       └── api/
-│           └── health/
-│               └── route.ts     # Health check endpoint
-├── public/
-│   └── favicon.ico
-├── next.config.js               # Next.js configuration
-├── tailwind.config.js           # Tailwind CSS setup
-├── tsconfig.json               # TypeScript configuration
-└── project.json                # Nx project configuration
+> ✨ **Idempotent by Design**: All generators are safe to run multiple times - they'll only make necessary changes, never duplicate or break existing code.
 
-libs/shared/web/                 # Shared client (auto-generated)
-├── src/
-│   ├── client.ts               # Typed API client
-│   ├── schemas.ts              # Zod validation schemas
-│   ├── errors.ts               # Error handling utilities
-│   └── env.ts                  # Environment configuration
-```
+## 🔄 Type Generation & Synchronization
 
-#### Remix Application
+Keep your entire stack in perfect type harmony:
+
+### 🔧 Generate Types from Schema
 
 ```bash
-nx g @ddd-plugin/ddd:web-app my-app --framework=remix
-```
-
-**Generated Structure:**
-```
-my-app/
-├── app/
-│   ├── root.tsx                # Root component with providers
-│   ├── entry.client.tsx        # Client entry point
-│   ├── entry.server.tsx        # Server entry point
-│   └── routes/
-│       ├── _index.tsx          # Home route with loader
-│       └── health.ts           # Health check route
-├── public/
-│   └── favicon.ico
-├── remix.config.js             # Remix configuration
-├── vite.config.ts              # Vite configuration
-├── tsconfig.json               # TypeScript configuration
-└── project.json                # Nx project configuration
-
-libs/shared/web/                 # Shared client (reused if exists)
-└── (same structure as above)
-```
-
-#### Expo Application
-
-```bash
-nx g @ddd-plugin/ddd:web-app my-app --framework=expo
-```
-
-**Generated Structure:**
-```
-my-app/
-├── src/
-│   └── app/
-│       ├── App.tsx             # Main app component
-│       ├── screens/
-│       │   └── HomeScreen.tsx  # Home screen with API integration
-│       └── components/
-│           └── HealthCheck.tsx # Health status component
-├── assets/
-│   ├── images/
-│   │   ├── icon.png
-│   │   └── splash.png
-│   └── fonts/
-├── app.json                    # Expo configuration
-├── metro.config.js             # Metro bundler config
-├── babel.config.js             # Babel configuration
-├── tsconfig.json               # TypeScript configuration
-└── project.json                # Nx project configuration
-
-libs/shared/web/                 # Shared client (reused if exists)
-└── (same structure as above)
-```
-
-### Domain Architecture
-
-#### Hexagonal Domain
-
-```bash
-nx g @ddd-plugin/ddd:hex-domain user-management
-```
-
-**Generated Structure:**
-```
-libs/user-management/
-├── domain/
-│   ├── entities/
-│   │   ├── user.entity.ts      # User aggregate root
-│   │   └── profile.entity.ts   # Profile entity
-│   ├── value-objects/
-│   │   ├── email.vo.ts         # Email value object
-│   │   └── user-id.vo.ts       # User ID value object
-│   ├── events/
-│   │   └── user-created.event.ts # Domain event
-│   └── index.ts                # Domain exports
-├── application/
-│   ├── use-cases/
-│   │   ├── create-user.use-case.ts
-│   │   └── update-user.use-case.ts
-│   ├── ports/
-│   │   ├── user.repository.ts  # Repository interface
-│   │   └── event-bus.ts        # Event bus interface
-│   ├── services/
-│   │   └── user.service.ts     # Application service
-│   └── index.ts                # Application exports
-├── infrastructure/
-│   ├── repositories/
-│   │   └── user.repository.impl.ts # Repository implementation
-│   ├── adapters/
-│   │   └── event-bus.adapter.ts    # Event bus adapter
-│   ├── di/
-│   │   └── bindings.ts         # Dependency injection
-│   └── index.ts                # Infrastructure exports
-└── project.json                # Nx project configuration
-```
-
-## Development Workflow
-
-### 1. Environment Setup
-
-```bash
-# Clone and install
-git clone <repository-url>
-cd nx-ddd-hex-plugin
-npm install
-
-# Set up environment variables
-export NX_API_URL=http://localhost:8000  # For API integration
-```
-
-### 2. Generate Type-Safe Schema
-
-```bash
-# Generate types from database schema
+# Generate TypeScript + Python types from Supabase schema
 nx run type-generator:generate
 
-# Verify type parity between TypeScript and Python
+# Verify type parity between languages
 nx run type-generator:verify
 ```
 
-### 3. Create Domain
+### 🐍 Python Type Checking
 
 ```bash
-# Generate a new bounded context
-nx g @ddd-plugin/ddd:hex-domain payment-processing
+# Strict mypy validation
+npm run type-check:py
 
-# Add ports and adapters
-nx g @ddd-plugin/ddd:port payment-gateway --domain=payment-processing
-nx g @ddd-plugin/ddd:uow payment-uow --domain=payment-processing
+# Or target specific files
+uv run mypy --strict apps/backend-api/
 ```
 
-### 4. Create Applications
+### 🤖 Automated CI Synchronization
 
-```bash
-# Admin dashboard (Next.js)
-nx g @ddd-plugin/ddd:web-app admin-dashboard --framework=next
+Our GitHub Actions workflow automatically:
+- ✅ Validates type consistency across languages
+- ✅ Generates updated types when schemas change
+- ✅ Creates pull requests with type updates
+- ✅ Prevents type drift in production
 
-# Customer portal (Remix)
-nx g @ddd-plugin/ddd:web-app customer-portal --framework=remix
+**Workflow triggers:**
+- Schema file changes in `supabase/`
+- Manual workflow dispatch
+- Scheduled weekly verification
 
-# Mobile app (Expo)
-nx g @ddd-plugin/ddd:web-app mobile-app --framework=expo
+## 🎯 Architecture Deep Dive
 
-# API backend (FastAPI)
-nx g @ddd-plugin/ddd:api payment-api
+### 🏛️ Clean Architecture Principles
+
+**Domain Layer** 💎 (Pure Business Logic)
+```typescript
+// ✅ Framework-agnostic entities and value objects
+export class User {
+  constructor(
+    private readonly id: UserId,
+    private readonly email: Email,
+    private readonly profile: UserProfile
+  ) {}
+
+  updateProfile(newProfile: UserProfile): UserProfileUpdated {
+    // Pure business rules - no framework dependencies
+    return new UserProfileUpdated(this.id, newProfile);
+  }
+}
 ```
 
-## Running Applications
+**Application Layer** ⚙️ (Use Cases & Ports)
+```typescript
+// ✅ Orchestrates domain logic with external services
+export class UpdateUserProfileUseCase {
+  constructor(
+    private readonly userRepository: UserRepository,  // Port
+    private readonly eventBus: EventBus               // Port
+  ) {}
 
-### Frontend Applications
-
-```bash
-# Next.js
-nx serve admin-dashboard
-# → http://localhost:4200
-
-# Remix
-nx serve customer-portal
-# → http://localhost:4200
-
-# Expo
-nx start mobile-app
-# → Opens Expo DevTools
+  async execute(request: UpdateProfileRequest): Promise<void> {
+    const user = await this.userRepository.findById(request.userId);
+    const event = user.updateProfile(request.profile);
+    await this.userRepository.save(user);
+    await this.eventBus.publish(event);
+  }
+}
 ```
 
-### Backend Services
+**Infrastructure Layer** 🔌 (Adapters & External Services)
+```python
+# ✅ Implements ports with real external dependencies
+class SupabaseUserRepository(UserRepository):
+    async def find_by_id(self, user_id: UserId) -> User:
+        # Database implementation
+        pass
 
-```bash
-# FastAPI
-nx serve payment-api
-# → http://localhost:8000
-# → API docs: http://localhost:8000/docs
+    async def save(self, user: User) -> None:
+        # Persistence implementation
+        pass
 ```
 
-### Health Checks
+### 🔗 Type Safety Across Boundaries
 
-All generated applications include health check endpoints:
+```mermaid
+graph LR
+    A[📊 Supabase Schema] --> B[🔄 Type Generator]
+    B --> C[📝 TypeScript Types]
+    B --> D[🐍 Python Types]
+    C --> E[⚛️ React Apps]
+    D --> F[🔗 FastAPI Backend]
+    E <--> G[🌐 Shared API Client]
+    G <--> F
+```
 
-- **Next.js**: `GET /api/health`
-- **Remix**: `GET /health`
-- **Expo**: Built-in health status component
-- **FastAPI**: `GET /health`
+**Benefits:**
+- 🛡️ **Compile-time safety** - Catch errors before they reach production
+- 🔄 **Automatic synchronization** - Schema changes propagate everywhere
+- 🧪 **Testable contracts** - Mock implementations match real interfaces
+- 📈 **Scalable patterns** - Add new domains without breaking existing code
 
-## Quality Assurance
+## 🧪 Testing & Quality Assurance
 
-### Testing
+### 🏗️ Comprehensive Testing Strategy
 
 ```bash
-# Run all tests
+# 🧪 Run all tests across the monorepo
 nx run-many --target=test --all
 
-# Test specific domain
-nx test user-management
-
-# E2E testing
-nx e2e admin-dashboard-e2e
-```
-
-### Type Checking
-
-```bash
-# TypeScript strict mode
-nx run-many --target=type-check --all
-
-# Python mypy strict mode
-npm run type-check:py
-```
-
-### Linting
-
-```bash
-# ESLint with architectural constraints
+# 🔍 Lint and architectural validation
 nx run-many --target=lint --all
 
-# Dependency rule violations will fail the build
+# 🐍 Python type checking
+npm run type-check:py
+
+# 🌊 End-to-end testing
+nx run ddd-e2e:e2e
 ```
 
-## Advanced Features
+### 🧪 Testing Layers
 
-### Type Generation Pipeline
+**Domain Tests** 💎
+- ✅ Pure unit tests with no mocking required
+- ✅ Business rule validation
+- ✅ Domain event verification
 
-The plugin automatically generates type-safe schemas across languages:
+**Application Tests** ⚙️
+- ✅ Use case testing with Protocol/interface mocks
+- ✅ In-memory port implementations for fast feedback
+- ✅ Event bus interaction verification
 
-1. **Database Schema** → PostgreSQL/Supabase definitions
-2. **TypeScript Types** → Zod schemas, interface definitions
-3. **Python Types** → Pydantic models, protocol definitions
-4. **Validation** → Cross-language parity verification
+**Infrastructure Tests** 🔌
+- ✅ Integration tests with real adapters
+- ✅ Contract tests ensuring port compliance
+- ✅ Database migration validation
 
-### Architectural Constraints
+**End-to-End Tests** 🌊
+- ✅ Full stack validation through UI
+- ✅ API contract verification
+- ✅ Type safety across language boundaries
 
-ESLint rules enforce clean architecture:
+### 🛡️ Quality Gates
 
-```typescript
-// ❌ Violates dependency rules
-import { DatabaseUserRepository } from '@app/infrastructure';
-
-// ✅ Follows dependency inversion
-import { UserRepository } from '@app/application/ports';
+**ESLint Boundary Enforcement:**
+```json
+{
+  "rules": {
+    "@nx/enforce-module-boundaries": [
+      "error",
+      {
+        "depConstraints": [
+          {
+            "sourceTag": "type:domain",
+            "onlyDependOnLibsWithTags": ["type:domain"]
+          },
+          {
+            "sourceTag": "type:application",
+            "onlyDependOnLibsWithTags": ["type:domain", "type:application"]
+          }
+        ]
+      }
+    ]
+  }
+}
 ```
 
-### Dependency Injection
+**Automated Verification:**
+- 🤖 **CI Pipeline** validates all boundaries
+- 🔍 **Type Drift Detection** prevents schema inconsistencies
+- 📊 **Test Coverage** reporting across all layers
+- 🚨 **Breaking Change Detection** in API contracts
 
-Built-in DI container setup:
+## 🛠️ Tech Stack & Standards
 
-```typescript
-// Automatic binding generation
-container.bind<UserRepository>('UserRepository')
-  .to(DatabaseUserRepository);
-```
+### Frontend Excellence ⚛️
+| Technology | Version | Purpose |
+|------------|---------|---------|
+| **Next.js** | 14+ (App Router) | 🌐 Full-stack React framework |
+| **Remix** | 2.15+ | 🎵 Progressive web apps |
+| **Expo** | 54+ | 📱 React Native mobile development |
+| **TypeScript** | 5.0+ (Strict) | 🔒 Type-safe development |
+| **Zod** | 3.23+ | ✅ Runtime type validation |
+| **React** | 19.0 | ⚛️ Component library |
 
-## Project Structure
+### Backend Power 🐍
+| Technology | Version | Purpose |
+|------------|---------|---------|
+| **FastAPI** | Latest | 🚀 High-performance async API |
+| **Python** | 3.11+ | 🐍 Backend development |
+| **Pydantic** | 2.x | 📝 Data validation & serialization |
+| **SQLAlchemy** | 2.x | 🗄️ Async ORM |
+| **mypy** | Latest | 🔍 Static type checking |
+| **pytest** | Latest | 🧪 Testing framework |
 
-```
-workspace/
-├── apps/                       # Interface layer applications
-│   ├── admin-dashboard/        # Next.js admin interface
-│   ├── customer-portal/        # Remix customer interface
-│   ├── mobile-app/            # Expo mobile application
-│   └── payment-api/           # FastAPI backend service
-├── libs/                      # Domain and shared libraries
-│   ├── payment-processing/    # Payment domain
-│   ├── user-management/       # User domain
-│   └── shared/               # Cross-cutting concerns
-│       ├── database-types/   # Generated DB types
-│       ├── api-types/        # Generated API types
-│       └── web/             # Shared web utilities
-├── tools/                    # Build and development tools
-│   └── type-generator/       # Schema-to-code generator
-└── tests/                   # Integration and E2E tests
-```
-## Contributing
+### Infrastructure & DevOps 🏗️
+| Technology | Version | Purpose |
+|------------|---------|---------|
+| **Nx** | 21.5+ | 🔧 Monorepo tooling |
+| **Supabase** | Latest | 🗄️ PostgreSQL + Auth + API |
+| **Docker** | Latest | 📦 Containerization |
+| **GitHub Actions** | - | 🤖 CI/CD pipelines |
+| **ESLint** | Latest | 🔍 Code quality enforcement |
 
-Please base all work on the dev branch and open pull requests against dev. Follow these best practices to keep the project stable and review-ready:
+## 🤝 Contributing
 
-1. Branching
-  - Create branches from dev: `git checkout dev && git pull && git checkout -b feat/<scope>-short-desc` or `fix/<scope>-short-desc`.
-  - Use clear branch names and reference issue/ticket IDs in branch names or PR titles.
+We welcome contributions! Here's how to get involved:
 
-2. Workflow
-  - Follow TDD: write failing tests first, implement code, then make tests pass.
-  - Keep PRs small and focused. One logical change per PR makes review and CI faster.
+### 🔄 Development Workflow
 
-3. Types & Generators
-  - When schema or type changes are required, run the type generator: `nx run type-generator:generate`.
-  - Commit any generated artifacts or open a separate PR that contains only generated changes if instructed by maintainers.
-  - Ensure cross-language parity checks (`nx run type-generator:verify`) pass when relevant.
+1. **🌿 Branch Strategy**
+   ```bash
+   # Create feature branch
+   git checkout -b feat/your-awesome-feature
 
-4. Quality checks
-  - Run tests and type checks locally: `nx test <project>`, `nx run-many --target=type-check --all`.
-  - Lint and enforce architectural rules: `nx run-many --target=lint --all`.
-  - Ensure all CI checks pass before requesting review.
+   # Or bug fix branch
+   git checkout -b fix/specific-issue
+   ```
 
-5. Code style & commits
-  - Use descriptive commit messages and follow the repository's commit conventions (e.g., conventional commits) if used.
-  - Keep code well-documented and maintain clear separation between domain, application, and infrastructure layers.
+2. **🧪 Quality Checks**
+   ```bash
+   # Run tests locally
+   nx run-many --target=test --all
 
-6. Pull Requests
-  - Target branch: dev.
-  - Provide a clear PR description: purpose, changes, testing steps, and any migration/type-generator impacts.
-  - Link to relevant issues or ADRs.
-  - Request reviews from the appropriate domain owners; at least one approving review is required before merge.
+   # Lint your code
+   nx run-many --target=lint --all
 
-7. Merging
-  - Merge into dev only after CI is green and reviewers have approved.
-  - Prefer merge strategies consistent with the repo policy (squash/rebase) to maintain a clean history.
+   # Type checking
+   npm run type-check:py
+   ```
 
-8. Maintenance notes
-  - If changing generators or templates, ensure idempotency and include tests that validate repeated runs.
-  - Update relevant docs (README, AGENTS.md, ADRs) when architectural or workflow changes are introduced.
+3. **📝 Documentation Updates**
+   - Update README.md for user-facing changes
+   - Update AGENTS.md for architectural changes
+   - Add ADRs for significant decisions
+   - Update generator schemas for new options
 
-Following these guidelines helps keep contributions predictable, reviewable, and aligned with the project's architectural rules. Thank you for contributing.
+4. **🔄 Generator Development**
+   ```bash
+   # Test generator idempotency
+   nx g @ddd-plugin/ddd:web-app test-app --framework=next
+   nx g @ddd-plugin/ddd:web-app test-app --framework=next
+   # Should show "no changes" on second run
+   ```
 
-## License
+5. **📨 Pull Request Guidelines**
+   - Provide clear context and motivation
+   - Include test evidence and screenshots
+   - Document any breaking changes
+   - Update type generation if schemas change
 
-MIT - see [LICENSE](LICENSE) for details.
+### 🎯 Areas for Contribution
+
+- 🎨 **New Framework Support** (Vite, SvelteKit, etc.)
+- 🔌 **Additional Adapters** (Redis, Kafka, GraphQL)
+- 📱 **Mobile Patterns** (Navigation, offline support)
+- 🧪 **Testing Utilities** (Test builders, factories)
+- 📚 **Documentation** (Tutorials, examples, guides)
+- 🏗️ **Generator Improvements** (More options, better DX)
+
+## 📚 Learn More
+
+### 📖 Essential Reading
+- 📋 [**AGENTS.md**](AGENTS.md) - AI agent guidelines and architecture context
+- 🏗️ [**ADR Documents**](docs/) - Architectural decisions and rationale
+- 📝 [**Product Requirements**](docs/PRD-hex-react-python.md) - Feature specifications
+- 🔧 [**Technical Specifications**](docs/TECHSPEC-hex-react-python.md) - Implementation details
+
+### 🎓 Architecture Resources
+- 📚 [Hexagonal Architecture](https://alistair.cockburn.us/hexagonal-architecture/) by Alistair Cockburn
+- 🏗️ [Domain-Driven Design](https://martinfowler.com/bliki/DomainDrivenDesign.html) by Martin Fowler
+- 🔧 [Clean Architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html) by Robert Martin
+- ⚛️ [React Architecture Patterns](https://reactpatterns.com/) for frontend best practices
+
+### 🛠️ Tool Documentation
+- 🔧 [Nx Monorepo Guide](https://nx.dev/getting-started/intro)
+- ⚛️ [Next.js Documentation](https://nextjs.org/docs)
+- 🎵 [Remix Framework](https://remix.run/docs)
+- 🐍 [FastAPI Guide](https://fastapi.tiangolo.com/)
+
+## 📄 License
+
+**MIT License** - see [LICENSE](LICENSE) for complete details.
+
+---
+
+<div align="center">
+
+**🚀 Ready to build something amazing?**
+
+[⭐ Star this repo](https://github.com/SPRIME01/nx-ddd-hex-plugin) • [🐛 Report issues](https://github.com/SPRIME01/nx-ddd-hex-plugin/issues) • [💬 Start discussions](https://github.com/SPRIME01/nx-ddd-hex-plugin/discussions)
+
+**Built with ❤️ by developers, for developers**
+
+</div>
