@@ -17,7 +17,7 @@
   },
   "private": true,
   "dependencies": {
-    "@expo/metro-config": "~0.20.14",
+    "@expo/metro-config": "~54.0.3",
     "@expo/metro-runtime": "~5.0.4",
     "@phenomnomnominal/tsquery": "^5.0.1",
     "@remix-run/node": "^2.15.0",
@@ -95,7 +95,6 @@
     "jest-expo": "~53.0.7",
     "jest-util": "30.0.5",
     "jsonc-eslint-parser": "^2.3.0",
-    "metro-config": "~0.82.4",
     "metro-resolver": "~0.82.4",
     "nx": "^21.5.2",
     "prettier": "^2.8.8",
