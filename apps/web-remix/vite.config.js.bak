@@ -1,0 +1,18 @@
+import { vitePlugin as remix } from "@remix-run/dev";
+import { defineConfig } from "vite";
+import { installGlobals } from "@remix-run/node";
+
+installGlobals();
+
+export default defineConfig({
+  plugins: [
+    remix({
+      appDirectory: "app",
+      ignoredRouteFiles: ["**/.*"],
+    }),
+  ],
+  ssr: {
+    // Bundle problematic dependencies into the server build to resolve ESM/CJS issues
+    noExternal: ["vite-node"],
+  },
+});

@@ -5,7 +5,7 @@ const config: Config = {
   preset: '../../jest.preset.js',
   testEnvironment: 'jsdom',
   transform: {
-    '^.+\.[tj]sx?$': ['ts-jest', { tsconfig: '<rootDir>/tsconfig.json' }],
+    '^.+\\.[tj]sx?$': ['ts-jest', { tsconfig: '<rootDir>/tsconfig.json' }],
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
   testMatch: ['**/*.spec.ts', '**/*.spec.tsx'],

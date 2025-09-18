@@ -1,11 +1,9 @@
 import { Tree, formatFiles, names } from '@nx/devkit';
 import { libraryGenerator as jsLibraryGenerator } from '@nx/js';
-import { ApiOptions } from './schema';
-import { validateInputs } from '../utils/validate-inputs';
+import { Api } from './schema';
 import { getWorkspaceScope } from '../utils/get-workspace-scope';
 
-export default async function (tree: Tree, options: ApiOptions) {
-  validateInputs(options);
+export default async function (tree: Tree, options: Api) {
 
   const workspaceName = getWorkspaceScope(tree);
 
@@ -33,7 +31,7 @@ export default async function (tree: Tree, options: ApiOptions) {
   });
 
   console.info(
-    `\nHINT: Don\'t forget to extend the rules in your "eslint.config.js" to allow selected domains to access this API.\nFor this, add the tag domain:${domainName}/${libName} to the respective domains' rule sets.\n `
+    `\nHINT: Don't forget to extend the rules in your "eslint.config.js" to allow selected domains to access this API.\nFor this, add the tag domain:${domainName}/${libName} to the respective domains' rule sets.\n `
   );
 
   await formatFiles(tree);

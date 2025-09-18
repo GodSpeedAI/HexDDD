@@ -15,9 +15,10 @@
       "options": {}
     },
     "build": {
-      "executor": "@nx/expo:build",
+      "executor": "nx:run-commands",
       "options": {
-        "outputPath": "dist/apps/web-expo"
+        "cwd": "apps/web-expo",
+        "command": "npx expo export --platform web --output-dir ../../dist/apps/web-expo"
       }
     },
     "lint": {

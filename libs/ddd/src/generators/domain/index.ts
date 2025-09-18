@@ -2,18 +2,16 @@ import {
   Tree,
   formatFiles,
   installPackagesTask,
-  generateFiles,
   joinPathFragments,
   names,
-  readNxJson,
 } from '@nx/devkit';
 import { libraryGenerator as jsLibraryGenerator } from '@nx/js';
 import { applicationGenerator as reactApplicationGenerator } from '@nx/react';
-import { DomainOptions } from './schema';
+import { Domain } from './schema';
 import { updateDepConst } from '../utils/update-dep-const';
 import { getNpmScope } from '../utils/npm';
 
-export default async function (tree: Tree, options: DomainOptions) {
+export default async function (tree: Tree, options: Domain) {
   const npmScope = getNpmScope(tree);
   const domainName = names(options.name).fileName;
 

@@ -43,5 +43,6 @@
   },
   "required": [
     "name"
-  ]
+  ],
+  "additionalProperties": false
 }

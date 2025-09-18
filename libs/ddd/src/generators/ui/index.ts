@@ -1,10 +1,10 @@
 import { Tree, formatFiles, names } from '@nx/devkit';
 import { libraryGenerator as reactLibraryGenerator } from '@nx/react';
-import { UiOptions } from './schema';
+import { Ui } from './schema';
 import { validateInputs } from '../utils/validate-inputs';
 import { getWorkspaceScope } from '../utils/get-workspace-scope';
 
-export default async function (tree: Tree, options: UiOptions) {
+export default async function (tree: Tree, options: Ui) {
   validateInputs(options);
 
   const workspaceName = getWorkspaceScope(tree);

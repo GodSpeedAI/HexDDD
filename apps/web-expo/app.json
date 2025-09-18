@@ -2,7 +2,17 @@
   "expo": {
     "name": "web-expo",
     "slug": "web-expo",
-    "version": "1.0.0"
+    "version": "1.0.0",
+    "main": "./index.js",
+    "platforms": ["ios", "android", "web"],
+    "web": {
+      "bundler": "metro"
+    },
+    "android": {
+      "package": "com.anonymous.webexpo"
+    },
+    "ios": {
+      "bundleIdentifier": "com.anonymous.webexpo"
+    }
   }
 }
-

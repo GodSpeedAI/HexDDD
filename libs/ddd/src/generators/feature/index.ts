@@ -7,10 +7,10 @@ import {
 } from '@nx/devkit';
 import { libraryGenerator as jsLibraryGenerator } from '@nx/js';
 import { componentGenerator as reactComponentGenerator } from '@nx/react';
-import { FeatureOptions } from './schema';
+import { Feature } from './schema';
 import { getNpmScope } from '../utils/npm';
 
-export default async function (tree: Tree, options: FeatureOptions) {
+export default async function (tree: Tree, options: Feature) {
   const npmScope = getNpmScope(tree);
   const domainName = names(options.domain).fileName;
   const featureName = names(options.name).fileName;

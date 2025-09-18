@@ -19,7 +19,6 @@
   "dependencies": {
     "@expo/metro-config": "~0.20.14",
     "@expo/metro-runtime": "~5.0.4",
-    "@nx/plugin": "21.4.1",
     "@phenomnomnominal/tsquery": "^5.0.1",
     "@remix-run/node": "^2.15.0",
     "@remix-run/react": "^2.15.0",
@@ -45,17 +44,18 @@
     "@expo/cli": "~0.24.14",
     "@next/eslint-plugin-next": "^15.2.4",
     "@nx/cypress": "21.4.1",
-    "@nx/devkit": "21.4.1",
+    "@nx/devkit": "^21.5.2",
     "@nx/eslint-plugin": "21.4.1",
-    "@nx/expo": "21.4.1",
-    "@nx/jest": "21.4.1",
-    "@nx/js": "21.4.1",
-    "@nx/next": "21.4.1",
+    "@nx/expo": "^21.5.2",
+    "@nx/jest": "^21.5.2",
+    "@nx/js": "^21.5.2",
+    "@nx/next": "^21.5.2",
     "@nx/playwright": "21.4.1",
-    "@nx/remix": "21.4.1",
+    "@nx/plugin": "^21.5.2",
+    "@nx/remix": "^21.5.2",
     "@nx/vite": "21.4.1",
-    "@nx/web": "21.4.1",
-    "@nx/workspace": "21.4.1",
+    "@nx/web": "^21.5.2",
+    "@nx/workspace": "^21.5.2",
     "@nxlv/python": "^1.6.0",
     "@playwright/test": "^1.36.0",
     "@remix-run/dev": "^2.15.0",
@@ -79,6 +79,7 @@
     "babel-plugin-macros": "3.1.0",
     "babel-preset-expo": "~13.2.0",
     "cypress": "15.2.0",
+    "eas-cli": "^16.19.3",
     "eslint": "^8.57.0",
     "eslint-config-next": "^15.2.4",
     "eslint-config-prettier": "^10.1.0",
@@ -96,7 +97,7 @@
     "jsonc-eslint-parser": "^2.3.0",
     "metro-config": "~0.82.4",
     "metro-resolver": "~0.82.4",
-    "nx": "21.4.1",
+    "nx": "^21.5.2",
     "prettier": "^2.8.8",
     "ts-jest": "29.4.1",
     "ts-node": "10.9.1",
@@ -104,5 +105,11 @@
     "typescript": "~5.8.2",
     "vite": "^5.0.0",
     "yaml": "^2.8.1"
+  },
+  "overrides": {
+    "vite-node": "1.6.1"
+  },
+  "volta": {
+    "node": "18.20.8"
   }
 }

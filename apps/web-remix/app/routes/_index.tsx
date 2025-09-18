@@ -1,4 +1,4 @@
-import { UserSchema } from '../../../../libs/shared/web/src';
+import { UserSchema } from '@shared/web';
 
 const sample = {
   id: '00000000-0000-0000-0000-000000000000',
