@@ -528,7 +528,7 @@ We welcome contributions! Here's how to get involved:
 
 ## 📄 License
 
-**MIT License** - see [LICENSE](LICENSE) for complete details.
+**Apache License 2.0** - see [LICENSE](LICENSE) for complete details.
 
 ---
 
