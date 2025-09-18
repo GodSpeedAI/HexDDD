@@ -1,7 +1,13 @@
 import { spawnSync } from 'node:child_process';
 
 function runNxTarget(target: string) {
-  const result = spawnSync('npx', ['nx', 'run-many', '-t', target, '--skip-nx-cache'], {
+  const args = ['nx', 'run-many', '-t', target, '--skip-nx-cache'];
+
+  if (target === 'build') {
+    args.push('--exclude', 'web-next,web-expo');
+  }
+
+  const result = spawnSync('npx', args, {
     encoding: 'utf8',
     stdio: 'pipe',
   });

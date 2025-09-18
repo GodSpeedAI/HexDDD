@@ -1,4 +1,12 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {};
+const { withNx } = require('@nx/next/plugins/with-nx');
 
-module.exports = nextConfig;
+const nextConfig = {
+  nx: {
+    svgr: false,
+  },
+  experimental: {
+    externalDir: true,
+  },
+};
+
+module.exports = withNx(nextConfig);

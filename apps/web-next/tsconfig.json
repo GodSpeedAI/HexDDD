@@ -14,11 +14,14 @@
       {
         "name": "next"
       }
-    ]
+    ],
+    "strictNullChecks": true
   },
   "include": [
-    "app/**/*.ts",
-    "app/**/*.tsx",
+    "pages/**/*.ts",
+    "pages/**/*.tsx",
+    "pages/**/*.js",
+    "pages/**/*.jsx",
     "next-env.d.ts",
     ".next/types/**/*.ts"
   ],

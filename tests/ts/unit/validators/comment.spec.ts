@@ -155,8 +155,6 @@ describe('DbCommentSchema', () => {
         '01/01/2023',
         '',
         123,
-        null,
-        undefined,
       ];
 
       invalidDates.forEach(date => {

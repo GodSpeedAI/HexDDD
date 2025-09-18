@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.mapPostgresToTypeScript = void 0;
+exports.mapPostgresToTypeScript = mapPostgresToTypeScript;
 function mapPostgresToTypeScript(postgresType, nullable = false, isArray = false) {
     const typeMap = {
         uuid: 'string',
@@ -34,4 +34,3 @@ function mapPostgresToTypeScript(postgresType, nullable = false, isArray = false
     }
     return baseType;
 }
-exports.mapPostgresToTypeScript = mapPostgresToTypeScript;

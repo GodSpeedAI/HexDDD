@@ -50,7 +50,7 @@ export const NonEmptyContentSchema = z
  */
 export const DateTimeSchema = z
   .string({ invalid_type_error: "Invalid date format", required_error: "Invalid date format" })
-  .datetime({ message: "Invalid date format" });
+  .datetime({ message: "Invalid date format", offset: true });
 
 /**
  * @description Base nullable ISO 8601 date-time validator.

@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.verifyTypeParity = void 0;
+exports.verifyTypeParity = verifyTypeParity;
 function verifyTypeParity(tsType, pyType) {
     // Normalize TypeScript type
     const normalizedTsType = tsType.replace(/\s+/g, '').toLowerCase();
@@ -50,4 +50,3 @@ function verifyTypeParity(tsType, pyType) {
     }
     return false;
 }
-exports.verifyTypeParity = verifyTypeParity;

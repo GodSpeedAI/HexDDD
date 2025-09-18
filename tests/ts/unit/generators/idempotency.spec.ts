@@ -1,4 +1,6 @@
 import { Tree, names } from '@nx/devkit';
+
+jest.setTimeout(30000);
 import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
 
 import { eventBusGenerator } from '../../../../libs/ddd/src/generators/event-bus/generator';

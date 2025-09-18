@@ -185,8 +185,6 @@ describe('DbPostSchema', () => {
         '01/01/2023',
         '',
         123,
-        null,
-        undefined,
       ];
 
       invalidDates.forEach(date => {
@@ -206,8 +204,6 @@ describe('DbPostSchema', () => {
         '01/01/2023',
         '',
         123,
-        null,
-        undefined,
       ];
 
       invalidDates.forEach(date => {

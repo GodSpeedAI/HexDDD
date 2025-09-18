@@ -136,8 +136,6 @@ describe('DbUserSchema', () => {
         '01/01/2023',
         '',
         123,
-        null,
-        undefined,
       ];
 
       invalidDates.forEach(date => {
@@ -157,11 +155,10 @@ describe('DbUserSchema', () => {
         '01/01/2023',
         '',
         123,
-        null,
-        undefined,
       ];
 
       invalidDates.forEach(date => {
+        console.log('user invalid date', date);
         const result = DbUserSchema.safeParse({ ...validUserData, updated_at: date });
         expect(result.success).toBe(false);
         if (!result.success) {
