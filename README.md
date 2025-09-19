@@ -93,7 +93,7 @@ HexDDD is a **batteries-included development platform** that combines:
 ## 🗂️ Project Structure
 
 ```
-📦 nx-ddd-hex-plugin/
+📦 HexDDD/
 ├── 🌐 apps/                          # Interface Layer Applications
 │   ├── 🔗 backend-api/               # FastAPI service with DI & UoW
 │   ├── ⚛️ web-next/                  # Next.js web application
