@@ -1,6 +1,6 @@
 # 🏗️ HexDDD Full-Stack APP Platform
 
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0)
+[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-blue.svg)](https://www.typescriptlang.org/)
 [![Python](https://img.shields.io/badge/Python-3.11+-green.svg)](https://www.python.org/)
 [![Nx](https://img.shields.io/badge/Nx-21.5+-purple.svg)](https://nx.dev/)
@@ -540,7 +540,7 @@ We welcome contributions! Here's how to get involved:
 
 ## 📄 License
 
-**Apache License 2.0** - see [LICENSE](LICENSE) for complete details.
+**Mozilla Public License 2.0** - see [LICENSE](LICENSE) for complete details.
 
 ---
 
