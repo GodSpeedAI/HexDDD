@@ -542,6 +542,13 @@ We welcome contributions! Here's how to get involved:
 
 **Mozilla Public License 2.0** - see [LICENSE](LICENSE) for complete details.
 
+
+## 🙏 Acknowledgments
+
+- **[Nx](https://nx.dev/)** - Monorepo orchestration platform
+- **[nx-ddd-plugin](https://github.com/angular-architects/nx-ddd-plugin)** - Original DDD plugin inspiration
+- **[@nxlv/python](https://www.npmjs.com/package/@nxlv/python)** - Python workspace integration
+
 ---
 
 <div align="center">
