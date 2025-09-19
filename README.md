@@ -130,8 +130,8 @@ HexDDD is a **batteries-included development platform** that combines:
 
 ```bash
 # Clone the repository
-git clone https://github.com/SPRIME01/nx-ddd-hex-plugin.git
-cd nx-ddd-hex-plugin
+git clone https://github.com/SPRIME01/HexDDD.git
+cd HexDDD
 
 # Install dependencies
 npm install
