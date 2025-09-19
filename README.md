@@ -542,7 +542,6 @@ We welcome contributions! Here's how to get involved:
 
 **Mozilla Public License 2.0** - see [LICENSE](LICENSE) for complete details.
 
-
 ## 🙏 Acknowledgments
 
 - **[Nx](https://nx.dev/)** - Monorepo orchestration platform
