@@ -1,5 +1,6 @@
 # 🏗️ HexDDD: Your Blueprint for Building Apps That Last
 
+[![CI](https://github.com/SPRIME01/HexDDD/actions/workflows/ci.yml/badge.svg)](https://github.com/SPRIME01/HexDDD/actions/workflows/ci.yml)
 [![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-blue.svg)](https://www.typescriptlang.org/)
 [![Python](https://img.shields.io/badge/Python-3.11+-green.svg)](https://www.python.org/)
