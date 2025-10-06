@@ -651,9 +651,30 @@ nx g @ddd-plugin/ddd:web-app test-app --framework=next
 
 ---
 
-## 📄 License
+## 📄 License & Community
 
-**Mozilla Public License 2.0** - see [LICENSE](LICENSE) for complete details.
+HexDDD follows what we call **"The Photoshop Rule"** — a simple way to understand how you can use HexDDD without getting lost in legal jargon:
+
+> 🖼️ **Think of HexDDD like Photoshop.**
+> You can use Photoshop to design, paint, or build anything — logos, posters, full digital worlds. You can sell your art, keep it private, or use it inside your company.
+>
+> What you *can't* do is **sell Photoshop itself** or offer "Photoshop as a service."
+
+It's the same with HexDDD:
+
+- ✅ **Use HexDDD freely inside your organization** — build applications, generate architecture, support your engineering workflows
+- ✅ **Use it to create applications** (web apps, mobile apps, APIs, microservices) and use or sell those applications however you like
+- ❌ **Don't resell HexDDD itself** — you can't package it up and offer it as a hosted platform or SaaS to third parties without a commercial license
+- ❌ **Don't strip out HexDDD's core to make a competing scaffolding service**
+
+### **License Details:**
+
+HexDDD is released under a **dual license**:
+
+- 🧩 **MPL-2.0 (Open Source)** — for personal, educational, and internal company use
+- 💼 **Commercial License** — required if you want to embed, resell, or offer HexDDD as a hosted service
+
+See [LICENSE](LICENSE) for complete legal details.
 
 This license balances openness with protection—use it freely, improve it collaboratively, share it widely.
 
