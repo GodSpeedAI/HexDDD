@@ -122,3 +122,7 @@ npm-debug.*
 *.orig.*
 web-build/
 cache/
+
+# working directories
+tmp/
+docs/tmp/
