@@ -9,8 +9,8 @@ on:
 jobs:
   smoke:
     runs-on: ubuntu-latest
-    env:
-      NODE_ENV: production
+    # Removed NODE_ENV=production - it was causing npm ci to skip devDependencies
+    # which includes nx and all @nx/* packages needed for builds
     steps:
       - name: Checkout
         uses: actions/checkout@v4
