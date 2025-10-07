@@ -189,8 +189,36 @@ Evidence:
 - nx IS listed in package.json devDependencies at line 99
 - This suggests `package-lock.json` corruption or mismatch
 
-Next Steps:
-1. Regenerate package-lock.json on a clean system
-2. Verify nx is properly locked in package-lock.json
-3. If that fails, delete and regenerate the example apps
-4. Update this document with resolution
+Actions Taken:
+1. ✅ Regenerated package-lock.json from scratch with --legacy-peer-deps
+2. ✅ Verified nx@21.5.2 is in the new lock file (3179 packages)
+3. ✅ Disabled npm caching in all workflows to prevent stale cache issues
+4. ✅ Pushed regenerated lock file to main and all PR branches
+5. ⏳ Awaiting CI verification
+
+### 2025-10-07 15:00 UTC - Resolution Applied
+**Actions Completed:**
+
+1. **Disabled GitHub Actions npm cache**: Temporarily commented out `cache: 'npm'` in all workflows
+2. **Regenerated package-lock.json**: Fresh generation with --legacy-peer-deps flag
+   - Old: 3438 packages
+   - New: 3179 packages (cleaned up)
+   - Verified nx@21.5.2 present
+3. **Confirmed local builds work**: All apps (web-next, web-remix, web-expo) build successfully locally
+4. **Apps are NOT the problem**: Ruled out app corruption as the cause
+
+**Root Cause Summary:**
+The issue was a combination of:
+- Corrupted GitHub Actions npm cache causing only 956/3180 packages to install
+- Old package-lock.json potentially out of sync
+
+**Current Status:**
+- All PR branches updated with fixes
+- Awaiting CI runs with fresh package-lock.json and no caching
+- Once verified working, can re-enable caching with proper cache keys
+
+**Next Steps:**
+1. Monitor CI runs on all three PRs
+2. If successful, merge PRs and delete branches  
+3. Re-enable npm caching with versioned cache keys
+4. Document lessons learned
