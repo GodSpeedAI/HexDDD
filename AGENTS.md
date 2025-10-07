@@ -290,3 +290,6 @@ When working with this codebase, focus on the current React + Python architectur
 - **Type Definitions**: Refer to generated types in `libs/shared/`
 
 For questions about architectural decisions, consult the ADR documents in the `docs/` folder.
+
+**Save all generated comprehensive summaries in the docs/workdoc/ folder for future reference**
+
