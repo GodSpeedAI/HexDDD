@@ -19,7 +19,8 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '18'
-          cache: 'npm'
+          # Cache disabled to force fresh install - was causing incomplete installs (956 vs 3180 packages)
+          # cache: 'npm'
 
       - name: Setup Python
         uses: actions/setup-python@v5
