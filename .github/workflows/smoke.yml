@@ -35,7 +35,7 @@ jobs:
         run: uv sync
 
       - name: Install dependencies
-        run: npm ci
+        run: npm ci --legacy-peer-deps
 
       - name: Smoke - Next build
         run: npm run ci:smoke:web-next
