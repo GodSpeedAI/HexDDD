@@ -58,10 +58,10 @@ jobs:
             ${{ runner.os }}-pip-
 
       - name: Install Node.js dependencies
-        run: npm ci
+        run: npm ci --legacy-peer-deps
 
       - name: Install type generator dependencies
-        run: npm ci
+        run: npm ci --legacy-peer-deps
         working-directory: tools/type-generator
 
       - name: Install Python dependencies
