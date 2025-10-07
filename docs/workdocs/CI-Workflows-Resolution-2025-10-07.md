@@ -98,7 +98,7 @@ All Nx documentation examples use `npx nx` in CI:
 
 ### Phase 2: Update Other PR Branches
 - [ ] Cherry-pick fix to dependabot branch
-- [ ] Cherry-pick fix to type-sync branch  
+- [ ] Cherry-pick fix to type-sync branch
 - [ ] Verify all PRs pass CI
 
 ### Phase 3: Merge PRs
@@ -179,3 +179,18 @@ All Nx documentation examples use `npx nx` in CI:
 - Created comprehensive analysis document
 - Identified root cause: incorrect nx invocation pattern
 - Ready to implement fix across all branches
+
+### 2025-10-07 14:45 UTC - CRITICAL FINDING
+**ACTUAL ROOT CAUSE IDENTIFIED**: `nx` package is NOT being installed by `npm ci`
+
+Evidence:
+- `npm ci` reports "added 956 packages" but nx@21.5.2 not among them
+- `npm exec nx` tries to install nx@21.6.3 from registry (latest version)
+- nx IS listed in package.json devDependencies at line 99
+- This suggests `package-lock.json` corruption or mismatch
+
+Next Steps:
+1. Regenerate package-lock.json on a clean system
+2. Verify nx is properly locked in package-lock.json
+3. If that fails, delete and regenerate the example apps
+4. Update this document with resolution
