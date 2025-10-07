@@ -291,5 +291,5 @@ When working with this codebase, focus on the current React + Python architectur
 
 For questions about architectural decisions, consult the ADR documents in the `docs/` folder.
 
-**Save all generated comprehensive summaries in the docs/workdoc/ folder for future reference**
+**Save all generated comprehensive summaries in the docs/workdocs/ folder for future reference**
 

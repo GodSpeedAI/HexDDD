@@ -9,9 +9,9 @@
     "test": "nx test",
     "reset": "rm -rf node_modules && rm package-lock.json && npm i",
     "build-pack": "nx b ddd && npm pack dist/libs/ddd",
-    "ci:smoke:web-next": "nx run web-next:build --skip-nx-cache",
-    "ci:smoke:web-remix": "nx run web-remix:build --skip-nx-cache",
-    "ci:smoke:web-expo": "nx run web-expo:type-check --skip-nx-cache && nx run web-expo:lint --skip-nx-cache",
+    "ci:smoke:web-next": "npx nx run web-next:build --skip-nx-cache",
+    "ci:smoke:web-remix": "npx nx run web-remix:build --skip-nx-cache",
+    "ci:smoke:web-expo": "npx nx run web-expo:type-check --skip-nx-cache && npx nx run web-expo:lint --skip-nx-cache",
     "ci:smoke": "npm run ci:smoke:web-next && npm run ci:smoke:web-remix && npm run ci:smoke:web-expo",
     "type-check:py": "uv run mypy --strict ."
   },
