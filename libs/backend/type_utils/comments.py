@@ -1,7 +1,7 @@
 # Auto-generated Python types for Comments
-from typing import Any
+from typing import Optional, List
 from uuid import UUID
-from datetime import datetime
+from datetime import datetime, date, time
 
 class Comments:
     """Database model type definitions."""
@@ -12,6 +12,6 @@ class Comments:
     content: str
     created_at: datetime
 
-    def __init__(self, **kwargs: Any) -> None:
+    def __init__(self, **kwargs):
         for key, value in kwargs.items():
             setattr(self, key, value)
