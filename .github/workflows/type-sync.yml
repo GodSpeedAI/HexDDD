@@ -70,10 +70,12 @@ jobs:
           # pip install -r requirements.txt
 
       - name: Build type generator
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: npm run build
         working-directory: tools/type-generator
 
       - name: Generate TypeScript and Python types
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: |
           # Generate TypeScript types
           node tools/type-generator/cli.js generate tests/fixtures/database-schema.json -o libs/shared/database-types
@@ -82,18 +84,20 @@ jobs:
           python libs/shared/type_system/generators/db_to_python.py tests/fixtures/database-schema.json libs/backend/type_utils
 
       - name: Verify type parity
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: |
           # Verify structural parity between TypeScript and Python types
           node tools/type-generator/cli.js verify libs/shared/database-types libs/backend/type_utils
 
       - name: Check for changes
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         id: git-check
         run: |
           git add .
           git diff --staged --quiet || echo "changes=true" >> $GITHUB_OUTPUT
 
       - name: Create Pull Request
-        if: steps.git-check.outputs.changes == 'true'
+        if: steps.git-check.outputs.changes == 'true' && github.event_name == 'push' && github.ref == 'refs/heads/main'
         uses: peter-evans/create-pull-request@v5
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
