@@ -1,6 +1,6 @@
 # 🏗️ HexDDD: Your Blueprint for Building Apps That Last
 
-[![CI](https://github.com/GodSpeedAI/HexDDD/actions/workflows/ci.yml/badge.svg)](https://github.com/GodSpeedAI/HexDDD/actions/workflows/ci.yml)
+[![CI](https://github.com/GodSpeedAI/HexDDD/actions/workflows/smoke.yml/badge.svg)](https://github.com/GodSpeedAI/HexDDD/actions/workflows/smoke.yml)
 [![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-blue.svg)](https://www.typescriptlang.org/)
 [![Python](https://img.shields.io/badge/Python-3.11+-green.svg)](https://www.python.org/)
@@ -188,7 +188,7 @@ Let's get you building. No PhD required.
 
 ```bash
 # Get HexDDD on your machine
-git clone https://github.com/SPRIME01/HexDDD.git
+git clone https://github.com/GodSpeedAI/HexDDD.git
 cd HexDDD
 
 # Install everything
@@ -703,7 +703,7 @@ HexDDD gives you the blueprint, the tools, and the guardrails to build apps that
 
 ---
 
-[⭐ **Star this repo**](https://github.com/SPRIME01/HexDDD) • [🐛 **Report issues**](https://github.com/SPRIME01/HexDDD/issues) • [💬 **Join discussions**](https://github.com/SPRIME01/HexDDD/discussions)
+[⭐ **Star this repo**](https://github.com/GodSpeedAI/HexDDD) • [🐛 **Report issues**](https://github.com/GodSpeedAI/HexDDD/issues) • [💬 **Join discussions**](https://github.com/GodSpeedAI/HexDDD/discussions)
 
 ---
 
