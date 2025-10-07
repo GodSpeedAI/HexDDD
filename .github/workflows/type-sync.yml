@@ -18,10 +18,9 @@ on:
 jobs:
   type-sync:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [18.x, 20.x]
-        python-version: [3.9, 3.11]
+    permissions:
+      contents: write
+      pull-requests: write
 
     steps:
       - name: Checkout code
@@ -30,16 +29,16 @@ jobs:
           # Fetch all history for all branches and tags
           fetch-depth: 0
 
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: Use Node.js 18.x
         uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: '18'
           cache: 'npm'
 
-      - name: Use Python ${{ matrix.python-version }}
+      - name: Use Python 3.11
         uses: actions/setup-python@v4
         with:
-          python-version: ${{ matrix.python-version }}
+          python-version: '3.11'
 
       - name: Cache node modules
         uses: actions/cache@v3
@@ -107,3 +106,5 @@ jobs:
             Please review and merge if appropriate.
           branch: type-sync/automated-changes
           delete-branch: true
+          committer: GitHub <noreply@github.com>
+          author: github-actions[bot] <github-actions[bot]@users.noreply.github.com>
