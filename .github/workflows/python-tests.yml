@@ -17,8 +17,8 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '18'
-          # Cache disabled to force fresh install
-          # cache: 'npm'
+          cache: 'npm'
+          cache-dependency-path: '**/package-lock.json'
 
       - name: Install Node dependencies
         run: npm ci --legacy-peer-deps

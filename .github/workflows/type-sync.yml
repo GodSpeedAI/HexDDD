@@ -33,8 +33,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '18'
-          # Cache disabled to force fresh install
-          # cache: 'npm'
+          cache: 'npm'
+          cache-dependency-path: '**/package-lock.json'
 
       - name: Use Python 3.11
         uses: actions/setup-python@v4
