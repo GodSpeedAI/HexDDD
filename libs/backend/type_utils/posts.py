@@ -1,7 +1,7 @@
 # Auto-generated Python types for Posts
-from typing import Any, Optional
+from typing import Optional, List
 from uuid import UUID
-from datetime import datetime
+from datetime import datetime, date, time
 
 class Posts:
     """Database model type definitions."""
@@ -14,6 +14,6 @@ class Posts:
     created_at: datetime
     updated_at: Optional[datetime]
 
-    def __init__(self, **kwargs: Any) -> None:
+    def __init__(self, **kwargs):
         for key, value in kwargs.items():
             setattr(self, key, value)
