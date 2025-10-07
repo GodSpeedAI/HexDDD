@@ -222,3 +222,59 @@ The issue was a combination of:
 2. If successful, merge PRs and delete branches  
 3. Re-enable npm caching with versioned cache keys
 4. Document lessons learned
+
+### 2025-10-07 15:15 UTC - FINAL ROOT CAUSE DISCOVERED ⚠️
+
+**The REAL Root Cause**: `NODE_ENV=production` in smoke.yml workflow!
+
+**How We Discovered It:**
+1. Package-lock.json regeneration and cache disabling didn't fix the issue
+2. CI logs still showed only 956 packages being installed
+3. Realized we have 64 devDependencies + 22 dependencies = 86 total packages
+4. **Critical insight**: `npm ci` with `NODE_ENV=production` skips devDependencies!
+5. nx and all @nx/* packages are in devDependencies
+6. This explained why exactly 956 packages (only dependencies + their deps) were installed
+
+**The Fix:**
+Removed `NODE_ENV=production` from .github/workflows/smoke.yml (commit d35723b)
+
+**Why it worked:**
+- Without NODE_ENV=production, npm ci installs ALL packages including devDependencies
+- nx and all @nx/* plugins are now installed
+- Smoke tests can now successfully run nx builds
+
+### 2025-10-07 15:20 UTC - ✅ RESOLUTION COMPLETE
+
+**Final Actions Taken:**
+1. ✅ Removed `NODE_ENV=production` from smoke.yml workflow
+2. ✅ Pushed fix to main branch (commit d35723b)
+3. ✅ Merged fix into all PR branches
+4. ✅ Verified all CI workflows pass on both PR branches
+5. ✅ Merged PR #2 (security: bump tar-fs 2.1.3 → 2.1.4) - branch deleted
+6. ✅ Merged PR #3 (CI workflow fixes) - branch deleted
+7. ✅ PR #4 was already merged earlier (type-sync improvements)
+8. ✅ Cleaned up all local branches (dependabot-branch, type-sync-local)
+9. ✅ Pruned stale remote branches
+10. ✅ Verified main branch CI: all workflows passing
+
+**Final Status:**
+- ✅ All 3 PRs successfully merged to main
+- ✅ All branches deleted (local and remote)
+- ✅ No open PRs remaining
+- ✅ Main branch CI green (smoke, python tests, CodeQL, type-sync)
+- ✅ Repository healthy
+
+**Root Cause Summary:**
+The layered issues were:
+1. **Primary**: `NODE_ENV=production` causing npm ci to skip devDependencies (which includes nx)
+2. **Secondary**: GitHub Actions npm cache corruption (mitigated by disabling cache)
+3. **Tertiary**: Outdated package-lock.json (resolved by regeneration)
+
+**Lessons Learned:**
+1. ✅ Never set `NODE_ENV=production` in CI if you need devDependencies for builds
+2. ✅ Understand that npm ci behavior changes based on NODE_ENV
+3. ✅ Disable caching when debugging mysterious package installation issues
+4. ✅ Always verify the actual package count in CI logs matches expectations
+5. ✅ GitHub Actions cache can become corrupted - force fresh installs when troubleshooting
+
+**Resolution: COMPLETE ✅**
