@@ -2,9 +2,9 @@ name: Example Apps Smoke
 
 on:
   pull_request:
-    branches: [ main ]
+    branches: [main]
   push:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   smoke:
